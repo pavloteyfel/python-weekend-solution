@@ -12,9 +12,9 @@ from csvreader import (
 )
 from flighthandler import DefaultLayoverRule, FlightGraph, FlightTripDataGenerator
 
-# ------------------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------- #
 # Names space
-# ------------------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------- #
 
 namespace = SimpleNamespace(
     csv="",
@@ -43,13 +43,14 @@ def main():
     start_date = datetime.strptime(namespace.start_date, "%Y-%m-%d")
 
     # Add start date filter to check if we can drop some unnecessary csv rows.
-    # If the --start-date argument are greater than the departure time of a flight,
-    # we drop the row.
+    # If the --start-date argument are greater than the departure time of a 
+    # flight, we drop the row.
     start_date_filter = StartDateFilter(start_date)
     flight_csv_reader.add_row_filter(start_date_filter)
 
     # Add bag filter, to check if we can ignore some csv rows.
-    # If the --bags argument greater that the flights allowed size, we drop the row.
+    # If the --bags argument greater that the flights allowed size, we drop the 
+    # row.
     bag_row_filter = BagRowFilter(namespace.bags)
     flight_csv_reader.add_row_filter(bag_row_filter)
 
@@ -68,7 +69,8 @@ def main():
         exit(1)
 
     # Before we start the calculation we feed some layover rules
-    layover_rule = DefaultLayoverRule(namespace.min_layover, namespace.max_layover)
+    layover_rule = DefaultLayoverRule(namespace.min_layover,
+                                      namespace.max_layover)
     flight_graph.set_layover_rule(layover_rule)
 
     # It will contain the list of all calculated trips
@@ -84,9 +86,9 @@ def main():
     else:
         trips = flight_graph.find_trips(namespace.origin, namespace.destination, start_date)
 
-    # Some plain object to handle the correct format of printing out the resutls
-    data_generator = FlightTripDataGenerator(trips, namespace.origin, 
-                                        namespace.destination, namespace.bags)
+    # Some plain object to handle the correct format of printing out the results
+    data_generator = FlightTripDataGenerator(trips, namespace.origin,
+                                             namespace.destination, namespace.bags)
 
     return data_generator.to_json()
 
