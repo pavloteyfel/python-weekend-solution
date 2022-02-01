@@ -109,7 +109,7 @@ class FlightGraph:
     """Store Flight objects in a dict based graph for quick trip finding"""
 
     def __init__(self, flights: Generator[dict[str, Any], None, None]):
-        self.graph: dict = {}
+        self.graph: dict[str, list[Flight]] = {}
         self.layover_rule: Optional[LayoverRule] = None
 
         # Self populates during initialising the graph
@@ -155,11 +155,11 @@ class FlightGraph:
             # reverse trip calculation.
             if start_date <= flight.get_departure_time():
                 #  Keeping track of all visited airports, to avoid A->B->A->C loops
-                visited_airport: set = set()
+                visited_airport: set[str] = set()
 
                 # Just feeding the explore algorithm with mutable list to keeping track
                 # of current trips
-                current_trip: list = []
+                current_trip: list[Flight] = []
 
                 # The main method for finding all correct flights starting from the origin
                 self.explore(flight, destination, visited_airport, current_trip, trips)
@@ -201,8 +201,8 @@ class FlightGraph:
 
         return all_trips
 
-    def explore(self, flight: Flight, destination: str, visited_airport: set,
-                current_trip: list, trips: list[list[Flight]]):
+    def explore(self, flight: Flight, destination: str, visited_airport: set[str],
+                current_trip: list[Flight], trips: list[list[Flight]]):
         """Recursive Depth First Search method for finding valid trips"""
 
         # Used for determining dead ends in the graph.
@@ -261,7 +261,7 @@ class FlightTripDataGenerator:
 
     def __init__(self, trips: list[list[Flight]], origin: str, destination: str,
                  bags: int):
-        self.trips: list = []
+        self.trips: list[FlightTrip] = []
         self.origin: str = origin
         self.destination: str = destination
         self.bags: int = bags

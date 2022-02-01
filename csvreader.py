@@ -86,7 +86,7 @@ class FlightCSVReader:
     def read(self) -> Generator[dict[str, Any], None, None]:
         """Get row dict from the CSV file and apply CSVRowFilter and CSVRowValidator"""
         with open(self.path, newline="", encoding="utf-8") as csv_file:
-            reader: csv.DictReader = csv.DictReader(csv_file)
+            reader: csv.DictReader[str] = csv.DictReader(csv_file)
 
             if reader.fieldnames != CSV_FIELDS:
                 headers = ", ".join(CSV_FIELDS)
@@ -145,7 +145,7 @@ class FlightRowValidator:
                 checker(items)
             except Exception as error:
                 raise CSVWrongValueException(
-                    f"error: wrong value in CSV file at row [{line}]: {error}"
+                    f"error: Wrong value in CSV file at row [{line}]: {error}"
                 ) from error
 
 
