@@ -6,10 +6,12 @@ python -m solution -h
 ```
 
 ```
-usage: python -m solution [-h] [--bags BAGS] [--reverse] [--min-layover MIN_LAYOVER] [--max-layover MAX_LAYOVER] [--start-date START_DATE] csv origin destination
+usage: python -m solution [-h] [--bags BAGS] [--reverse] [--min-layover MIN_LAYOVER] [--max-layover MAX_LAYOVER] 
+[--start-date START_DATE] csv origin destination
 
-This script prints out a structured list of all flight combinations for a given flight data in a form of csv file for a selected route between airports A -> B, sorted by the final price for     
-the trip, in json format. Example usage: `python -m solution test_data/example0.csv WIW RFZ --bags=1`
+This script prints out a structured list of all flight combinations for a given flight data in a form of csv file 
+for a selected route between airports A -> B, sorted by the final price for  the trip, in json format. 
+Example usage: `python -m solution test_data/example0.csv WIW RFZ --bags=1`
 
 positional arguments:
   csv                   Path to the .csv file. Example: test_data/example0.csv
@@ -20,8 +22,10 @@ options:
   -h, --help                    show this help message and exit
   --bags BAGS                   Number of requested bags. Optional (defaults to 0).
   --reverse                     Is it a return flight? Optional (defaults to false).
-  --min-layover MIN_LAYOVER     The minimum layover time between arrive and departure time should not be less than X hours. Optional (defaults to 1).
-  --max-layover MAX_LAYOVER     The maximum layover time between arrive and departure time should not be more than X hours. Optional (defaults to 6).
+  --min-layover MIN_LAYOVER     The minimum layover time between arrive and departure time should not be less 
+                                than X hours. Optional (defaults to 1).
+  --max-layover MAX_LAYOVER     The maximum layover time between arrive and departure time should not be more 
+                                than X hours. Optional (defaults to 6).
   --start-date START_DATE       The start date of your trip in YYYY-MM-DD date format. Optional.
 ```
 
