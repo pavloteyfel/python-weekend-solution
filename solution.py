@@ -9,7 +9,7 @@ from csvreader import (
     FlightRowValidator,
     StartDateFilter,
 )
-from flighthandler import DefaultLayoverRule, FlightGraph, FlightPathDataGenerator
+from flighthandler import DefaultLayoverRule, FlightGraph, FlightTripDataGenerator
 
 # ------------------------------------------------------------------------------------- #
 # Global parameters
@@ -67,21 +67,21 @@ def main():
     layover_rule = DefaultLayoverRule(MIN_LAYOVER, MAX_LAYOVER)
     flight_graph.set_layover_rule(layover_rule)
 
-    # It will contain the list of all calculated paths
-    # By path I mean list of flight objects: list[Flight(), Flight(), ...] that 
+    # It will contain the list of all calculated trips
+    # By trip I mean list of flight objects: list[Flight(), Flight(), ...] that 
     # necessary to get you from A airport to B airport
-    # By paths I mean a list of list of flights: list[list[Flight(), Flight(), ...]]
-    # that are all the paths you can take
-    paths = []
+    # By trips I mean a list of list of flights: list[list[Flight(), Flight(), ...]]
+    # that are all the trips you can take
+    trips = []
 
     # If --reverse argument set to true, we check all flight back to origin
     if REVERSE:
-        paths = flight_graph.find_paths_reverse(ORIGIN, DESTINATION, start_date)
+        trips = flight_graph.find_trips_reverse(ORIGIN, DESTINATION, start_date)
     else:
-        paths = flight_graph.find_paths(ORIGIN, DESTINATION, start_date)
+        trips = flight_graph.find_trips(ORIGIN, DESTINATION, start_date)
 
     # Some plain object to handle the correct format of printing out the resutls
-    data_generator = FlightPathDataGenerator(paths, ORIGIN, DESTINATION, BAGS)
+    data_generator = FlightTripDataGenerator(trips, ORIGIN, DESTINATION, BAGS)
 
     return data_generator.to_json()
 

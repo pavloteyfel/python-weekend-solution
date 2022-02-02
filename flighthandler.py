@@ -46,7 +46,7 @@ class Flight:
 
 
 @dataclass
-class FlightPath:
+class FlightTrip:
     """Container for all Flight objects that are necessary to get from A airport to B
     airport"""
 
@@ -73,12 +73,12 @@ class FlightPath:
         self.total_price = total_price
         self.travel_time = str(travel_time)
 
-    # Used to calculate the final order flight paths
-    def __gt__(self, other: "FlightPath"):
+    # Used to calculate the final order flight trips
+    def __gt__(self, other: "FlightTrip"):
         return self.total_price > other.total_price
 
-    # Used to calculate the final order flight paths
-    def __lt__(self, other: "FlightPath"):
+    # Used to calculate the final order flight trips
+    def __lt__(self, other: "FlightTrip"):
         return self.total_price < other.total_price
 
 
@@ -106,7 +106,7 @@ class DefaultLayoverRule:
 
 
 class FlightGraph:
-    """Store Flight objects in a dict based graph for quick path finding"""
+    """Store Flight objects in a dict based graph for quick trip finding"""
 
     def __init__(self, flights: Generator[dict[str, Any], None, None]):
         self.graph: dict = {}
@@ -133,94 +133,93 @@ class FlightGraph:
         """Add Layover to the FlightGraph"""
         self.layover_rule = rule
 
-    def find_paths(
-            self, origin: str, destination: str, start_date: datetime
-    ) -> list[list[Flight]]:
-        """Main method for finding all paths in the following way:
+    def find_trips(self, origin: str, destination: str, start_date: datetime
+                   ) -> list[list[Flight]]:
+        """Main method for finding all trips in the following way:
         [
             [Flight(), ...],
             [Flight(), Flight()],
             [Flight(), Flight(), Flight()],
             ...
         ]
-        By path I mean list of Flight objects that are necessary to get from A airport to B
+        By trip I mean list of Flight objects that are necessary to get from A airport to B
         """
 
-        # The eventual list that will contain all the paths (list of flights)
-        paths: list[list[Flight]] = []
+        # The eventual list that will contain all the trips (list of flights)
+        trips: list[list[Flight]] = []
 
         # Going through all the flights departing from origin.
         # I use empty list for error handling reasons.
         for flight in self.graph.get(origin, []):
             # This might be a little bit redundant checking. But will be useful for
-            # reverse path calculation.
+            # reverse trip calculation.
             if start_date <= flight.get_departure_time():
                 #  Keeping track of all visited airports, to avoid A->B->A->C loops
                 visited_airport: set = set()
 
                 # Just feeding the explore algorithm with mutable list to keeping track
-                # of current paths
-                current_path: list = []
+                # of current trips
+                current_trip: list = []
 
                 # The main method for finding all correct flights starting from the origin
-                self.explore(flight, destination, visited_airport, current_path, paths)
+                self.explore(flight, destination, visited_airport, current_trip, trips)
 
-        return paths
+        return trips
 
-    def find_paths_reverse(self, origin: str, destination: str,
+    def find_trips_reverse(self, origin: str, destination: str,
                            start_date: datetime) -> list[list[Flight]]:
-        """Method for finding all reverse paths, based on the find_paths() method"""
+        """Method for finding all reverse trips, based on the find_trips() method"""
 
-        # Will be an extended list of flight list with reverse paths
-        all_paths: list[list[Flight]] = []
+        # Will be an extended list of flight list with reverse trips
+        all_trips: list[list[Flight]] = []
 
         # We are doing this in two parts, first we get all flights from A to B
-        paths = self.find_paths(origin, destination, start_date)
+        trips = self.find_trips(origin, destination, start_date)
 
-        # After that we iterate through these paths and extend them with all paths from B to A
-        for path in paths:
+        # After that we iterate through these trips and extend them with all trips from B to A
+        for trip in trips:
 
             # Getting the last flight to the target airport
-            last_flight = path[-1]
+            last_flight = trip[-1]
 
             # Getting the arrival to the target airport
             last_flight_arrival_time = last_flight.get_arrival_time()
 
-            # Here we call again the find_paths method, switching the origin and destination,
+            # Here we call again the find_trips method, switching the origin and destination,
             # and filter out based on the last flight's arrival time.
             # So we want see here all flights that starts from B airport and are after
             # the arrival time.
             # No layover rule applied here.
-            reverse_paths = self.find_paths(destination, origin,
+            reverse_trips = self.find_trips(destination, origin,
                                             last_flight_arrival_time)
 
-            # Extend our original list with reverse paths as well
-            for reverse_path in reverse_paths:
-                extended_paths = path.copy()
-                extended_paths += reverse_path
-                all_paths.append(extended_paths)
+            # Extend our original list with reverse trips as well
+            for reverse_trip in reverse_trips:
+                extended_trips = trip.copy()
+                extended_trips += reverse_trip
+                all_trips.append(extended_trips)
 
-        return all_paths
+        return all_trips
 
     def explore(self, flight: Flight, destination: str, visited_airport: set,
-                current_path: list, paths: list[list[Flight]]):
-        """Recursive Depth First Search method for finding valid paths"""
+                current_trip: list, trips: list[list[Flight]]):
+        """Recursive Depth First Search method for finding valid trips"""
 
         # Used for determining dead ends in the graph.
-        is_correct_path = True
+        is_correct_trip = True
 
         # Keeping track of visited airports
         visited_airport.add(flight.origin)
         visited_airport.add(flight.destination)
 
-        # Building our path, adding the first flight to it
-        current_path.append(flight)
+        # Building our trip, adding the first flight to it
+        current_trip.append(flight)
 
         # Check if we reached our destination
         if flight.destination == destination:
-            # Let's add the current path's copy to the list of all valid paths
+            # Let's add the current trip's copy to the list of all valid trips
             # Maybe creating a tuple would be more appropriate
-            paths.append(current_path.copy())
+            trips.append(current_trip.copy())
 
         # Still not there
         else:
@@ -235,17 +234,17 @@ class FlightGraph:
                 ):
                     # Let's go deep recursively
                     self.explore(next_flight, destination, visited_airport,
-                                 current_path, paths)
+                                 current_trip, trips)
             # If we ended up here, it implies that there are no more valid flight to
             # to take to reach our destination, the is a dead end :(
-            is_correct_path = False
+            is_correct_trip = False
 
         # Let's explore the other flights from the previous airport, if there any
-        current_path.pop()
+        current_trip.pop()
 
         # If we reached the dead end then, we don't want to take any other flight's
         # to this airport anymore. We leave it in the memory as visited.
-        if is_correct_path:
+        if is_correct_trip:
             # We can visit this airport again maybe in different time
             visited_airport.remove(flight.destination)
 
@@ -257,35 +256,35 @@ class FlightGraph:
         return True
 
 
-class FlightPathDataGenerator:
-    """Converts path information into presentable format"""
+class FlightTripDataGenerator:
+    """Converts trip information into presentable format"""
 
-    def __init__(self, paths: list[list[Flight]], origin: str, destination: str,
+    def __init__(self, trips: list[list[Flight]], origin: str, destination: str,
                  bags: int):
-        self.paths: list = []
+        self.trips: list = []
         self.origin: str = origin
         self.destination: str = destination
         self.bags: int = bags
-        self.add_paths(paths)
+        self.add_trips(trips)
 
-    def add_paths(self, paths: list[list[Flight]]):
-        """Converts list of Flight objects into FlightPath objects where the Flight
+    def add_trips(self, trips: list[list[Flight]]):
+        """Converts list of Flight objects into FlightTrip objects where the Flight
         objects are ordered based on the total price data"""
 
-        for flights in paths:
-            self.paths.append(
-                FlightPath(
+        for flights in trips:
+            self.trips.append(
+                FlightTrip(
                     flights=flights,
                     origin=self.origin,
                     destination=self.destination,
                     bags_count=self.bags,
                 )
             )
-        self.paths.sort()
+        self.trips.sort()
 
     def to_dict(self) -> list[dict[str, Any]]:
         """Returns the flight data objects to list of dicts"""
-        return [asdict(path) for path in self.paths]
+        return [asdict(trip) for trip in self.trips]
 
     def to_json(self) -> str:
         """Returns formatted json string from list of dictionaries"""
