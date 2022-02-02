@@ -146,15 +146,14 @@ class FlightGraph:
         By path I mean list of Flight objects that are necessary to get from A airport to B
         """
 
-        # The eventual list that will contain all the paths
+        # The eventual list that will contain all the paths (list of flights)
         paths: list[list[Flight]] = []
 
-        # Going through all the flights departing from origin, empty list for error handling reasons
+        # Going through all the flights departing from origin. 
+        # I use empty list for error handling reasons.
         for flight in self.graph.get(origin, []):
-
-            # This check will play a bigger role for reverse path finding.
-            # All the past flights are dropped if start_date is specificed,
-            # so if no reverse path if calculated this is a little bit reduntant checking.
+            # This might be a little bit reduntant checking. But will be useful for
+            # reverse path calculation.
             if start_date <= flight.get_departure_time():
 
                 #  Keeping track of all visited airports, to avoid A->B->A->C loops
@@ -169,11 +168,11 @@ class FlightGraph:
 
         return paths
 
-    def find_paths_reverse(
-        self, origin: str, destination: str, start_date: datetime
-    ) -> list[list[Flight]]:
+    def find_paths_reverse(self, origin: str, destination: str, 
+            start_date: datetime) -> list[list[Flight]]:
         """Method for finding all reverse paths, based on the find_paths() method"""
 
+        # Will be an extended list of flight list with reverse paths
         all_paths: list[list[Flight]] = []
 
         # We are doing this in two parts, first we get all flights from A to B
@@ -193,9 +192,8 @@ class FlightGraph:
             # So we want see here all flights that starts from B airport and are after 
             # the arrival time.
             # No layover rule applied here.
-            reverse_paths = self.find_paths(
-                destination, origin, last_flight_arrival_time
-            )
+            reverse_paths = self.find_paths(destination, origin, 
+                last_flight_arrival_time)
 
             # Extend our original list with reverse paths as well
             for reverse_path in reverse_paths:
@@ -208,28 +206,54 @@ class FlightGraph:
     def explore(self, flight: Flight, destination: str, visited_airport: set, 
             current_path: list, paths: list[list[Flight]]):
         """Recursive Depth First Search method for finding valid paths"""
+
+        # Used for determining dead ends in the graph.  
         is_correct_path = True
+        
+        # Keeping track of visited airports
         visited_airport.add(flight.origin)
         visited_airport.add(flight.destination)
+        
+        # Building our path, adding the first flight to it
         current_path.append(flight)
+        
+        # Check if we reached our destination
         if flight.destination == destination:
+            # Let's add the current path's copy to the list of all valid paths
+            # Maybe creating a tuple would be more apropriate
             paths.append(current_path.copy())
+        
+        # Still not there 
         else:
+            # let's check what are the available flight option on the
+            # destination's airport
             for next_flight in self.graph[flight.destination]:
+                # We need a flight that flies to new airport we haven't been before,
+                # and the layover are correct, min 1 hour and 6 hours as default.
                 if (
                     next_flight.destination not in visited_airport
                     and self.is_valid_layover(flight, next_flight)
                 ):
-                    self.explore(
-                        next_flight, destination, visited_airport, current_path, paths
-                    )
+                    # Let's go deep recursively
+                    self.explore(next_flight, destination, visited_airport, 
+                        current_path, paths)
+            # If we ended up here, it implies that there are no more valid flight to
+            # to take to reach our destination, the is a dead end :(
+            # 
             is_correct_path = False
+        
+        # Let's explore the other flights from the previous airport, if there any
         current_path.pop()
+
+        # If we reached the dead end then, we don't want to take any other flight's 
+        # to this airport anymore. We leave it in the memory as visited.
         if is_correct_path:
+            # We can visit this airport again maybe in different time
             visited_airport.remove(flight.destination)
 
     def is_valid_layover(self, prev_flight: Flight, next_flight: Flight) -> bool:
-        """Method utilises the LayoverRule protocol to check to filter out non-valid layovers"""
+        """Method utilises the LayoverRule protocol to check to filter out 
+        non-valid layovers"""
         if self.layover_rule:
             return self.layover_rule.validate(prev_flight, next_flight)
         return True
@@ -238,7 +262,8 @@ class FlightGraph:
 class FlightPathDataGenerator:
     """Converts path information into presentable format"""
 
-    def __init__(self, paths: list[list[Flight]], origin: str, destination: str, bags: int):
+    def __init__(self, paths: list[list[Flight]], origin: str, destination: str, 
+        bags: int):
         self.paths: list = []
         self.origin: str = origin
         self.destination: str = destination
