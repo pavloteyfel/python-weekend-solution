@@ -100,7 +100,7 @@ class FlighCSVReader:
                     yield row
 
 
-class BagRowFilter:  # pylint: disable=too-few-public-methods
+class BagRowFilter:
     """CSVRowFilter for filtering bag data in CSV file"""
 
     def __init__(self, bags: int):
@@ -111,7 +111,7 @@ class BagRowFilter:  # pylint: disable=too-few-public-methods
         return int(row["bags_allowed"]) >= self.bags
 
 
-class StartDateFilter:  # pylint: disable=too-few-public-methods
+class StartDateFilter:
     """CSVRowFilter for filtering departure date in CSV file"""
 
     def __init__(self, start_date: datetime):
@@ -123,7 +123,7 @@ class StartDateFilter:  # pylint: disable=too-few-public-methods
         return departure_time >= self.start_date
 
 
-class FlightRowValidator: # pylint: disable=too-few-public-methods
+class FlightRowValidator:
     """CSVRowValidator for checking the data correctness of the CSV file"""
 
     def __init__(self):
