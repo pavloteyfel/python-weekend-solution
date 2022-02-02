@@ -25,22 +25,22 @@ options:
   --start-date START_DATE       The start date of your trip in YYYY-MM-DD date format. Optional.
 ```
 
-### Data Structure
-The CSV datasets have the following columns:
+## Data Structure
+The scripts only works on the following CSV data structure:
 - `flight_no`: Flight number.
 - `origin`, `destination`: Airport codes.
 - `departure`, `arrival`: Dates and times of the departures/arrivals.
 - `base_price`, `bag_price`: Prices of the ticket and one piece of baggage.
 - `bags_allowed`: Number of allowed pieces of baggage for the flight.
 
-### Implemented Search Restrictions
+## Implemented Search Restrictions
 - By default, the search is performed on all available combinations, according to search parameters.
 - In case of a combination of A -> B -> C, the layover time in B is **not be less than 1 hour and more than 6 hours** by default.
 - There are no repeating airports in the same trip:
     - A -> B -> A -> C is not a valid combination for search A -> C.
 - Output is sorted by the final price of the trip.
 
-### Project Structure
+## Project Structure
 - `argparser.py`: Contains the argument CLI argument parsing logic
 - `flighthandler.py`: Contains all models and logic necessary for the trip calculations
 - `csvreader.py`: Enhanced csv reader module for parsing, validating and checking flight data
@@ -48,23 +48,40 @@ The CSV datasets have the following columns:
 - `test_solution.py`: Some basic test cases, mainly happy paths
 - `test_data`: Directory contains the example csv files and some generated json files for unit testing
 
-#### Example usages
+## Example usages
+Only with mandatory arguments:
+
 ```shell
 python -m solution test_data/example0.csv WIW RFZ
+```
+
+Let's bring 2 bags:
+```shell
 python -m solution test_data/example0.csv WIW RFZ --bags=2
+```
+
+And see how we can get back:
+```shell
 python -m solution test_data/example0.csv WIW RFZ --bags=2 --reverse
+```
+
+Let's check flights on a given date:
+```shell
 python -m solution test_data/example0.csv WIW RFZ --bags=2 --start-date=2021-09-04
-python -m solution test_data/example0.csv WIW RFZ --bags=2 --start-date=2021-09-04 --min-layover=10
+```
+
+With other layover hours:
+```shell
 python -m solution test_data/example1.csv DHE NIZ --bags=1 --start-date=2021-09-04 --min-layover=12 --max-layover=48
 ```
 
-### Tests
+## Tests
 There are some basic test cases prepared, to run them use the following command:
 ```shell
 python -m unittest -v
 ```
 
-#### Supported Arguments
+## Supported Arguments
 | Argument name   | type    | Description                        | Notes                          |
 |-----------------|---------|------------------------------------|--------------------------------|
 | `csv`           | string  | Origin airport code                | Positional, mandatory          |
@@ -77,7 +94,7 @@ python -m unittest -v
 | `--max-layover` | integer | Max. layover between two flights   | Optional (defaults to 6 hours) |
 
 
-#### Output
+## Output
 The output is json string of trips sorted by price. The trip has the following schema:
 
 | Field          | Description                                                   |
