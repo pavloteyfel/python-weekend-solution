@@ -9,9 +9,9 @@ python -m solution -h
 usage: python -m solution [-h] [--bags BAGS] [--reverse] [--min-layover MIN_LAYOVER] [--max-layover MAX_LAYOVER] 
 [--start-date START_DATE] csv origin destination
 
-This script prints out a structured list of all flight combinations for a given flight data in a form of csv file 
-for a selected route between airports A -> B, sorted by the final price for  the trip, in json format. 
-Example usage: `python -m solution test_data/example0.csv WIW RFZ --bags=1`
+This script prints out a structured list of all flight combinations for a selected route between airports A -> B,
+sorted by the final price for the trip, in json format. As input, the script uses flight data given in a form of 
+csv file. Example usage: `python -m solution test_data/example0.csv WIW RFZ --bags=1`
 
 positional arguments:
   csv                   Path to the .csv file. Example: test_data/example0.csv
@@ -45,10 +45,10 @@ The scripts only works on the following CSV data structure:
 - Output is sorted by the final price of the trip.
 
 ## Project Structure
-- `argparser.py`: Contains the argument CLI argument parsing logic
+- `argparser.py`: Contains the CLI argument parsing logic
 - `flighthandler.py`: Contains all models and logic necessary for the trip calculations
 - `csvreader.py`: Enhanced csv reader module for parsing, validating and checking flight data
-- `solution.py`: The main script that should be called, it glues all modules to work on the solution
+- `solution.py`: The main script that should be called, it glues all modules together to work on the solution
 - `test_solution.py`: Some basic test cases, mainly happy paths
 - `test_data`: Directory contains the example csv files and some generated json files for unit testing
 
@@ -124,7 +124,7 @@ error: Wrong value in CSV file at row [4]: base_price cannot be a negative numbe
 
 
 ## Output
-The output is json string of trips sorted by price. The trip has the following schema:
+The output is a json string of trips sorted by price. The output has the following schema:
 
 | Field          | Description                                                   |
 |----------------|---------------------------------------------------------------|
