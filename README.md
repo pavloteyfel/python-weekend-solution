@@ -104,10 +104,10 @@ python -m solution: error: argument --bags: invalid int value: 'x'
 In case of incorrect data in the csv file:
 ```shell
 error: Incorrect CSV headers. The following headers are expected: flight_no, origin, destination, departure, arrival, base_price, bag_price, bags_allowed
-error: wrong value in CSV file at row [2]: bags_allowed is not an integer number.
-error: wrong value in CSV file at row [16]: departure has an invalid date-time format.
-error: wrong value in CSV file at row [18]: flight_no cannot be an empty string.
-error: wrong value in CSV file at row [4]: base_price cannot be a negative number.
+error: Wrong value in CSV file at row [2]: bags_allowed is not an integer number.
+error: Wrong value in CSV file at row [16]: departure has an invalid date-time format.
+error: Wrong value in CSV file at row [18]: flight_no cannot be an empty string.
+error: Wrong value in CSV file at row [4]: base_price cannot be a negative number.
 ```
 
 ## Supported Arguments

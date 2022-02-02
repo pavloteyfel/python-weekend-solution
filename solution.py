@@ -12,10 +12,6 @@ from csvreader import (
 )
 from flighthandler import DefaultLayoverRule, FlightGraph, FlightTripDataGenerator
 
-# ---------------------------------------------------------------------------- #
-# Names space
-# ---------------------------------------------------------------------------- #
-
 namespace = SimpleNamespace(
     csv="",
     origin="",
