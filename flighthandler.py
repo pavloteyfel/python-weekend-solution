@@ -9,7 +9,7 @@ from csvreader import DATE_TIME_PATTERN
 
 @dataclass
 class Flight:
-    """Contaner for flight data row"""
+    """Container for flight data row"""
 
     flight_no: str
     origin: str
@@ -50,7 +50,7 @@ class FlightPath:
     """Container for all Flight objects that are necessary to get from A airport to B
     airport"""
 
-    fligths: list[Flight]
+    flights: list[Flight]
     bags_allowed: int = field(init=False, default=0)
     bags_count: int
     destination: str
@@ -64,7 +64,7 @@ class FlightPath:
         total_price: float = 0.0
         travel_time: timedelta = timedelta()
 
-        for flight in self.fligths:
+        for flight in self.flights:
             bags_allowed = min(bags_allowed, flight.bags_allowed)
             total_price += flight.get_full_price(self.bags_count)
             travel_time += flight.get_travel_time()
@@ -83,7 +83,7 @@ class FlightPath:
 
 
 class LayoverRule(Protocol):
-    """Protocol for defining min and max layorver rules"""
+    """Protocol for defining min and max layover rules"""
 
     def validate(self, prev_flight: Flight, next_flight: Flight) -> bool:
         """Compare two sequential flights to check if the meet the validation protocol"""
@@ -98,7 +98,7 @@ class DefaultLayoverRule:
         self.max_layover = max_layover
 
     def validate(self, prev_flight: Flight, next_flight: Flight) -> bool:
-        """Comapre previous flight arrival time to the next flight's departure time"""
+        """Compare previous flight arrival time to the next flight's departure time"""
         min_hour_time = timedelta(hours=self.min_layover)
         max_hour_time = timedelta(hours=self.max_layover)
         difference = next_flight.get_departure_time() - prev_flight.get_arrival_time()
@@ -134,7 +134,7 @@ class FlightGraph:
         self.layover_rule = rule
 
     def find_paths(
-        self, origin: str, destination: str, start_date: datetime
+            self, origin: str, destination: str, start_date: datetime
     ) -> list[list[Flight]]:
         """Main method for finding all paths in the following way:
         [
@@ -152,10 +152,9 @@ class FlightGraph:
         # Going through all the flights departing from origin.
         # I use empty list for error handling reasons.
         for flight in self.graph.get(origin, []):
-            # This might be a little bit reduntant checking. But will be useful for
+            # This might be a little bit redundant checking. But will be useful for
             # reverse path calculation.
             if start_date <= flight.get_departure_time():
-
                 #  Keeping track of all visited airports, to avoid A->B->A->C loops
                 visited_airport: set = set()
 
@@ -168,8 +167,8 @@ class FlightGraph:
 
         return paths
 
-    def find_paths_reverse(self, origin: str, destination: str, 
-            start_date: datetime) -> list[list[Flight]]:
+    def find_paths_reverse(self, origin: str, destination: str,
+                           start_date: datetime) -> list[list[Flight]]:
         """Method for finding all reverse paths, based on the find_paths() method"""
 
         # Will be an extended list of flight list with reverse paths
@@ -192,8 +191,8 @@ class FlightGraph:
             # So we want see here all flights that starts from B airport and are after
             # the arrival time.
             # No layover rule applied here.
-            reverse_paths = self.find_paths(destination, origin, 
-                last_flight_arrival_time)
+            reverse_paths = self.find_paths(destination, origin,
+                                            last_flight_arrival_time)
 
             # Extend our original list with reverse paths as well
             for reverse_path in reverse_paths:
@@ -203,8 +202,8 @@ class FlightGraph:
 
         return all_paths
 
-    def explore(self, flight: Flight, destination: str, visited_airport: set, 
-            current_path: list, paths: list[list[Flight]]):
+    def explore(self, flight: Flight, destination: str, visited_airport: set,
+                current_path: list, paths: list[list[Flight]]):
         """Recursive Depth First Search method for finding valid paths"""
 
         # Used for determining dead ends in the graph.
@@ -220,7 +219,7 @@ class FlightGraph:
         # Check if we reached our destination
         if flight.destination == destination:
             # Let's add the current path's copy to the list of all valid paths
-            # Maybe creating a tuple would be more apropriate
+            # Maybe creating a tuple would be more appropriate
             paths.append(current_path.copy())
 
         # Still not there
@@ -231,15 +230,14 @@ class FlightGraph:
                 # We need a flight that flies to new airport we haven't been before,
                 # and the layover are correct, min 1 hour and 6 hours as default.
                 if (
-                    next_flight.destination not in visited_airport
-                    and self.is_valid_layover(flight, next_flight)
+                        next_flight.destination not in visited_airport
+                        and self.is_valid_layover(flight, next_flight)
                 ):
                     # Let's go deep recursively
-                    self.explore(next_flight, destination, visited_airport, 
-                        current_path, paths)
+                    self.explore(next_flight, destination, visited_airport,
+                                 current_path, paths)
             # If we ended up here, it implies that there are no more valid flight to
             # to take to reach our destination, the is a dead end :(
-            #
             is_correct_path = False
 
         # Let's explore the other flights from the previous airport, if there any
@@ -262,8 +260,8 @@ class FlightGraph:
 class FlightPathDataGenerator:
     """Converts path information into presentable format"""
 
-    def __init__(self, paths: list[list[Flight]], origin: str, destination: str, 
-        bags: int):
+    def __init__(self, paths: list[list[Flight]], origin: str, destination: str,
+                 bags: int):
         self.paths: list = []
         self.origin: str = origin
         self.destination: str = destination
@@ -277,7 +275,7 @@ class FlightPathDataGenerator:
         for flights in paths:
             self.paths.append(
                 FlightPath(
-                    fligths=flights,
+                    flights=flights,
                     origin=self.origin,
                     destination=self.destination,
                     bags_count=self.bags,

@@ -5,16 +5,16 @@ from csvreader import (
     BagRowFilter,
     CSVHeaderException,
     CSVWrongValueException,
-    FlighCSVReader,
+    FlightCSVReader,
     FlightRowValidator,
     StartDateFilter,
 )
 from flighthandler import DefaultLayoverRule, FlightGraph, FlightPathDataGenerator
 
-
-#--------------------------------------------------------------------------------------#
+# ------------------------------------------------------------------------------------- #
 # Global parameters
-#--------------------------------------------------------------------------------------#
+# ------------------------------------------------------------------------------------- #
+
 CSV = ""
 ORIGIN = ""
 DESTINATION = ""
@@ -25,21 +25,21 @@ MAX_LAYOVER = 6
 
 
 def main():
-    # Creating a csv reader to deal with fligh data csv
+    # Creating a csv reader to deal with flight data csv
     try:
-        flight_csv_reader = FlighCSVReader(CSV)
+        flight_csv_reader = FlightCSVReader(CSV)
     except FileNotFoundError:
         print(f"error: {CSV} file not found")
         exit(1)
 
     # We will validate each csv row
     flight_csv_reader.add_row_validator(FlightRowValidator())
-    
+
     # Create datetime object from string, comes from --start-date argument
     start_date = datetime.strptime(START_DATE, "%Y-%m-%d")
-    
+
     # Add start date filter to check if we can drop some unnecessary csv rows.
-    # If the --start-date argument greater than then the departure time of a flightm, 
+    # If the --start-date argument are greater than the departure time of a flight,
     # we drop the row.
     start_date_filter = StartDateFilter(start_date)
     flight_csv_reader.add_row_filter(start_date_filter)
@@ -52,7 +52,7 @@ def main():
     # Getting a generator object from csv reader
     flights = flight_csv_reader.read()
 
-    # Passing the generator object to create a flight hashmap for quick acces 
+    # Passing the generator object to create a flight hashmap for quick access
     # and calculations 
     try:
         flight_graph = FlightGraph(flights)
@@ -100,5 +100,5 @@ if __name__ == "__main__":
     REVERSE = arguments.reverse
     START_DATE = arguments.start_date
 
-    # Start the process and print out the resutls
+    # Start the process and print out the results
     print(main())

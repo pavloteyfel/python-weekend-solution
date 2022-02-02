@@ -134,3 +134,65 @@ and get the following result:
     }
 ]
 ```
+
+```shell
+python -m solution -h
+```
+
+```
+usage: python -m solution [-h] [--bags BAGS] [--reverse] [--min-layover MIN_LAYOVER] [--max-layover MAX_LAYOVER] [--start-date START_DATE] csv origin destination
+
+This script prints out a structured list of all flight combinations for a given flight data in a form of csv file for a selected route between airports A -> B, sorted by the final price for     
+the trip, in json format. Example usage: `python -m solution test_data/example0.csv WIW RFZ --bags=1`
+
+positional arguments:
+  csv                   Path to the .csv file. Example: test_data/example0.csv
+  origin                Origin airport code.
+  destination           Destination airport code.
+
+options:
+  -h, --help                    show this help message and exit
+  --bags BAGS                   Number of requested bags. Optional (defaults to 0).
+  --reverse                     Is it a return flight? Optional (defaults to false).
+  --min-layover MIN_LAYOVER     The minimum layover time between arrive and departure time should not be less than X hours. Optional (defaults to 1).
+  --max-layover MAX_LAYOVER     The maximum layover time between arrive and departure time should not be more than X hours. Optional (defaults to 6).
+  --start-date START_DATE       The start date of your trip in YYYY-MM-DD date format. Optional.
+```
+
+#### Arguments
+| Argument name   | type    | Description                        | Notes                          |
+|-----------------|---------|------------------------------------|--------------------------------|
+| `csv`           | string  | Origin airport code                | Positional, mandatory          |
+| `origin`        | string  | Origin airport code                | Positional, mandatory          |
+| `destination`   | string  | Destination airport code           | Positional, mandatory          |
+| `--bags`        | integer | Number of requested bags           | Optional (defaults to 0)       |
+| `--return`      | boolean | Is it a return flight?             | Optional (defaults to false)   |
+| `--start-date`  | string  | Start date of the trip             | Optional (format YYY-MM-DD)    |
+| `--min-layover` | integer | Min. layover between two flights   | Optional (defaults to 1 hour)  |
+| `--max-layover` | integer | Max. layover between two flights   | Optional (defaults to 6 hours) |
+
+
+#### Output
+The output is json string of trips sorted by price. The trip has the following schema:
+
+| Field          | Description                                                   |
+|----------------|---------------------------------------------------------------|
+| `flights`      | A list of flights in the trip according to the input dataset. |
+| `origin`       | Origin airport of the trip.                                   |
+| `destination`  | The final destination of the trip.                            |
+| `bags_allowed` | The number of allowed bags for the trip.                      |
+| `bags_count`   | The searched number of bags.                                  |
+| `total_price`  | The total price for the trip.                                 |
+| `travel_time`  | The total travel time.                                        |
+
+Example result: ![json](test_data/0_wiw_rfz_2_f.json)
+
+#### Example usages
+```shell
+python -m solution test_data/example0.csv WIW RFZ
+python -m solution test_data/example0.csv WIW RFZ --bags=2
+python -m solution test_data/example0.csv WIW RFZ --bags=2 --reverse
+python -m solution test_data/example0.csv WIW RFZ --bags=2 --start-date=2021-09-04
+python -m solution test_data/example0.csv WIW RFZ --bags=2 --start-date=2021-09-04 --min-layover=10
+python -m solution test_data/example1.csv DHE NIZ --bags=1 --start-date=2021-09-04 --min-layover=12 --max-layover=48
+```

@@ -46,7 +46,7 @@ def get_args() -> argparse.Namespace:
     )
     parser.add_argument("origin", action="store", type=str, help="Origin airport code.")
     parser.add_argument(
-        "destination", action="store", type=str, help="Destination ariport code."
+        "destination", action="store", type=str, help="Destination airport code."
     )
     parser.add_argument(
         "--bags",
@@ -56,7 +56,7 @@ def get_args() -> argparse.Namespace:
         help="Number of requested bags. Optional (defaults to 0).",
     )
     parser.add_argument(
-        "--reverse",
+        "--reverse", "-r",
         action="store_true",
         default=False,
         help="Is it a return flight? Optional (defaults to false).",

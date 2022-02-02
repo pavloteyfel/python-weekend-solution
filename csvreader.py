@@ -19,7 +19,7 @@ CSV_FIELDS: list[str] = [
 ]
 
 
-class CSVRowFilter(Protocol):  # pylint: disable=too-few-public-methods
+class CSVRowFilter(Protocol):
     """Filter protocol for FlightCSVReader"""
 
     def filter_row(self, row: dict[str, str]) -> bool:
@@ -27,7 +27,7 @@ class CSVRowFilter(Protocol):  # pylint: disable=too-few-public-methods
         ...
 
 
-class CSVRowValidator(Protocol):  # pylint: disable=too-few-public-methods
+class CSVRowValidator(Protocol):
     """Validator protocol for FlightCSVReader"""
 
     def validate_row(self, line: int, row: dict[str, str]):
@@ -36,24 +36,24 @@ class CSVRowValidator(Protocol):  # pylint: disable=too-few-public-methods
 
 
 class CSVHeaderException(Exception):
-    """Custom expection for FlightCSVReader header checking"""
+    """Custom exception for FlightCSVReader header checking"""
 
     ...
 
 
 class CSVWrongValueException(Exception):
-    """Custom expection for  CSVRowValidator row cell value checking"""
+    """Custom exception for  CSVRowValidator row cell value checking"""
 
     ...
 
 
 class CSVValidationException(Exception):
-    """Custom expection for CSVRowValidator validation errors"""
+    """Custom exception for CSVRowValidator validation errors"""
 
     ...
 
 
-class FlighCSVReader:
+class FlightCSVReader:
     """Custom CSV reader for flight related data"""
 
     def __init__(self, path: str):
@@ -84,7 +84,7 @@ class FlighCSVReader:
             self.row_validator.validate_row(row_line, row)
 
     def read(self) -> Generator[dict[str, Any], None, None]:
-        """Get row ditc from the CSV file and apply CSVRowFilter and CSVRowValidator"""
+        """Get row dict from the CSV file and apply CSVRowFilter and CSVRowValidator"""
         with open(self.path, newline="", encoding="utf-8") as csv_file:
             reader: csv.DictReader = csv.DictReader(csv_file)
 
@@ -188,4 +188,4 @@ def check_float(items: tuple[str, Any]):
         raise CSVValidationException(f"{key} is not a float number.") from error
 
     if converted < 0:
-        raise CSVValidationException(f"{key} cannot be anegative number.")
+        raise CSVValidationException(f"{key} cannot be a negative number.")
