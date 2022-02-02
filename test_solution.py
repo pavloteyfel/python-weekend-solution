@@ -4,7 +4,7 @@ import json
 
 
 class TestSolution(unittest.TestCase):
-    def setUp(self) -> None:
+    def setUp(self):
         solution.MIN_LAYOVER = 1
         solution.MAX_LAYOVER = 6
         solution.REVERSE = False

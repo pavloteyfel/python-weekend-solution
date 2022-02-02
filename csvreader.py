@@ -30,7 +30,7 @@ class CSVRowFilter(Protocol):  # pylint: disable=too-few-public-methods
 class CSVRowValidator(Protocol):  # pylint: disable=too-few-public-methods
     """Validator protocol for FlightCSVReader"""
 
-    def validate_row(self, line: int, row: dict[str, str]) -> bool:
+    def validate_row(self, line: int, row: dict[str, str]):
         """Check if the given row contains correct data"""
         ...
 
@@ -83,10 +83,10 @@ class FlighCSVReader:
         if self.row_validator:
             self.row_validator.validate_row(row_line, row)
 
-    def read(self) -> Generator[dict[str, str], None, None]:
+    def read(self) -> Generator[dict[str, Any], None, None]:
         """Get row ditc from the CSV file and apply CSVRowFilter and CSVRowValidator"""
         with open(self.path, newline="", encoding="utf-8") as csv_file:
-            reader = csv.DictReader(csv_file)
+            reader: csv.DictReader = csv.DictReader(csv_file)
 
             if reader.fieldnames != CSV_FIELDS:
                 headers = ", ".join(CSV_FIELDS)

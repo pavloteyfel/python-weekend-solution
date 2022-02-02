@@ -11,8 +11,9 @@ def check_number(number: str) -> int:
         raise argparse.ArgumentTypeError(f"invalid int value: '{number}'") from error
     if converted < 0:
         raise argparse.ArgumentTypeError(f"not a positive number: '{number}'")
+    if converted > 999:
+        raise argparse.ArgumentTypeError(f"too much: '{number}'") # :)
     return converted
-
 
 def check_date(date_string: str) -> str:
     """Check if value in correct date time format"""
