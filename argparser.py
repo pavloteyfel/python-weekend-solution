@@ -12,8 +12,9 @@ def check_number(number: str) -> int:
     if converted < 0:
         raise argparse.ArgumentTypeError(f"not a positive number: '{number}'")
     if converted > 999:
-        raise argparse.ArgumentTypeError(f"too much: '{number}'") # :)
+        raise argparse.ArgumentTypeError(f"too much: '{number}'")  # :)
     return converted
+
 
 def check_date(date_string: str) -> str:
     """Check if value in correct date time format"""
@@ -77,10 +78,11 @@ def get_args() -> argparse.Namespace:
                             should not be more than X hours. Optional (defaults to 6).",
     )
     parser.add_argument(
-        "--start",
+        "--start-date",
         action="store",
         type=check_date,
         help="The start date of your trip in YYYY-MM-DD date format. \
                             Optional.",
+        default="1900-01-01",
     )
     return parser.parse_args()
