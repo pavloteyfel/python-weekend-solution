@@ -1,6 +1,6 @@
 [
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "SJ609",
                 "origin": "IUT",
@@ -20,7 +20,7 @@
         "travel_time": "2:15:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "SJ609",
                 "origin": "IUT",
@@ -40,7 +40,7 @@
         "travel_time": "2:15:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "SJ609",
                 "origin": "IUT",
@@ -60,7 +60,7 @@
         "travel_time": "2:15:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "SJ609",
                 "origin": "IUT",

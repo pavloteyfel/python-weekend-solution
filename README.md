@@ -185,7 +185,71 @@ The output is json string of trips sorted by price. The trip has the following s
 | `total_price`  | The total price for the trip.                                 |
 | `travel_time`  | The total travel time.                                        |
 
-Example result: ![json](test_data/0_wiw_rfz_2_f.json)
+Example result:
+```json
+[
+    {
+        "fligths": [
+            {
+                "flight_no": "ZH214",
+                "origin": "WIW",
+                "destination": "RFZ",
+                "departure": "2021-09-01T23:20:00",
+                "arrival": "2021-09-02T03:50:00",
+                "base_price": 168.0,
+                "bag_price": 12,
+                "bags_allowed": 2
+            }
+        ],
+        "bags_allowed": 2,
+        "bags_count": 2,
+        "destination": "RFZ",
+        "origin": "WIW",
+        "total_price": 192.0,
+        "travel_time": "4:30:00"
+    },
+    {
+        "fligths": [
+            {
+                "flight_no": "ZH214",
+                "origin": "WIW",
+                "destination": "RFZ",
+                "departure": "2021-09-04T23:20:00",
+                "arrival": "2021-09-05T03:50:00",
+                "base_price": 168.0,
+                "bag_price": 12,
+                "bags_allowed": 2
+            }
+        ],
+        "bags_allowed": 2,
+        "bags_count": 2,
+        "destination": "RFZ",
+        "origin": "WIW",
+        "total_price": 192.0,
+        "travel_time": "4:30:00"
+    },
+    {
+        "fligths": [
+            {
+                "flight_no": "ZH214",
+                "origin": "WIW",
+                "destination": "RFZ",
+                "departure": "2021-09-09T23:20:00",
+                "arrival": "2021-09-10T03:50:00",
+                "base_price": 168.0,
+                "bag_price": 12,
+                "bags_allowed": 2
+            }
+        ],
+        "bags_allowed": 2,
+        "bags_count": 2,
+        "destination": "RFZ",
+        "origin": "WIW",
+        "total_price": 192.0,
+        "travel_time": "4:30:00"
+    }
+]
+```
 
 #### Example usages
 ```shell

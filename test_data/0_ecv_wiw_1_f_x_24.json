@@ -1,6 +1,6 @@
 [
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "ZH665",
                 "origin": "ECV",
@@ -30,7 +30,7 @@
         "travel_time": "7:00:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "ZH665",
                 "origin": "ECV",
@@ -60,7 +60,7 @@
         "travel_time": "7:00:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "ZH151",
                 "origin": "ECV",
@@ -80,7 +80,7 @@
         "travel_time": "5:10:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "ZH151",
                 "origin": "ECV",
@@ -100,7 +100,7 @@
         "travel_time": "5:10:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "ZH151",
                 "origin": "ECV",
@@ -120,7 +120,7 @@
         "travel_time": "5:10:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "ZH151",
                 "origin": "ECV",

@@ -1,6 +1,6 @@
 [
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "IM286",
                 "origin": "DHE",
@@ -30,7 +30,7 @@
         "travel_time": "5:45:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "IM286",
                 "origin": "DHE",
@@ -60,7 +60,7 @@
         "travel_time": "5:45:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "IM286",
                 "origin": "DHE",
@@ -90,7 +90,7 @@
         "travel_time": "5:45:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "IM718",
                 "origin": "DHE",
@@ -130,7 +130,7 @@
         "travel_time": "7:00:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "IM718",
                 "origin": "DHE",
@@ -160,7 +160,7 @@
         "travel_time": "5:35:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "IM718",
                 "origin": "DHE",
@@ -190,7 +190,7 @@
         "travel_time": "5:35:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "IM718",
                 "origin": "DHE",
@@ -220,7 +220,7 @@
         "travel_time": "5:35:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "WM608",
                 "origin": "DHE",
@@ -260,7 +260,7 @@
         "travel_time": "7:00:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "IM405",
                 "origin": "DHE",
@@ -280,7 +280,7 @@
         "travel_time": "5:10:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "IM405",
                 "origin": "DHE",
@@ -300,7 +300,7 @@
         "travel_time": "5:10:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "IM405",
                 "origin": "DHE",
@@ -320,7 +320,7 @@
         "travel_time": "5:10:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "WM478",
                 "origin": "DHE",
@@ -340,7 +340,7 @@
         "travel_time": "5:10:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "WM478",
                 "origin": "DHE",
@@ -360,7 +360,7 @@
         "travel_time": "5:10:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "WM478",
                 "origin": "DHE",

@@ -1,6 +1,6 @@
 [
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "ZH214",
                 "origin": "WIW",
@@ -30,7 +30,7 @@
         "travel_time": "9:00:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "ZH214",
                 "origin": "WIW",
@@ -60,7 +60,7 @@
         "travel_time": "9:00:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "ZH214",
                 "origin": "WIW",
@@ -90,7 +90,7 @@
         "travel_time": "9:00:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "ZH214",
                 "origin": "WIW",
@@ -120,7 +120,7 @@
         "travel_time": "9:00:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "ZH214",
                 "origin": "WIW",
@@ -150,7 +150,7 @@
         "travel_time": "9:00:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "ZH214",
                 "origin": "WIW",

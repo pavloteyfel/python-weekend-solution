@@ -1,6 +1,6 @@
 [
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "ZH214",
                 "origin": "WIW",
@@ -20,7 +20,7 @@
         "travel_time": "4:30:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "ZH214",
                 "origin": "WIW",
@@ -40,7 +40,7 @@
         "travel_time": "4:30:00"
     },
     {
-        "fligths": [
+        "flights": [
             {
                 "flight_no": "ZH214",
                 "origin": "WIW",
