@@ -30,11 +30,10 @@ def check_date(date_string: str) -> str:
 def get_args() -> argparse.Namespace:
     """Collect the input provided from CLI, handle the default values and errors"""
     parser = argparse.ArgumentParser(
-        description="This script prints out a structured list of all flight \
-            combinations for a given flight data in a form of csv file for a \
-            selected route between airports A -> B, sorted by the final price \
-            for the trip, in json format. Example usage: `python -m solution \
-            test_data/example0.csv WIW RFZ --bags=1`",
+        description="This script prints out a structured list of all flight combinations for a selected route between "
+                    "airports A -> B, sorted by the final price for the trip, in json format. As input, the script "
+                    "uses flight data given in a form of csv file. Example usage: `python -m solution "
+                    "test_data/example0.csv WIW RFZ --bags=1`",
         prog="python -m solution",
     )
 
