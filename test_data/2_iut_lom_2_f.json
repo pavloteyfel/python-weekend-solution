@@ -1,0 +1,82 @@
+[
+    {
+        "fligths": [
+            {
+                "flight_no": "SJ609",
+                "origin": "IUT",
+                "destination": "LOM",
+                "departure": "2021-09-02T03:50:00",
+                "arrival": "2021-09-02T06:05:00",
+                "base_price": 48.0,
+                "bag_price": 14,
+                "bags_allowed": 2
+            }
+        ],
+        "bags_allowed": 2,
+        "bags_count": 2,
+        "destination": "LOM",
+        "origin": "IUT",
+        "total_price": 76.0,
+        "travel_time": "2:15:00"
+    },
+    {
+        "fligths": [
+            {
+                "flight_no": "SJ609",
+                "origin": "IUT",
+                "destination": "LOM",
+                "departure": "2021-09-04T03:50:00",
+                "arrival": "2021-09-04T06:05:00",
+                "base_price": 48.0,
+                "bag_price": 14,
+                "bags_allowed": 2
+            }
+        ],
+        "bags_allowed": 2,
+        "bags_count": 2,
+        "destination": "LOM",
+        "origin": "IUT",
+        "total_price": 76.0,
+        "travel_time": "2:15:00"
+    },
+    {
+        "fligths": [
+            {
+                "flight_no": "SJ609",
+                "origin": "IUT",
+                "destination": "LOM",
+                "departure": "2021-09-08T03:50:00",
+                "arrival": "2021-09-08T06:05:00",
+                "base_price": 48.0,
+                "bag_price": 14,
+                "bags_allowed": 2
+            }
+        ],
+        "bags_allowed": 2,
+        "bags_count": 2,
+        "destination": "LOM",
+        "origin": "IUT",
+        "total_price": 76.0,
+        "travel_time": "2:15:00"
+    },
+    {
+        "fligths": [
+            {
+                "flight_no": "SJ609",
+                "origin": "IUT",
+                "destination": "LOM",
+                "departure": "2021-09-14T03:50:00",
+                "arrival": "2021-09-14T06:05:00",
+                "base_price": 48.0,
+                "bag_price": 14,
+                "bags_allowed": 2
+            }
+        ],
+        "bags_allowed": 2,
+        "bags_count": 2,
+        "destination": "LOM",
+        "origin": "IUT",
+        "total_price": 76.0,
+        "travel_time": "2:15:00"
+    }
+]

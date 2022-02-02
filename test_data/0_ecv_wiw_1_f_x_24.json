@@ -1,0 +1,142 @@
+[
+    {
+        "fligths": [
+            {
+                "flight_no": "ZH665",
+                "origin": "ECV",
+                "destination": "RFZ",
+                "departure": "2021-09-01T12:10:00",
+                "arrival": "2021-09-01T14:40:00",
+                "base_price": 58.0,
+                "bag_price": 12,
+                "bags_allowed": 2
+            },
+            {
+                "flight_no": "ZH214",
+                "origin": "RFZ",
+                "destination": "WIW",
+                "departure": "2021-09-02T05:50:00",
+                "arrival": "2021-09-02T10:20:00",
+                "base_price": 168.0,
+                "bag_price": 12,
+                "bags_allowed": 2
+            }
+        ],
+        "bags_allowed": 2,
+        "bags_count": 1,
+        "destination": "WIW",
+        "origin": "ECV",
+        "total_price": 250.0,
+        "travel_time": "7:00:00"
+    },
+    {
+        "fligths": [
+            {
+                "flight_no": "ZH665",
+                "origin": "ECV",
+                "destination": "RFZ",
+                "departure": "2021-09-09T12:10:00",
+                "arrival": "2021-09-09T14:40:00",
+                "base_price": 58.0,
+                "bag_price": 12,
+                "bags_allowed": 2
+            },
+            {
+                "flight_no": "ZH214",
+                "origin": "RFZ",
+                "destination": "WIW",
+                "departure": "2021-09-10T05:50:00",
+                "arrival": "2021-09-10T10:20:00",
+                "base_price": 168.0,
+                "bag_price": 12,
+                "bags_allowed": 2
+            }
+        ],
+        "bags_allowed": 2,
+        "bags_count": 1,
+        "destination": "WIW",
+        "origin": "ECV",
+        "total_price": 250.0,
+        "travel_time": "7:00:00"
+    },
+    {
+        "fligths": [
+            {
+                "flight_no": "ZH151",
+                "origin": "ECV",
+                "destination": "WIW",
+                "departure": "2021-09-01T15:35:00",
+                "arrival": "2021-09-01T20:45:00",
+                "base_price": 245.0,
+                "bag_price": 12,
+                "bags_allowed": 2
+            }
+        ],
+        "bags_allowed": 2,
+        "bags_count": 1,
+        "destination": "WIW",
+        "origin": "ECV",
+        "total_price": 257.0,
+        "travel_time": "5:10:00"
+    },
+    {
+        "fligths": [
+            {
+                "flight_no": "ZH151",
+                "origin": "ECV",
+                "destination": "WIW",
+                "departure": "2021-09-02T15:35:00",
+                "arrival": "2021-09-02T20:45:00",
+                "base_price": 245.0,
+                "bag_price": 12,
+                "bags_allowed": 2
+            }
+        ],
+        "bags_allowed": 2,
+        "bags_count": 1,
+        "destination": "WIW",
+        "origin": "ECV",
+        "total_price": 257.0,
+        "travel_time": "5:10:00"
+    },
+    {
+        "fligths": [
+            {
+                "flight_no": "ZH151",
+                "origin": "ECV",
+                "destination": "WIW",
+                "departure": "2021-09-06T15:35:00",
+                "arrival": "2021-09-06T20:45:00",
+                "base_price": 245.0,
+                "bag_price": 12,
+                "bags_allowed": 2
+            }
+        ],
+        "bags_allowed": 2,
+        "bags_count": 1,
+        "destination": "WIW",
+        "origin": "ECV",
+        "total_price": 257.0,
+        "travel_time": "5:10:00"
+    },
+    {
+        "fligths": [
+            {
+                "flight_no": "ZH151",
+                "origin": "ECV",
+                "destination": "WIW",
+                "departure": "2021-09-11T15:35:00",
+                "arrival": "2021-09-11T20:45:00",
+                "base_price": 245.0,
+                "bag_price": 12,
+                "bags_allowed": 2
+            }
+        ],
+        "bags_allowed": 2,
+        "bags_count": 1,
+        "destination": "WIW",
+        "origin": "ECV",
+        "total_price": 257.0,
+        "travel_time": "5:10:00"
+    }
+]
