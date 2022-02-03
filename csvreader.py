@@ -155,9 +155,8 @@ class FlightRowValidator:
         for checker, items in zip(self.checkers, row.items()):
             try:
                 checker(items)
-            except Exception as error:
-                message = f"error: Wrong value in CSV file at row [{line}]:\
-                    {error}"
+            except CSVValidationException as error:
+                message = f"error: Wrong value in CSV file at row [{line}]: {error}"
                 raise CSVWrongValueException(message) from error
 
 
