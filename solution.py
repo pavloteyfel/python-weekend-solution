@@ -10,7 +10,9 @@ from csvreader import (
     FlightRowValidator,
     StartDateFilter,
 )
-from flighthandler import DefaultLayoverRule, FlightGraph, FlightTripDataGenerator
+from flighthandler import (DefaultLayoverRule,
+                           FlightGraph,
+                           FlightTripDataGenerator)
 
 namespace = SimpleNamespace(
     csv="",
@@ -25,22 +27,25 @@ namespace = SimpleNamespace(
 
 
 def main():
-    # Creating a csv reader to deal with flight data csv
+    # Create a csv reader to deal with flight data csv
     try:
         flight_csv_reader = FlightCSVReader(namespace.csv)
     except FileNotFoundError:
         print(f"error: {namespace.csv} file not found")
         exit(1)
 
-    # We will validate each csv row
-    flight_csv_reader.add_row_validator(FlightRowValidator())
+    # Create row validator for reading csv file
+    row_validator = FlightRowValidator()
+
+    # Validate each csv row
+    flight_csv_reader.add_row_validator(row_validator)
 
     # Create datetime object from string, comes from --start-date argument
     start_date = datetime.strptime(namespace.start_date, "%Y-%m-%d")
 
-    # Add start date filter to check if we can drop some unnecessary csv rows.
-    # If the --start-date argument are greater than the departure time of a 
-    # flight, we drop the row.
+    # Add start date filter to check if there are some rows that can be dropped
+    # If the --start-date argument is greater than the departure time of a
+    # flight, we drop the row
     start_date_filter = StartDateFilter(start_date)
     flight_csv_reader.add_row_filter(start_date_filter)
 
@@ -67,24 +72,31 @@ def main():
     # Before we start the calculation we feed some layover rules
     layover_rule = DefaultLayoverRule(namespace.min_layover,
                                       namespace.max_layover)
+
+    # Add layover to the graph
     flight_graph.set_layover_rule(layover_rule)
 
-    # It will contain the list of all calculated trips
-    # By trip I mean list of flight objects: list[Flight(), Flight(), ...] that
-    # necessary to get you from A airport to B airport
-    # By trips I mean a list of list of flights: list[list[Flight(), Flight(), ...]]
-    # that are all the trips you can take
+    # It will contain the list of all calculated trips, e.g. from A to C:
+    # [
+    #   [Flight(origin=A, destination=B), Flight(origin=B, destination=C), ...],
+    #   [Flight(origin=A, destination=C)],
+    #   ...
+    # ]
     trips = []
 
-    # If --reverse argument set to true, we check all flight back to origin
+    # If --reverse argument is set to true, the reverse method is called
     if namespace.reverse:
-        trips = flight_graph.find_trips_reverse(namespace.origin, namespace.destination, start_date)
+        trips = flight_graph.find_trips_reverse(namespace.origin,
+                                                namespace.destination,
+                                                start_date)
     else:
-        trips = flight_graph.find_trips(namespace.origin, namespace.destination, start_date)
+        trips = flight_graph.find_trips(namespace.origin, namespace.destination,
+                                        start_date)
 
     # Some plain object to handle the correct format of printing out the results
     data_generator = FlightTripDataGenerator(trips, namespace.origin,
-                                             namespace.destination, namespace.bags)
+                                             namespace.destination,
+                                             namespace.bags)
 
     return data_generator.to_json()
 
@@ -93,7 +105,7 @@ if __name__ == "__main__":
     # Getting the arguments from the CLI
     arguments = argparser.get_args()
 
-    # Feeding them to the globals
+    # Populate the namespace object
     namespace.__dict__.update(arguments.__dict__)
 
     # Start the process and print out the results

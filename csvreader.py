@@ -65,14 +65,17 @@ class FlightCSVReader:
 
     def add_row_filter(self, row_filter: CSVRowFilter):
         """Add CSVRowFilter to the reader"""
+
         self.row_filters.append(row_filter)
 
     def add_row_validator(self, row_validator: CSVRowValidator):
         """Add CSVRowValidator to the reader"""
+
         self.row_validator = row_validator
 
     def filter_row(self, row: dict[str, str]) -> bool:
         """Filter a particular row with CSVRowFilter"""
+
         valid = True
         for row_filter in self.row_filters:
             valid &= row_filter.filter_row(row)
@@ -80,19 +83,22 @@ class FlightCSVReader:
 
     def validate_row(self, row_line: int, row: dict[str, str]):
         """Validate a particular row with CSVRowValidator"""
+
         if self.row_validator:
             self.row_validator.validate_row(row_line, row)
 
     def read(self) -> Generator[dict[str, Any], None, None]:
-        """Get row dict from the CSV file and apply CSVRowFilter and CSVRowValidator"""
+        """Get row dict from the CSV file and apply CSVRowFilter and
+        CSVRowValidator """
+
         with open(self.path, newline="", encoding="utf-8") as csv_file:
             reader = csv.DictReader(csv_file)
 
             if reader.fieldnames != CSV_FIELDS:
                 headers = ", ".join(CSV_FIELDS)
-                raise CSVHeaderException(
-                    f"error: Incorrect CSV headers. The following headers are expected: {headers}"
-                )
+                message = f"error: Incorrect CSV headers. The following headers\
+                    are expected: {headers}"
+                raise CSVHeaderException(message)
 
             for row in reader:
                 self.validate_row(reader.line_num, row)
@@ -108,6 +114,7 @@ class BagRowFilter:
 
     def filter_row(self, row: dict[str, str]) -> bool:
         """Filter out CSV rows where flight's allowed bag size >= bags"""
+
         return int(row["bags_allowed"]) >= self.bags
 
 
@@ -139,18 +146,21 @@ class FlightRowValidator:
         ]
 
     def validate_row(self, line: int, row: dict[str, str]):
-        """Validate given row based on the sequence of prepared validation functions"""
+        """Validate given row based on the sequence of prepared validation
+        functions """
+
         for checker, items in zip(self.checkers, row.items()):
             try:
                 checker(items)
             except Exception as error:
-                raise CSVWrongValueException(
-                    f"error: Wrong value in CSV file at row [{line}]: {error}"
-                ) from error
+                message = f"error: Wrong value in CSV file at row [{line}]:\
+                    {error}"
+                raise CSVWrongValueException(message) from error
 
 
 def check_string(items: tuple[str, Any]):
     """Check if row cell is not empty"""
+
     key, value = items
     if not value:
         raise CSVValidationException(f"{key} cannot be an empty string.")
@@ -158,6 +168,7 @@ def check_string(items: tuple[str, Any]):
 
 def check_date(items: tuple[str, Any]):
     """Check if row cell in correct date time format"""
+
     key, value = items
     try:
         datetime.strptime(value, DATE_TIME_PATTERN)
@@ -169,6 +180,7 @@ def check_date(items: tuple[str, Any]):
 
 def check_number(items: tuple[str, Any]):
     """Check if row cell is a non-negative integer"""
+
     key, value = items
     try:
         converted = int(value)
@@ -181,6 +193,7 @@ def check_number(items: tuple[str, Any]):
 
 def check_float(items: tuple[str, Any]):
     """Check if row cell is a non-negative float"""
+
     key, value = items
     try:
         converted = float(value)
