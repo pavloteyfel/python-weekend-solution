@@ -1,4 +1,5 @@
 """Module for organising flight related classes"""
+
 from typing import Any, Generator, Optional, Protocol
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timedelta
@@ -8,7 +9,7 @@ from json import dumps
 
 @dataclass
 class Flight:
-    """Container for flight data CSV row"""
+    """Container for flight data CSV rows"""
 
     flight_no: str
     origin: str
@@ -23,9 +24,6 @@ class Flight:
         self.base_price = float(self.base_price)
         self.bag_price = int(self.bag_price)
         self.bags_allowed = int(self.bags_allowed)
-
-    def __hash__(self):
-        return id(self)
 
     def get_full_price(self, bags_count: int) -> float:
         """Calculate the total price based on the bag number and base price"""
@@ -118,8 +116,6 @@ class FlightGraph:
     def __init__(self, flights: Generator[dict[str, Any], None, None]):
         self.graph: dict[str, list[Flight]] = {}
         self.layover_rule: Optional[LayoverRule] = None
-
-        # Self populates during initialising the graph
         self.create_graph(flights)
 
     def create_graph(self, flights: Generator[dict[str, Any], None, None]):
@@ -131,6 +127,7 @@ class FlightGraph:
         }
         """
 
+        # Maybe a defaultdict would be a better idea
         for flight_data in flights:
             flight_object = Flight(**flight_data)
             if flight_object.origin not in self.graph:
@@ -149,8 +146,7 @@ class FlightGraph:
         # The eventual list that will contain all the trips (list of flights)
         trips: list[list[Flight]] = []
 
-        # Going through all the flights departing from origin
-        # I use empty list for error handling reasons
+        # Going through all the flights departing from the origin airport
         for flight in self.graph.get(origin, []):
             # This might be a little bit redundant checking. But will be
             # useful for reverse trip calculation.
@@ -159,12 +155,12 @@ class FlightGraph:
                 # loops
                 visited_airport: set[str] = set()
 
-                # Just feeding the explore algorithm with mutable list to
+                # Provide a mutable list to the explore algorithm to
                 # keeping track of current trips
                 current_trip: list[Flight] = []
 
                 # The main method for finding all correct flights starting
-                # from the origin
+                # from the origin airport
                 self.explore(flight, destination, visited_airport, current_trip,
                              trips)
 
@@ -191,8 +187,8 @@ class FlightGraph:
             # Getting the arrival to the target airport
             last_flight_arrival_time = last_flight.get_arrival_time()
 
-            # Here we call again the find_trips method, switching the origin
-            # and destination, and filter out based on the last flight's
+            # Here we again call the find_trips method, switching the origin
+            # and destination, and filtering out based on the last flight's
             # arrival time. So we want see here all flights that starts from
             # B airport and are after the arrival time. No layover rule
             # applied here.
@@ -212,7 +208,7 @@ class FlightGraph:
                 trips: list[list[Flight]]):
         """Recursive Depth First Search method for finding valid trips"""
 
-        # Used for determining dead ends in the graph.
+        # Used for determining dead ends in the graph
         is_correct_trip = True
 
         # Keeping track of visited airports

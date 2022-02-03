@@ -1,4 +1,5 @@
 """Parser module for CLI command line"""
+
 from datetime import datetime
 import argparse
 

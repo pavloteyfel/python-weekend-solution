@@ -94,12 +94,14 @@ class FlightCSVReader:
         with open(self.path, newline="", encoding="utf-8") as csv_file:
             reader = csv.DictReader(csv_file)
 
+            # Check if the headers are OK
             if reader.fieldnames != CSV_FIELDS:
                 headers = ", ".join(CSV_FIELDS)
                 message = f"error: Incorrect CSV headers. The following headers\
                     are expected: {headers}"
                 raise CSVHeaderException(message)
 
+            # Apply validation and filters
             for row in reader:
                 self.validate_row(reader.line_num, row)
                 if self.filter_row(row):
@@ -149,6 +151,7 @@ class FlightRowValidator:
         """Validate given row based on the sequence of prepared validation
         functions """
 
+        # Go through every cell and apply the corresponding checker method to it
         for checker, items in zip(self.checkers, row.items()):
             try:
                 checker(items)
