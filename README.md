@@ -53,6 +53,7 @@ The scripts only works on the following CSV data structure:
 - `solution.py`: The main script that should be called, it glues all modules together to work on the solution
 - `test_solution.py`: Some basic test cases, mainly happy paths
 - `test_data`: Directory contains the example csv files and some generated json files for unit testing
+- `doc`: Contains the exported code documentation in html format
 
 ## Example usages
 Only with mandatory arguments:

@@ -1,0 +1,1236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>weekend.flighthandler API documentation</title>
+<meta name="description" content="Module for organising flight related classes" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>weekend.flighthandler</code></h1>
+</header>
+<section id="section-intro">
+<p>Module for organising flight related classes</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">&#34;&#34;&#34;Module for organising flight related classes&#34;&#34;&#34;
+from typing import Any, Generator, Optional, Protocol
+from dataclasses import asdict, dataclass, field
+from datetime import datetime, timedelta
+from csvreader import DATE_TIME_PATTERN
+from json import dumps
+
+
+@dataclass
+class Flight:
+    &#34;&#34;&#34;Container for flight data CSV row&#34;&#34;&#34;
+
+    flight_no: str
+    origin: str
+    destination: str
+    departure: str
+    arrival: str
+    base_price: float
+    bag_price: float
+    bags_allowed: int
+
+    def __post_init__(self):
+        self.base_price = float(self.base_price)
+        self.bag_price = int(self.bag_price)
+        self.bags_allowed = int(self.bags_allowed)
+
+    def __hash__(self):
+        return id(self)
+
+    def get_full_price(self, bags_count: int) -&gt; float:
+        &#34;&#34;&#34;Calculate the total price based on the bag number and base price&#34;&#34;&#34;
+
+        return self.base_price + (bags_count * self.bag_price)
+
+    def get_travel_time(self) -&gt; timedelta:
+        &#34;&#34;&#34;Calculate the total travel time of a flight&#34;&#34;&#34;
+
+        return self.get_arrival_time() - self.get_departure_time()
+
+    def get_arrival_time(self) -&gt; datetime:
+        &#34;&#34;&#34;Convert date time string to datetime object&#34;&#34;&#34;
+
+        return datetime.strptime(self.arrival, DATE_TIME_PATTERN)
+
+    def get_departure_time(self) -&gt; datetime:
+        &#34;&#34;&#34;Convert date time string to datetime object&#34;&#34;&#34;
+
+        return datetime.strptime(self.departure, DATE_TIME_PATTERN)
+
+
+@dataclass
+class FlightTrip:
+    &#34;&#34;&#34;Container for all Flight objects that are necessary to get from A
+    airport to B airport &#34;&#34;&#34;
+
+    flights: list[Flight]
+    bags_allowed: int = field(init=False, default=0)
+    bags_count: int
+    destination: str
+    origin: str
+    total_price: float = field(init=False, default=0.0)
+    travel_time: str = field(init=False, default=&#34;&#34;)
+
+    def __post_init__(self):
+        # Maybe creating @property for these would be a better option
+        bags_allowed: int = 999
+        total_price: float = 0.0
+        travel_time: timedelta = timedelta()
+
+        for flight in self.flights:
+            bags_allowed = min(bags_allowed, flight.bags_allowed)
+            total_price += flight.get_full_price(self.bags_count)
+            travel_time += flight.get_travel_time()
+
+        self.bags_allowed = bags_allowed
+        self.total_price = total_price
+        self.travel_time = str(travel_time)
+
+    # Used to calculate the final order flight trips
+    def __gt__(self, other: &#34;FlightTrip&#34;):
+        return self.total_price &gt; other.total_price
+
+    # Used to calculate the final order flight trips
+    def __lt__(self, other: &#34;FlightTrip&#34;):
+        return self.total_price &lt; other.total_price
+
+
+class LayoverRule(Protocol):
+    &#34;&#34;&#34;Protocol for defining min and max layover rules&#34;&#34;&#34;
+
+    def validate(self, prev_flight: Flight, next_flight: Flight) -&gt; bool:
+        &#34;&#34;&#34;Compare two sequential flights to check if the meet the validation
+        protocol &#34;&#34;&#34;
+
+        ...
+
+
+class DefaultLayoverRule:
+    &#34;&#34;&#34;Default layover logic implementation&#34;&#34;&#34;
+
+    def __init__(self, min_layover: int, max_layover: int):
+        self.min_layover = min_layover
+        self.max_layover = max_layover
+
+    def validate(self, prev_flight: Flight, next_flight: Flight) -&gt; bool:
+        &#34;&#34;&#34;Compare the previous flight arrival time to the next flight&#39;s
+        departure time &#34;&#34;&#34;
+
+        min_hour_time = timedelta(hours=self.min_layover)
+        max_hour_time = timedelta(hours=self.max_layover)
+        diff = next_flight.get_departure_time() - prev_flight.get_arrival_time()
+        return min_hour_time &lt;= diff &lt;= max_hour_time
+
+
+class FlightGraph:
+    &#34;&#34;&#34;Store Flight objects in a dict based graph for quick trip finding&#34;&#34;&#34;
+
+    def __init__(self, flights: Generator[dict[str, Any], None, None]):
+        self.graph: dict[str, list[Flight]] = {}
+        self.layover_rule: Optional[LayoverRule] = None
+
+        # Self populates during initialising the graph
+        self.create_graph(flights)
+
+    def create_graph(self, flights: Generator[dict[str, Any], None, None]):
+        &#34;&#34;&#34;Populate the graph with list of Flight objects for every airport
+        {
+            &#34;WIW&#34;: [Flight(origin=WIW, destination=RFZ), Flight(...), ...],
+            &#34;RFZ&#34;: [Flight(...), Flight(...)],
+            ...
+        }
+        &#34;&#34;&#34;
+
+        for flight_data in flights:
+            flight_object = Flight(**flight_data)
+            if flight_object.origin not in self.graph:
+                self.graph[flight_object.origin] = []
+            self.graph[flight_object.origin].append(flight_object)
+
+    def set_layover_rule(self, rule: LayoverRule):
+        &#34;&#34;&#34;Add Layover to the FlightGraph&#34;&#34;&#34;
+
+        self.layover_rule = rule
+
+    def find_trips(self, origin: str, destination: str,
+                   start_date: datetime) -&gt; list[list[Flight]]:
+        &#34;&#34;&#34;Main method for finding all trips&#34;&#34;&#34;
+
+        # The eventual list that will contain all the trips (list of flights)
+        trips: list[list[Flight]] = []
+
+        # Going through all the flights departing from origin
+        # I use empty list for error handling reasons
+        for flight in self.graph.get(origin, []):
+            # This might be a little bit redundant checking. But will be
+            # useful for reverse trip calculation.
+            if start_date &lt;= flight.get_departure_time():
+                # Keeping track of all visited airports, to avoid A-&gt;B-&gt;A-&gt;C
+                # loops
+                visited_airport: set[str] = set()
+
+                # Just feeding the explore algorithm with mutable list to
+                # keeping track of current trips
+                current_trip: list[Flight] = []
+
+                # The main method for finding all correct flights starting
+                # from the origin
+                self.explore(flight, destination, visited_airport, current_trip,
+                             trips)
+
+        return trips
+
+    def find_trips_reverse(self, origin: str, destination: str,
+                           start_date: datetime) -&gt; list[list[Flight]]:
+        &#34;&#34;&#34;Method for finding all reverse trips, based on the find_trips()
+        method &#34;&#34;&#34;
+
+        # Will be an extended list of flight list with reverse trips
+        all_trips: list[list[Flight]] = []
+
+        # We are doing this in two parts, first we get all flights from A to B
+        trips = self.find_trips(origin, destination, start_date)
+
+        # After that we iterate through these trips and extend them with all
+        # trips from B to A
+        for trip in trips:
+
+            # Getting the last flight to the target airport
+            last_flight = trip[-1]
+
+            # Getting the arrival to the target airport
+            last_flight_arrival_time = last_flight.get_arrival_time()
+
+            # Here we call again the find_trips method, switching the origin
+            # and destination, and filter out based on the last flight&#39;s
+            # arrival time. So we want see here all flights that starts from
+            # B airport and are after the arrival time. No layover rule
+            # applied here.
+            reverse_trips = self.find_trips(destination, origin,
+                                            last_flight_arrival_time)
+
+            # Extend our original list with reverse trips as well
+            for reverse_trip in reverse_trips:
+                extended_trips = trip.copy()
+                extended_trips += reverse_trip
+                all_trips.append(extended_trips)
+
+        return all_trips
+
+    def explore(self, flight: Flight, destination: str,
+                visited_airport: set[str], current_trip: list[Flight],
+                trips: list[list[Flight]]):
+        &#34;&#34;&#34;Recursive Depth First Search method for finding valid trips&#34;&#34;&#34;
+
+        # Used for determining dead ends in the graph.
+        is_correct_trip = True
+
+        # Keeping track of visited airports
+        visited_airport.add(flight.origin)
+        visited_airport.add(flight.destination)
+
+        # Building our trip, adding the first flight to it
+        current_trip.append(flight)
+
+        # Check if we reached our destination
+        if flight.destination == destination:
+            # Let&#39;s add the current trip&#39;s copy to the list of all valid trips
+            # Maybe creating a tuple would be more appropriate
+            trips.append(current_trip.copy())
+
+        # Still not there
+        else:
+            # Let&#39;s check what are the available flight option on the
+            # destination&#39;s airport
+            for next_flight in self.graph[flight.destination]:
+                # We need a flight that flies to new airport we haven&#39;t been
+                # before, and the layover are correct, min 1 hour and 6 hours
+                # as default.
+                if (next_flight.destination not in visited_airport
+                        and self.is_valid_layover(flight, next_flight)):
+                    # Let&#39;s go deep recursively
+                    self.explore(next_flight, destination, visited_airport,
+                                 current_trip, trips)
+            # If we ended up here, it implies that there are no more valid
+            # flight to take to reach our destination, the is a dead end :(
+            is_correct_trip = False
+
+        # Let&#39;s explore the other flights from the previous airport, if there
+        # any
+        current_trip.pop()
+
+        # If we reached the dead end then, we don&#39;t want to take any other
+        # flight&#39;s to this airport anymore. We leave it in the memory as
+        # visited.
+        if is_correct_trip:
+            # We can visit this airport again maybe in different time
+            visited_airport.remove(flight.destination)
+
+    def is_valid_layover(self, prev_flight: Flight,
+                         next_flight: Flight) -&gt; bool:
+        &#34;&#34;&#34;Method utilises the LayoverRule protocol to check to filter out
+        non-valid layovers &#34;&#34;&#34;
+
+        if self.layover_rule:
+            return self.layover_rule.validate(prev_flight, next_flight)
+        return True
+
+
+class FlightTripDataGenerator:
+    &#34;&#34;&#34;Converts trip information into presentable format&#34;&#34;&#34;
+
+    def __init__(self, trips: list[list[Flight]], origin: str, destination: str,
+                 bags: int):
+        self.trips: list[FlightTrip] = []
+        self.origin: str = origin
+        self.destination: str = destination
+        self.bags: int = bags
+        self.add_trips(trips)
+
+    def add_trips(self, trips: list[list[Flight]]):
+        &#34;&#34;&#34;Converts a list of Flight objects into FlightTrip objects where the
+        Flight objects are ordered based on the total price data &#34;&#34;&#34;
+
+        for flights in trips:
+            self.trips.append(
+                FlightTrip(
+                    flights=flights,
+                    origin=self.origin,
+                    destination=self.destination,
+                    bags_count=self.bags,
+                )
+            )
+        self.trips.sort()
+
+    def to_dict(self) -&gt; list[dict[str, Any]]:
+        &#34;&#34;&#34;Returns the flight data objects to list of dicts&#34;&#34;&#34;
+
+        return [asdict(trip) for trip in self.trips]
+
+    def to_json(self) -&gt; str:
+        &#34;&#34;&#34;Returns a formatted json string from list of dictionaries&#34;&#34;&#34;
+
+        return dumps(self.to_dict(), indent=4)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="weekend.flighthandler.DefaultLayoverRule"><code class="flex name class">
+<span>class <span class="ident">DefaultLayoverRule</span></span>
+<span>(</span><span>min_layover: int, max_layover: int)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Default layover logic implementation</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class DefaultLayoverRule:
+    &#34;&#34;&#34;Default layover logic implementation&#34;&#34;&#34;
+
+    def __init__(self, min_layover: int, max_layover: int):
+        self.min_layover = min_layover
+        self.max_layover = max_layover
+
+    def validate(self, prev_flight: Flight, next_flight: Flight) -&gt; bool:
+        &#34;&#34;&#34;Compare the previous flight arrival time to the next flight&#39;s
+        departure time &#34;&#34;&#34;
+
+        min_hour_time = timedelta(hours=self.min_layover)
+        max_hour_time = timedelta(hours=self.max_layover)
+        diff = next_flight.get_departure_time() - prev_flight.get_arrival_time()
+        return min_hour_time &lt;= diff &lt;= max_hour_time</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="weekend.flighthandler.DefaultLayoverRule.validate"><code class="name flex">
+<span>def <span class="ident">validate</span></span>(<span>self, prev_flight: <a title="weekend.flighthandler.Flight" href="#weekend.flighthandler.Flight">Flight</a>, next_flight: <a title="weekend.flighthandler.Flight" href="#weekend.flighthandler.Flight">Flight</a>) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Compare the previous flight arrival time to the next flight's
+departure time</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def validate(self, prev_flight: Flight, next_flight: Flight) -&gt; bool:
+    &#34;&#34;&#34;Compare the previous flight arrival time to the next flight&#39;s
+    departure time &#34;&#34;&#34;
+
+    min_hour_time = timedelta(hours=self.min_layover)
+    max_hour_time = timedelta(hours=self.max_layover)
+    diff = next_flight.get_departure_time() - prev_flight.get_arrival_time()
+    return min_hour_time &lt;= diff &lt;= max_hour_time</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="weekend.flighthandler.Flight"><code class="flex name class">
+<span>class <span class="ident">Flight</span></span>
+<span>(</span><span>flight_no: str, origin: str, destination: str, departure: str, arrival: str, base_price: float, bag_price: float, bags_allowed: int)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Container for flight data CSV row</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@dataclass
+class Flight:
+    &#34;&#34;&#34;Container for flight data CSV row&#34;&#34;&#34;
+
+    flight_no: str
+    origin: str
+    destination: str
+    departure: str
+    arrival: str
+    base_price: float
+    bag_price: float
+    bags_allowed: int
+
+    def __post_init__(self):
+        self.base_price = float(self.base_price)
+        self.bag_price = int(self.bag_price)
+        self.bags_allowed = int(self.bags_allowed)
+
+    def __hash__(self):
+        return id(self)
+
+    def get_full_price(self, bags_count: int) -&gt; float:
+        &#34;&#34;&#34;Calculate the total price based on the bag number and base price&#34;&#34;&#34;
+
+        return self.base_price + (bags_count * self.bag_price)
+
+    def get_travel_time(self) -&gt; timedelta:
+        &#34;&#34;&#34;Calculate the total travel time of a flight&#34;&#34;&#34;
+
+        return self.get_arrival_time() - self.get_departure_time()
+
+    def get_arrival_time(self) -&gt; datetime:
+        &#34;&#34;&#34;Convert date time string to datetime object&#34;&#34;&#34;
+
+        return datetime.strptime(self.arrival, DATE_TIME_PATTERN)
+
+    def get_departure_time(self) -&gt; datetime:
+        &#34;&#34;&#34;Convert date time string to datetime object&#34;&#34;&#34;
+
+        return datetime.strptime(self.departure, DATE_TIME_PATTERN)</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="weekend.flighthandler.Flight.arrival"><code class="name">var <span class="ident">arrival</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="weekend.flighthandler.Flight.bag_price"><code class="name">var <span class="ident">bag_price</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="weekend.flighthandler.Flight.bags_allowed"><code class="name">var <span class="ident">bags_allowed</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="weekend.flighthandler.Flight.base_price"><code class="name">var <span class="ident">base_price</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="weekend.flighthandler.Flight.departure"><code class="name">var <span class="ident">departure</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="weekend.flighthandler.Flight.destination"><code class="name">var <span class="ident">destination</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="weekend.flighthandler.Flight.flight_no"><code class="name">var <span class="ident">flight_no</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="weekend.flighthandler.Flight.origin"><code class="name">var <span class="ident">origin</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="weekend.flighthandler.Flight.get_arrival_time"><code class="name flex">
+<span>def <span class="ident">get_arrival_time</span></span>(<span>self) ‑> datetime.datetime</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Convert date time string to datetime object</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_arrival_time(self) -&gt; datetime:
+    &#34;&#34;&#34;Convert date time string to datetime object&#34;&#34;&#34;
+
+    return datetime.strptime(self.arrival, DATE_TIME_PATTERN)</code></pre>
+</details>
+</dd>
+<dt id="weekend.flighthandler.Flight.get_departure_time"><code class="name flex">
+<span>def <span class="ident">get_departure_time</span></span>(<span>self) ‑> datetime.datetime</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Convert date time string to datetime object</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_departure_time(self) -&gt; datetime:
+    &#34;&#34;&#34;Convert date time string to datetime object&#34;&#34;&#34;
+
+    return datetime.strptime(self.departure, DATE_TIME_PATTERN)</code></pre>
+</details>
+</dd>
+<dt id="weekend.flighthandler.Flight.get_full_price"><code class="name flex">
+<span>def <span class="ident">get_full_price</span></span>(<span>self, bags_count: int) ‑> float</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calculate the total price based on the bag number and base price</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_full_price(self, bags_count: int) -&gt; float:
+    &#34;&#34;&#34;Calculate the total price based on the bag number and base price&#34;&#34;&#34;
+
+    return self.base_price + (bags_count * self.bag_price)</code></pre>
+</details>
+</dd>
+<dt id="weekend.flighthandler.Flight.get_travel_time"><code class="name flex">
+<span>def <span class="ident">get_travel_time</span></span>(<span>self) ‑> datetime.timedelta</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calculate the total travel time of a flight</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_travel_time(self) -&gt; timedelta:
+    &#34;&#34;&#34;Calculate the total travel time of a flight&#34;&#34;&#34;
+
+    return self.get_arrival_time() - self.get_departure_time()</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="weekend.flighthandler.FlightGraph"><code class="flex name class">
+<span>class <span class="ident">FlightGraph</span></span>
+<span>(</span><span>flights: Generator[dict[str, Any], None, None])</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Store Flight objects in a dict based graph for quick trip finding</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class FlightGraph:
+    &#34;&#34;&#34;Store Flight objects in a dict based graph for quick trip finding&#34;&#34;&#34;
+
+    def __init__(self, flights: Generator[dict[str, Any], None, None]):
+        self.graph: dict[str, list[Flight]] = {}
+        self.layover_rule: Optional[LayoverRule] = None
+
+        # Self populates during initialising the graph
+        self.create_graph(flights)
+
+    def create_graph(self, flights: Generator[dict[str, Any], None, None]):
+        &#34;&#34;&#34;Populate the graph with list of Flight objects for every airport
+        {
+            &#34;WIW&#34;: [Flight(origin=WIW, destination=RFZ), Flight(...), ...],
+            &#34;RFZ&#34;: [Flight(...), Flight(...)],
+            ...
+        }
+        &#34;&#34;&#34;
+
+        for flight_data in flights:
+            flight_object = Flight(**flight_data)
+            if flight_object.origin not in self.graph:
+                self.graph[flight_object.origin] = []
+            self.graph[flight_object.origin].append(flight_object)
+
+    def set_layover_rule(self, rule: LayoverRule):
+        &#34;&#34;&#34;Add Layover to the FlightGraph&#34;&#34;&#34;
+
+        self.layover_rule = rule
+
+    def find_trips(self, origin: str, destination: str,
+                   start_date: datetime) -&gt; list[list[Flight]]:
+        &#34;&#34;&#34;Main method for finding all trips&#34;&#34;&#34;
+
+        # The eventual list that will contain all the trips (list of flights)
+        trips: list[list[Flight]] = []
+
+        # Going through all the flights departing from origin
+        # I use empty list for error handling reasons
+        for flight in self.graph.get(origin, []):
+            # This might be a little bit redundant checking. But will be
+            # useful for reverse trip calculation.
+            if start_date &lt;= flight.get_departure_time():
+                # Keeping track of all visited airports, to avoid A-&gt;B-&gt;A-&gt;C
+                # loops
+                visited_airport: set[str] = set()
+
+                # Just feeding the explore algorithm with mutable list to
+                # keeping track of current trips
+                current_trip: list[Flight] = []
+
+                # The main method for finding all correct flights starting
+                # from the origin
+                self.explore(flight, destination, visited_airport, current_trip,
+                             trips)
+
+        return trips
+
+    def find_trips_reverse(self, origin: str, destination: str,
+                           start_date: datetime) -&gt; list[list[Flight]]:
+        &#34;&#34;&#34;Method for finding all reverse trips, based on the find_trips()
+        method &#34;&#34;&#34;
+
+        # Will be an extended list of flight list with reverse trips
+        all_trips: list[list[Flight]] = []
+
+        # We are doing this in two parts, first we get all flights from A to B
+        trips = self.find_trips(origin, destination, start_date)
+
+        # After that we iterate through these trips and extend them with all
+        # trips from B to A
+        for trip in trips:
+
+            # Getting the last flight to the target airport
+            last_flight = trip[-1]
+
+            # Getting the arrival to the target airport
+            last_flight_arrival_time = last_flight.get_arrival_time()
+
+            # Here we call again the find_trips method, switching the origin
+            # and destination, and filter out based on the last flight&#39;s
+            # arrival time. So we want see here all flights that starts from
+            # B airport and are after the arrival time. No layover rule
+            # applied here.
+            reverse_trips = self.find_trips(destination, origin,
+                                            last_flight_arrival_time)
+
+            # Extend our original list with reverse trips as well
+            for reverse_trip in reverse_trips:
+                extended_trips = trip.copy()
+                extended_trips += reverse_trip
+                all_trips.append(extended_trips)
+
+        return all_trips
+
+    def explore(self, flight: Flight, destination: str,
+                visited_airport: set[str], current_trip: list[Flight],
+                trips: list[list[Flight]]):
+        &#34;&#34;&#34;Recursive Depth First Search method for finding valid trips&#34;&#34;&#34;
+
+        # Used for determining dead ends in the graph.
+        is_correct_trip = True
+
+        # Keeping track of visited airports
+        visited_airport.add(flight.origin)
+        visited_airport.add(flight.destination)
+
+        # Building our trip, adding the first flight to it
+        current_trip.append(flight)
+
+        # Check if we reached our destination
+        if flight.destination == destination:
+            # Let&#39;s add the current trip&#39;s copy to the list of all valid trips
+            # Maybe creating a tuple would be more appropriate
+            trips.append(current_trip.copy())
+
+        # Still not there
+        else:
+            # Let&#39;s check what are the available flight option on the
+            # destination&#39;s airport
+            for next_flight in self.graph[flight.destination]:
+                # We need a flight that flies to new airport we haven&#39;t been
+                # before, and the layover are correct, min 1 hour and 6 hours
+                # as default.
+                if (next_flight.destination not in visited_airport
+                        and self.is_valid_layover(flight, next_flight)):
+                    # Let&#39;s go deep recursively
+                    self.explore(next_flight, destination, visited_airport,
+                                 current_trip, trips)
+            # If we ended up here, it implies that there are no more valid
+            # flight to take to reach our destination, the is a dead end :(
+            is_correct_trip = False
+
+        # Let&#39;s explore the other flights from the previous airport, if there
+        # any
+        current_trip.pop()
+
+        # If we reached the dead end then, we don&#39;t want to take any other
+        # flight&#39;s to this airport anymore. We leave it in the memory as
+        # visited.
+        if is_correct_trip:
+            # We can visit this airport again maybe in different time
+            visited_airport.remove(flight.destination)
+
+    def is_valid_layover(self, prev_flight: Flight,
+                         next_flight: Flight) -&gt; bool:
+        &#34;&#34;&#34;Method utilises the LayoverRule protocol to check to filter out
+        non-valid layovers &#34;&#34;&#34;
+
+        if self.layover_rule:
+            return self.layover_rule.validate(prev_flight, next_flight)
+        return True</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="weekend.flighthandler.FlightGraph.create_graph"><code class="name flex">
+<span>def <span class="ident">create_graph</span></span>(<span>self, flights: Generator[dict[str, Any], None, None])</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Populate the graph with list of Flight objects for every airport
+{
+"WIW": [Flight(origin=WIW, destination=RFZ), Flight(&hellip;), &hellip;],
+"RFZ": [Flight(&hellip;), Flight(&hellip;)],
+&hellip;
+}</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def create_graph(self, flights: Generator[dict[str, Any], None, None]):
+    &#34;&#34;&#34;Populate the graph with list of Flight objects for every airport
+    {
+        &#34;WIW&#34;: [Flight(origin=WIW, destination=RFZ), Flight(...), ...],
+        &#34;RFZ&#34;: [Flight(...), Flight(...)],
+        ...
+    }
+    &#34;&#34;&#34;
+
+    for flight_data in flights:
+        flight_object = Flight(**flight_data)
+        if flight_object.origin not in self.graph:
+            self.graph[flight_object.origin] = []
+        self.graph[flight_object.origin].append(flight_object)</code></pre>
+</details>
+</dd>
+<dt id="weekend.flighthandler.FlightGraph.explore"><code class="name flex">
+<span>def <span class="ident">explore</span></span>(<span>self, flight: <a title="weekend.flighthandler.Flight" href="#weekend.flighthandler.Flight">Flight</a>, destination: str, visited_airport: set, current_trip: list, trips: list)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Recursive Depth First Search method for finding valid trips</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def explore(self, flight: Flight, destination: str,
+            visited_airport: set[str], current_trip: list[Flight],
+            trips: list[list[Flight]]):
+    &#34;&#34;&#34;Recursive Depth First Search method for finding valid trips&#34;&#34;&#34;
+
+    # Used for determining dead ends in the graph.
+    is_correct_trip = True
+
+    # Keeping track of visited airports
+    visited_airport.add(flight.origin)
+    visited_airport.add(flight.destination)
+
+    # Building our trip, adding the first flight to it
+    current_trip.append(flight)
+
+    # Check if we reached our destination
+    if flight.destination == destination:
+        # Let&#39;s add the current trip&#39;s copy to the list of all valid trips
+        # Maybe creating a tuple would be more appropriate
+        trips.append(current_trip.copy())
+
+    # Still not there
+    else:
+        # Let&#39;s check what are the available flight option on the
+        # destination&#39;s airport
+        for next_flight in self.graph[flight.destination]:
+            # We need a flight that flies to new airport we haven&#39;t been
+            # before, and the layover are correct, min 1 hour and 6 hours
+            # as default.
+            if (next_flight.destination not in visited_airport
+                    and self.is_valid_layover(flight, next_flight)):
+                # Let&#39;s go deep recursively
+                self.explore(next_flight, destination, visited_airport,
+                             current_trip, trips)
+        # If we ended up here, it implies that there are no more valid
+        # flight to take to reach our destination, the is a dead end :(
+        is_correct_trip = False
+
+    # Let&#39;s explore the other flights from the previous airport, if there
+    # any
+    current_trip.pop()
+
+    # If we reached the dead end then, we don&#39;t want to take any other
+    # flight&#39;s to this airport anymore. We leave it in the memory as
+    # visited.
+    if is_correct_trip:
+        # We can visit this airport again maybe in different time
+        visited_airport.remove(flight.destination)</code></pre>
+</details>
+</dd>
+<dt id="weekend.flighthandler.FlightGraph.find_trips"><code class="name flex">
+<span>def <span class="ident">find_trips</span></span>(<span>self, origin: str, destination: str, start_date: datetime.datetime) ‑> list</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Main method for finding all trips</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def find_trips(self, origin: str, destination: str,
+               start_date: datetime) -&gt; list[list[Flight]]:
+    &#34;&#34;&#34;Main method for finding all trips&#34;&#34;&#34;
+
+    # The eventual list that will contain all the trips (list of flights)
+    trips: list[list[Flight]] = []
+
+    # Going through all the flights departing from origin
+    # I use empty list for error handling reasons
+    for flight in self.graph.get(origin, []):
+        # This might be a little bit redundant checking. But will be
+        # useful for reverse trip calculation.
+        if start_date &lt;= flight.get_departure_time():
+            # Keeping track of all visited airports, to avoid A-&gt;B-&gt;A-&gt;C
+            # loops
+            visited_airport: set[str] = set()
+
+            # Just feeding the explore algorithm with mutable list to
+            # keeping track of current trips
+            current_trip: list[Flight] = []
+
+            # The main method for finding all correct flights starting
+            # from the origin
+            self.explore(flight, destination, visited_airport, current_trip,
+                         trips)
+
+    return trips</code></pre>
+</details>
+</dd>
+<dt id="weekend.flighthandler.FlightGraph.find_trips_reverse"><code class="name flex">
+<span>def <span class="ident">find_trips_reverse</span></span>(<span>self, origin: str, destination: str, start_date: datetime.datetime) ‑> list</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Method for finding all reverse trips, based on the find_trips()
+method</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def find_trips_reverse(self, origin: str, destination: str,
+                       start_date: datetime) -&gt; list[list[Flight]]:
+    &#34;&#34;&#34;Method for finding all reverse trips, based on the find_trips()
+    method &#34;&#34;&#34;
+
+    # Will be an extended list of flight list with reverse trips
+    all_trips: list[list[Flight]] = []
+
+    # We are doing this in two parts, first we get all flights from A to B
+    trips = self.find_trips(origin, destination, start_date)
+
+    # After that we iterate through these trips and extend them with all
+    # trips from B to A
+    for trip in trips:
+
+        # Getting the last flight to the target airport
+        last_flight = trip[-1]
+
+        # Getting the arrival to the target airport
+        last_flight_arrival_time = last_flight.get_arrival_time()
+
+        # Here we call again the find_trips method, switching the origin
+        # and destination, and filter out based on the last flight&#39;s
+        # arrival time. So we want see here all flights that starts from
+        # B airport and are after the arrival time. No layover rule
+        # applied here.
+        reverse_trips = self.find_trips(destination, origin,
+                                        last_flight_arrival_time)
+
+        # Extend our original list with reverse trips as well
+        for reverse_trip in reverse_trips:
+            extended_trips = trip.copy()
+            extended_trips += reverse_trip
+            all_trips.append(extended_trips)
+
+    return all_trips</code></pre>
+</details>
+</dd>
+<dt id="weekend.flighthandler.FlightGraph.is_valid_layover"><code class="name flex">
+<span>def <span class="ident">is_valid_layover</span></span>(<span>self, prev_flight: <a title="weekend.flighthandler.Flight" href="#weekend.flighthandler.Flight">Flight</a>, next_flight: <a title="weekend.flighthandler.Flight" href="#weekend.flighthandler.Flight">Flight</a>) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Method utilises the LayoverRule protocol to check to filter out
+non-valid layovers</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def is_valid_layover(self, prev_flight: Flight,
+                     next_flight: Flight) -&gt; bool:
+    &#34;&#34;&#34;Method utilises the LayoverRule protocol to check to filter out
+    non-valid layovers &#34;&#34;&#34;
+
+    if self.layover_rule:
+        return self.layover_rule.validate(prev_flight, next_flight)
+    return True</code></pre>
+</details>
+</dd>
+<dt id="weekend.flighthandler.FlightGraph.set_layover_rule"><code class="name flex">
+<span>def <span class="ident">set_layover_rule</span></span>(<span>self, rule: <a title="weekend.flighthandler.LayoverRule" href="#weekend.flighthandler.LayoverRule">LayoverRule</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add Layover to the FlightGraph</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_layover_rule(self, rule: LayoverRule):
+    &#34;&#34;&#34;Add Layover to the FlightGraph&#34;&#34;&#34;
+
+    self.layover_rule = rule</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="weekend.flighthandler.FlightTrip"><code class="flex name class">
+<span>class <span class="ident">FlightTrip</span></span>
+<span>(</span><span>flights: list, bags_count: int, destination: str, origin: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Container for all Flight objects that are necessary to get from A
+airport to B airport</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@dataclass
+class FlightTrip:
+    &#34;&#34;&#34;Container for all Flight objects that are necessary to get from A
+    airport to B airport &#34;&#34;&#34;
+
+    flights: list[Flight]
+    bags_allowed: int = field(init=False, default=0)
+    bags_count: int
+    destination: str
+    origin: str
+    total_price: float = field(init=False, default=0.0)
+    travel_time: str = field(init=False, default=&#34;&#34;)
+
+    def __post_init__(self):
+        # Maybe creating @property for these would be a better option
+        bags_allowed: int = 999
+        total_price: float = 0.0
+        travel_time: timedelta = timedelta()
+
+        for flight in self.flights:
+            bags_allowed = min(bags_allowed, flight.bags_allowed)
+            total_price += flight.get_full_price(self.bags_count)
+            travel_time += flight.get_travel_time()
+
+        self.bags_allowed = bags_allowed
+        self.total_price = total_price
+        self.travel_time = str(travel_time)
+
+    # Used to calculate the final order flight trips
+    def __gt__(self, other: &#34;FlightTrip&#34;):
+        return self.total_price &gt; other.total_price
+
+    # Used to calculate the final order flight trips
+    def __lt__(self, other: &#34;FlightTrip&#34;):
+        return self.total_price &lt; other.total_price</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="weekend.flighthandler.FlightTrip.bags_allowed"><code class="name">var <span class="ident">bags_allowed</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="weekend.flighthandler.FlightTrip.bags_count"><code class="name">var <span class="ident">bags_count</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="weekend.flighthandler.FlightTrip.destination"><code class="name">var <span class="ident">destination</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="weekend.flighthandler.FlightTrip.flights"><code class="name">var <span class="ident">flights</span> : list</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="weekend.flighthandler.FlightTrip.origin"><code class="name">var <span class="ident">origin</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="weekend.flighthandler.FlightTrip.total_price"><code class="name">var <span class="ident">total_price</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="weekend.flighthandler.FlightTrip.travel_time"><code class="name">var <span class="ident">travel_time</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="weekend.flighthandler.FlightTripDataGenerator"><code class="flex name class">
+<span>class <span class="ident">FlightTripDataGenerator</span></span>
+<span>(</span><span>trips: list, origin: str, destination: str, bags: int)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Converts trip information into presentable format</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class FlightTripDataGenerator:
+    &#34;&#34;&#34;Converts trip information into presentable format&#34;&#34;&#34;
+
+    def __init__(self, trips: list[list[Flight]], origin: str, destination: str,
+                 bags: int):
+        self.trips: list[FlightTrip] = []
+        self.origin: str = origin
+        self.destination: str = destination
+        self.bags: int = bags
+        self.add_trips(trips)
+
+    def add_trips(self, trips: list[list[Flight]]):
+        &#34;&#34;&#34;Converts a list of Flight objects into FlightTrip objects where the
+        Flight objects are ordered based on the total price data &#34;&#34;&#34;
+
+        for flights in trips:
+            self.trips.append(
+                FlightTrip(
+                    flights=flights,
+                    origin=self.origin,
+                    destination=self.destination,
+                    bags_count=self.bags,
+                )
+            )
+        self.trips.sort()
+
+    def to_dict(self) -&gt; list[dict[str, Any]]:
+        &#34;&#34;&#34;Returns the flight data objects to list of dicts&#34;&#34;&#34;
+
+        return [asdict(trip) for trip in self.trips]
+
+    def to_json(self) -&gt; str:
+        &#34;&#34;&#34;Returns a formatted json string from list of dictionaries&#34;&#34;&#34;
+
+        return dumps(self.to_dict(), indent=4)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="weekend.flighthandler.FlightTripDataGenerator.add_trips"><code class="name flex">
+<span>def <span class="ident">add_trips</span></span>(<span>self, trips: list)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Converts a list of Flight objects into FlightTrip objects where the
+Flight objects are ordered based on the total price data</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_trips(self, trips: list[list[Flight]]):
+    &#34;&#34;&#34;Converts a list of Flight objects into FlightTrip objects where the
+    Flight objects are ordered based on the total price data &#34;&#34;&#34;
+
+    for flights in trips:
+        self.trips.append(
+            FlightTrip(
+                flights=flights,
+                origin=self.origin,
+                destination=self.destination,
+                bags_count=self.bags,
+            )
+        )
+    self.trips.sort()</code></pre>
+</details>
+</dd>
+<dt id="weekend.flighthandler.FlightTripDataGenerator.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self) ‑> list</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the flight data objects to list of dicts</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self) -&gt; list[dict[str, Any]]:
+    &#34;&#34;&#34;Returns the flight data objects to list of dicts&#34;&#34;&#34;
+
+    return [asdict(trip) for trip in self.trips]</code></pre>
+</details>
+</dd>
+<dt id="weekend.flighthandler.FlightTripDataGenerator.to_json"><code class="name flex">
+<span>def <span class="ident">to_json</span></span>(<span>self) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a formatted json string from list of dictionaries</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_json(self) -&gt; str:
+    &#34;&#34;&#34;Returns a formatted json string from list of dictionaries&#34;&#34;&#34;
+
+    return dumps(self.to_dict(), indent=4)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="weekend.flighthandler.LayoverRule"><code class="flex name class">
+<span>class <span class="ident">LayoverRule</span></span>
+<span>(</span><span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Protocol for defining min and max layover rules</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class LayoverRule(Protocol):
+    &#34;&#34;&#34;Protocol for defining min and max layover rules&#34;&#34;&#34;
+
+    def validate(self, prev_flight: Flight, next_flight: Flight) -&gt; bool:
+        &#34;&#34;&#34;Compare two sequential flights to check if the meet the validation
+        protocol &#34;&#34;&#34;
+
+        ...</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>typing.Protocol</li>
+<li>typing.Generic</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="weekend.flighthandler.LayoverRule.validate"><code class="name flex">
+<span>def <span class="ident">validate</span></span>(<span>self, prev_flight: <a title="weekend.flighthandler.Flight" href="#weekend.flighthandler.Flight">Flight</a>, next_flight: <a title="weekend.flighthandler.Flight" href="#weekend.flighthandler.Flight">Flight</a>) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Compare two sequential flights to check if the meet the validation
+protocol</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def validate(self, prev_flight: Flight, next_flight: Flight) -&gt; bool:
+    &#34;&#34;&#34;Compare two sequential flights to check if the meet the validation
+    protocol &#34;&#34;&#34;
+
+    ...</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="weekend" href="index.html">weekend</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="weekend.flighthandler.DefaultLayoverRule" href="#weekend.flighthandler.DefaultLayoverRule">DefaultLayoverRule</a></code></h4>
+<ul class="">
+<li><code><a title="weekend.flighthandler.DefaultLayoverRule.validate" href="#weekend.flighthandler.DefaultLayoverRule.validate">validate</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="weekend.flighthandler.Flight" href="#weekend.flighthandler.Flight">Flight</a></code></h4>
+<ul class="two-column">
+<li><code><a title="weekend.flighthandler.Flight.arrival" href="#weekend.flighthandler.Flight.arrival">arrival</a></code></li>
+<li><code><a title="weekend.flighthandler.Flight.bag_price" href="#weekend.flighthandler.Flight.bag_price">bag_price</a></code></li>
+<li><code><a title="weekend.flighthandler.Flight.bags_allowed" href="#weekend.flighthandler.Flight.bags_allowed">bags_allowed</a></code></li>
+<li><code><a title="weekend.flighthandler.Flight.base_price" href="#weekend.flighthandler.Flight.base_price">base_price</a></code></li>
+<li><code><a title="weekend.flighthandler.Flight.departure" href="#weekend.flighthandler.Flight.departure">departure</a></code></li>
+<li><code><a title="weekend.flighthandler.Flight.destination" href="#weekend.flighthandler.Flight.destination">destination</a></code></li>
+<li><code><a title="weekend.flighthandler.Flight.flight_no" href="#weekend.flighthandler.Flight.flight_no">flight_no</a></code></li>
+<li><code><a title="weekend.flighthandler.Flight.get_arrival_time" href="#weekend.flighthandler.Flight.get_arrival_time">get_arrival_time</a></code></li>
+<li><code><a title="weekend.flighthandler.Flight.get_departure_time" href="#weekend.flighthandler.Flight.get_departure_time">get_departure_time</a></code></li>
+<li><code><a title="weekend.flighthandler.Flight.get_full_price" href="#weekend.flighthandler.Flight.get_full_price">get_full_price</a></code></li>
+<li><code><a title="weekend.flighthandler.Flight.get_travel_time" href="#weekend.flighthandler.Flight.get_travel_time">get_travel_time</a></code></li>
+<li><code><a title="weekend.flighthandler.Flight.origin" href="#weekend.flighthandler.Flight.origin">origin</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="weekend.flighthandler.FlightGraph" href="#weekend.flighthandler.FlightGraph">FlightGraph</a></code></h4>
+<ul class="two-column">
+<li><code><a title="weekend.flighthandler.FlightGraph.create_graph" href="#weekend.flighthandler.FlightGraph.create_graph">create_graph</a></code></li>
+<li><code><a title="weekend.flighthandler.FlightGraph.explore" href="#weekend.flighthandler.FlightGraph.explore">explore</a></code></li>
+<li><code><a title="weekend.flighthandler.FlightGraph.find_trips" href="#weekend.flighthandler.FlightGraph.find_trips">find_trips</a></code></li>
+<li><code><a title="weekend.flighthandler.FlightGraph.find_trips_reverse" href="#weekend.flighthandler.FlightGraph.find_trips_reverse">find_trips_reverse</a></code></li>
+<li><code><a title="weekend.flighthandler.FlightGraph.is_valid_layover" href="#weekend.flighthandler.FlightGraph.is_valid_layover">is_valid_layover</a></code></li>
+<li><code><a title="weekend.flighthandler.FlightGraph.set_layover_rule" href="#weekend.flighthandler.FlightGraph.set_layover_rule">set_layover_rule</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="weekend.flighthandler.FlightTrip" href="#weekend.flighthandler.FlightTrip">FlightTrip</a></code></h4>
+<ul class="two-column">
+<li><code><a title="weekend.flighthandler.FlightTrip.bags_allowed" href="#weekend.flighthandler.FlightTrip.bags_allowed">bags_allowed</a></code></li>
+<li><code><a title="weekend.flighthandler.FlightTrip.bags_count" href="#weekend.flighthandler.FlightTrip.bags_count">bags_count</a></code></li>
+<li><code><a title="weekend.flighthandler.FlightTrip.destination" href="#weekend.flighthandler.FlightTrip.destination">destination</a></code></li>
+<li><code><a title="weekend.flighthandler.FlightTrip.flights" href="#weekend.flighthandler.FlightTrip.flights">flights</a></code></li>
+<li><code><a title="weekend.flighthandler.FlightTrip.origin" href="#weekend.flighthandler.FlightTrip.origin">origin</a></code></li>
+<li><code><a title="weekend.flighthandler.FlightTrip.total_price" href="#weekend.flighthandler.FlightTrip.total_price">total_price</a></code></li>
+<li><code><a title="weekend.flighthandler.FlightTrip.travel_time" href="#weekend.flighthandler.FlightTrip.travel_time">travel_time</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="weekend.flighthandler.FlightTripDataGenerator" href="#weekend.flighthandler.FlightTripDataGenerator">FlightTripDataGenerator</a></code></h4>
+<ul class="">
+<li><code><a title="weekend.flighthandler.FlightTripDataGenerator.add_trips" href="#weekend.flighthandler.FlightTripDataGenerator.add_trips">add_trips</a></code></li>
+<li><code><a title="weekend.flighthandler.FlightTripDataGenerator.to_dict" href="#weekend.flighthandler.FlightTripDataGenerator.to_dict">to_dict</a></code></li>
+<li><code><a title="weekend.flighthandler.FlightTripDataGenerator.to_json" href="#weekend.flighthandler.FlightTripDataGenerator.to_json">to_json</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="weekend.flighthandler.LayoverRule" href="#weekend.flighthandler.LayoverRule">LayoverRule</a></code></h4>
+<ul class="">
+<li><code><a title="weekend.flighthandler.LayoverRule.validate" href="#weekend.flighthandler.LayoverRule.validate">validate</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

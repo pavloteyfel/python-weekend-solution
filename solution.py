@@ -31,6 +31,7 @@ namespace = SimpleNamespace(
 
 
 def main():
+    """Main entry point"""
     # Create a csv reader to deal with flight data csv
     try:
         flight_csv_reader = FlightCSVReader(namespace.csv)
