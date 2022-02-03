@@ -28,6 +28,8 @@ options:
                                 than X hours. Optional (defaults to 6).
   --start-date START_DATE       The start date of your trip in YYYY-MM-DD date format. Optional.
 ```
+## Requirements
+Python 3.9+ is required to run the script as it utilizes some features introduced in that version.
 
 ## Data Structure
 The scripts only works on the following CSV data structure:
@@ -108,6 +110,11 @@ error: Wrong value in CSV file at row [2]: bags_allowed is not an integer number
 error: Wrong value in CSV file at row [16]: departure has an invalid date-time format.
 error: Wrong value in CSV file at row [18]: flight_no cannot be an empty string.
 error: Wrong value in CSV file at row [4]: base_price cannot be a negative number.
+```
+
+If there is no match, then an empty json array is returned:
+```json
+[]
 ```
 
 ## Supported Arguments
