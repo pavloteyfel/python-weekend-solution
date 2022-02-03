@@ -1,9 +1,9 @@
 """CSV module for reading flight data"""
 
-import csv
+from typing import Any, Callable, Generator, Optional, Protocol
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Callable, Generator, Optional, Protocol
+import csv
 
 DATE_TIME_PATTERN: str = "%Y-%m-%dT%H:%M:%S"
 DATE_PATTERN: str = "%Y-%m-%d"

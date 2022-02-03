@@ -1,6 +1,6 @@
 """Parser module for CLI command line"""
-import argparse
 from datetime import datetime
+import argparse
 
 
 def check_number(number: str) -> int:

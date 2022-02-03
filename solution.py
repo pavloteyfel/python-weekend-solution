@@ -1,28 +1,31 @@
-from datetime import datetime
 from types import SimpleNamespace
+from datetime import datetime
 
 import argparser
 from csvreader import (
-    BagRowFilter,
-    CSVHeaderException,
     CSVWrongValueException,
-    FlightCSVReader,
     FlightRowValidator,
+    CSVHeaderException,
+    FlightCSVReader,
     StartDateFilter,
+    BagRowFilter,
 )
-from flighthandler import (DefaultLayoverRule,
-                           FlightGraph,
-                           FlightTripDataGenerator)
+from flighthandler import (
+    FlightTripDataGenerator,
+    DefaultLayoverRule,
+    FlightGraph,
+)
+
 
 namespace = SimpleNamespace(
-    csv="",
-    origin="",
     destination="",
-    bags=0,
     reverse=False,
     start_date="",
     min_layover=1,
     max_layover=6,
+    origin="",
+    bags=0,
+    csv="",
 )
 
 

@@ -1,10 +1,9 @@
 """Module for organising flight related classes"""
+from typing import Any, Generator, Optional, Protocol
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timedelta
-from json import dumps
-from typing import Any, Generator, Optional, Protocol
-
 from csvreader import DATE_TIME_PATTERN
+from json import dumps
 
 
 @dataclass
