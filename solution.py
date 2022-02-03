@@ -1,3 +1,4 @@
+"""Main script runner"""
 from types import SimpleNamespace
 from datetime import datetime
 

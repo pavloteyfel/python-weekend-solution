@@ -89,7 +89,7 @@ class FlightCSVReader:
 
     def read(self) -> Generator[dict[str, Any], None, None]:
         """Get row dict from the CSV file and apply CSVRowFilter and
-        CSVRowValidator """
+        CSVRowValidator"""
 
         with open(self.path, newline="", encoding="utf-8") as csv_file:
             reader = csv.DictReader(csv_file)
@@ -107,7 +107,7 @@ class FlightCSVReader:
 
 
 class BagRowFilter:
-    """CSVRowFilter for filtering bag data in CSV file"""
+    """CSVRowFilter for filtering bag data in a CSV file"""
 
     def __init__(self, bags: int):
         self.bags = bags
@@ -167,7 +167,7 @@ def check_string(items: tuple[str, Any]):
 
 
 def check_date(items: tuple[str, Any]):
-    """Check if row cell in correct date time format"""
+    """Check if row cell is in correct date time format"""
 
     key, value = items
     try:

@@ -8,7 +8,7 @@ from json import dumps
 
 @dataclass
 class Flight:
-    """Container for flight data row"""
+    """Container for flight data CSV row"""
 
     flight_no: str
     origin: str
@@ -103,7 +103,7 @@ class DefaultLayoverRule:
         self.max_layover = max_layover
 
     def validate(self, prev_flight: Flight, next_flight: Flight) -> bool:
-        """Compare previous flight arrival time to the next flight's
+        """Compare the previous flight arrival time to the next flight's
         departure time """
 
         min_hour_time = timedelta(hours=self.min_layover)
@@ -278,7 +278,7 @@ class FlightTripDataGenerator:
         self.add_trips(trips)
 
     def add_trips(self, trips: list[list[Flight]]):
-        """Converts list of Flight objects into FlightTrip objects where the
+        """Converts a list of Flight objects into FlightTrip objects where the
         Flight objects are ordered based on the total price data """
 
         for flights in trips:
@@ -298,6 +298,6 @@ class FlightTripDataGenerator:
         return [asdict(trip) for trip in self.trips]
 
     def to_json(self) -> str:
-        """Returns formatted json string from list of dictionaries"""
+        """Returns a formatted json string from list of dictionaries"""
 
         return dumps(self.to_dict(), indent=4)

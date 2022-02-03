@@ -1,7 +1,7 @@
 import unittest
 import solution
 import json
-
+import sys
 
 class TestSolution(unittest.TestCase):
     def setUp(self):
@@ -22,6 +22,59 @@ class TestSolution(unittest.TestCase):
         with open("test_data/0_wiw_rfz_2_f.json") as file:
             prepared = json.load(file)
         self.assertCountEqual(calculated, prepared)
+    
+    def test_to_many_bags(self):
+        solution.namespace.csv = "test_data/example0.csv"
+        solution.namespace.origin = "WIW"
+        solution.namespace.destination = "RFZ"
+        solution.namespace.bags = 5
+        solution.namespace.reverse = False
+        result = solution.main()
+        calculated = json.loads(result)
+        self.assertCountEqual(calculated, [])
+
+    def test_no_valid_destination(self):
+        solution.namespace.csv = "test_data/example0.csv"
+        solution.namespace.origin = "WIW"
+        solution.namespace.destination = "XXX"
+        solution.namespace.bags = 1
+        solution.namespace.reverse = False
+        result = solution.main()
+        calculated = json.loads(result)
+        self.assertCountEqual(calculated, [])
+
+    def test_csv_not_exist(self):
+        solution.namespace.csv = "findme.csv"
+        solution.namespace.origin = "WIW"
+        solution.namespace.destination = "RFZ"
+        solution.namespace.bags = 1
+        solution.namespace.reverse = False
+        stdout = sys.stdout
+        sys.stdout = None
+        self.assertRaises((FileNotFoundError, SystemExit), solution.main)
+        sys.stdout = stdout
+
+    def test_wrong_csv_header(self):
+        solution.namespace.csv = "test_data/invalid_wrong_header.csv"
+        solution.namespace.origin = "WIW"
+        solution.namespace.destination = "RFZ"
+        solution.namespace.bags = 1
+        solution.namespace.reverse = False
+        stdout = sys.stdout
+        sys.stdout = None
+        self.assertRaises( SystemExit, solution.main)
+        sys.stdout = stdout
+
+    def test_wrong_cell_data(self):
+        solution.namespace.csv = "test_data/invalid_wrong_cell_data.csv"
+        solution.namespace.origin = "WIW"
+        solution.namespace.destination = "RFZ"
+        solution.namespace.bags = 1
+        solution.namespace.reverse = False
+        stdout = sys.stdout
+        sys.stdout = None
+        self.assertRaises(SystemExit, solution.main)
+        sys.stdout = stdout
 
     def test_0_ecv_wiw_1_f_x_24(self):
         solution.namespace.csv = "test_data/example0.csv"

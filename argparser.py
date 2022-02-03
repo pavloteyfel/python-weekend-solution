@@ -76,7 +76,7 @@ def get_args() -> argparse.Namespace:
         action="store",
         default=1,
         type=check_number,
-        help="The minimum layover time between arrive and departure time "
+        help="The minimum layover time between arrival and departure time "
              "should not be less than X hours. Optional (defaults to 1).",
     )
     parser.add_argument(
@@ -84,7 +84,7 @@ def get_args() -> argparse.Namespace:
         action="store",
         default=6,
         type=check_number,
-        help="The maximum layover time between arrive and departure time "
+        help="The maximum layover time between arrival and departure time "
              "should not be more than X hours. Optional (defaults to 6).",
     )
     parser.add_argument(
