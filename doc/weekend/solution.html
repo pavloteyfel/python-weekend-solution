@@ -30,8 +30,6 @@
 <pre><code class="python">&#34;&#34;&#34;Main script runner&#34;&#34;&#34;
 from types import SimpleNamespace
 from datetime import datetime
-
-import argparser
 from csvreader import (
     CSVWrongValueException,
     FlightRowValidator,
@@ -45,8 +43,10 @@ from flighthandler import (
     DefaultLayoverRule,
     FlightGraph,
 )
+import argparser
 
 
+# Namespace object used by unittests and argparser module 
 namespace = SimpleNamespace(
     destination=&#34;&#34;,
     reverse=False,
@@ -61,20 +61,21 @@ namespace = SimpleNamespace(
 
 def main():
     &#34;&#34;&#34;Main entry point&#34;&#34;&#34;
+
     # Create a csv reader to deal with flight data csv
     try:
         flight_csv_reader = FlightCSVReader(namespace.csv)
+    
+    # Do we have the file?
     except FileNotFoundError:
         print(f&#34;error: {namespace.csv} file not found&#34;)
         exit(1)
 
     # Create row validator for reading csv file
     row_validator = FlightRowValidator()
-
-    # Validate each csv row
     flight_csv_reader.add_row_validator(row_validator)
 
-    # Create datetime object from string, comes from --start-date argument
+    # Create datetime object, comes from --start-date argument
     start_date = datetime.strptime(namespace.start_date, &#34;%Y-%m-%d&#34;)
 
     # Add start date filter to check if there are some rows that can be dropped
@@ -83,7 +84,7 @@ def main():
     start_date_filter = StartDateFilter(start_date)
     flight_csv_reader.add_row_filter(start_date_filter)
 
-    # Add bag filter, to check if we can ignore some csv rows.
+    # Add bag filter, to check if we can ignore some csv rows during loading
     # If the --bags argument greater that the flights allowed size, we drop the 
     # row.
     bag_row_filter = BagRowFilter(namespace.bags)
@@ -96,9 +97,13 @@ def main():
     # and calculations
     try:
         flight_graph = FlightGraph(flights)
+    
+    # Are the headers ok?
     except CSVHeaderException as error:
         print(error)
         exit(1)
+    
+    # Are the values ok?
     except CSVWrongValueException as error:
         print(error)
         exit(1)
@@ -106,11 +111,10 @@ def main():
     # Before we start the calculation we feed some layover rules
     layover_rule = DefaultLayoverRule(namespace.min_layover,
                                       namespace.max_layover)
-
-    # Add layover to the graph
     flight_graph.set_layover_rule(layover_rule)
 
-    # It will contain the list of all calculated trips, e.g. from A to C:
+    # A list that will contain the list of all calculated trips, 
+    # e.g. from A to C:
     # [
     #   [Flight(origin=A, destination=B), Flight(origin=B, destination=C), ...],
     #   [Flight(origin=A, destination=C)],
@@ -118,31 +122,36 @@ def main():
     # ]
     trips = []
 
-    # If --reverse argument is set to true, the reverse method is called
+    # If --reverse argument is present, the reverse method is called
     if namespace.reverse:
         trips = flight_graph.find_trips_reverse(namespace.origin,
                                                 namespace.destination,
                                                 start_date)
+    # If not, then use the one way method
     else:
-        trips = flight_graph.find_trips(namespace.origin, namespace.destination,
+        trips = flight_graph.find_trips(namespace.origin, 
+                                        namespace.destination,
                                         start_date)
 
-    # Some plain object to handle the correct format of printing out the results
-    data_generator = FlightTripDataGenerator(trips, namespace.origin,
+    # Eventually the list is consumed by this class, that can conver object
+    # data into json format
+    data_generator = FlightTripDataGenerator(trips, 
+                                             namespace.origin,
                                              namespace.destination,
                                              namespace.bags)
 
+    # We arrived :)
     return data_generator.to_json()
 
 
 if __name__ == &#34;__main__&#34;:
-    # Getting the arguments from the CLI
+    # Get the arguments from the CLI
     arguments = argparser.get_args()
 
     # Populate the namespace object
     namespace.__dict__.update(arguments.__dict__)
 
-    # Start the process and print out the results
+    # Start the process and print out the results into sdtout
     print(main())</code></pre>
 </details>
 </section>
@@ -164,20 +173,21 @@ if __name__ == &#34;__main__&#34;:
 </summary>
 <pre><code class="python">def main():
     &#34;&#34;&#34;Main entry point&#34;&#34;&#34;
+
     # Create a csv reader to deal with flight data csv
     try:
         flight_csv_reader = FlightCSVReader(namespace.csv)
+    
+    # Do we have the file?
     except FileNotFoundError:
         print(f&#34;error: {namespace.csv} file not found&#34;)
         exit(1)
 
     # Create row validator for reading csv file
     row_validator = FlightRowValidator()
-
-    # Validate each csv row
     flight_csv_reader.add_row_validator(row_validator)
 
-    # Create datetime object from string, comes from --start-date argument
+    # Create datetime object, comes from --start-date argument
     start_date = datetime.strptime(namespace.start_date, &#34;%Y-%m-%d&#34;)
 
     # Add start date filter to check if there are some rows that can be dropped
@@ -186,7 +196,7 @@ if __name__ == &#34;__main__&#34;:
     start_date_filter = StartDateFilter(start_date)
     flight_csv_reader.add_row_filter(start_date_filter)
 
-    # Add bag filter, to check if we can ignore some csv rows.
+    # Add bag filter, to check if we can ignore some csv rows during loading
     # If the --bags argument greater that the flights allowed size, we drop the 
     # row.
     bag_row_filter = BagRowFilter(namespace.bags)
@@ -199,9 +209,13 @@ if __name__ == &#34;__main__&#34;:
     # and calculations
     try:
         flight_graph = FlightGraph(flights)
+    
+    # Are the headers ok?
     except CSVHeaderException as error:
         print(error)
         exit(1)
+    
+    # Are the values ok?
     except CSVWrongValueException as error:
         print(error)
         exit(1)
@@ -209,11 +223,10 @@ if __name__ == &#34;__main__&#34;:
     # Before we start the calculation we feed some layover rules
     layover_rule = DefaultLayoverRule(namespace.min_layover,
                                       namespace.max_layover)
-
-    # Add layover to the graph
     flight_graph.set_layover_rule(layover_rule)
 
-    # It will contain the list of all calculated trips, e.g. from A to C:
+    # A list that will contain the list of all calculated trips, 
+    # e.g. from A to C:
     # [
     #   [Flight(origin=A, destination=B), Flight(origin=B, destination=C), ...],
     #   [Flight(origin=A, destination=C)],
@@ -221,20 +234,25 @@ if __name__ == &#34;__main__&#34;:
     # ]
     trips = []
 
-    # If --reverse argument is set to true, the reverse method is called
+    # If --reverse argument is present, the reverse method is called
     if namespace.reverse:
         trips = flight_graph.find_trips_reverse(namespace.origin,
                                                 namespace.destination,
                                                 start_date)
+    # If not, then use the one way method
     else:
-        trips = flight_graph.find_trips(namespace.origin, namespace.destination,
+        trips = flight_graph.find_trips(namespace.origin, 
+                                        namespace.destination,
                                         start_date)
 
-    # Some plain object to handle the correct format of printing out the results
-    data_generator = FlightTripDataGenerator(trips, namespace.origin,
+    # Eventually the list is consumed by this class, that can conver object
+    # data into json format
+    data_generator = FlightTripDataGenerator(trips, 
+                                             namespace.origin,
                                              namespace.destination,
                                              namespace.bags)
 
+    # We arrived :)
     return data_generator.to_json()</code></pre>
 </details>
 </dd>
