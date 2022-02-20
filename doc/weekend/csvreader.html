@@ -29,10 +29,10 @@
 </summary>
 <pre><code class="python">&#34;&#34;&#34;CSV module for reading flight data&#34;&#34;&#34;
 
-from typing import Any, Callable, Generator, Optional, Protocol
+import csv
 from datetime import datetime
 from pathlib import Path
-import csv
+from typing import Any, Callable, Generator, Optional, Protocol
 
 DATE_TIME_PATTERN: str = &#34;%Y-%m-%dT%H:%M:%S&#34;
 DATE_PATTERN: str = &#34;%Y-%m-%d&#34;
@@ -178,7 +178,7 @@ class FlightRowValidator:
 
     def validate_row(self, line: int, row: dict[str, str]):
         &#34;&#34;&#34;Validate given row based on the sequence of prepared validation
-        functions &#34;&#34;&#34;
+        functions&#34;&#34;&#34;
 
         # Go through every cell and apply the corresponding checker method to it
         for checker, items in zip(self.checkers, row.items()):
@@ -702,7 +702,7 @@ CSVRowValidator</p></div>
 
     def validate_row(self, line: int, row: dict[str, str]):
         &#34;&#34;&#34;Validate given row based on the sequence of prepared validation
-        functions &#34;&#34;&#34;
+        functions&#34;&#34;&#34;
 
         # Go through every cell and apply the corresponding checker method to it
         for checker, items in zip(self.checkers, row.items()):
@@ -726,7 +726,7 @@ functions</p></div>
 </summary>
 <pre><code class="python">def validate_row(self, line: int, row: dict[str, str]):
     &#34;&#34;&#34;Validate given row based on the sequence of prepared validation
-    functions &#34;&#34;&#34;
+    functions&#34;&#34;&#34;
 
     # Go through every cell and apply the corresponding checker method to it
     for checker, items in zip(self.checkers, row.items()):

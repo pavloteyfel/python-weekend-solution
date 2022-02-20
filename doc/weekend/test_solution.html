@@ -26,10 +26,12 @@
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">import unittest
-import solution
-import json
+<pre><code class="python">import json
 import sys
+import unittest
+
+import solution
+
 
 class TestSolution(unittest.TestCase):
     def setUp(self):
@@ -50,7 +52,7 @@ class TestSolution(unittest.TestCase):
         with open(&#34;test_data/0_wiw_rfz_2_f.json&#34;) as file:
             prepared = json.load(file)
         self.assertCountEqual(calculated, prepared)
-    
+
     def test_to_many_bags(self):
         solution.namespace.csv = &#34;test_data/example0.csv&#34;
         solution.namespace.origin = &#34;WIW&#34;
@@ -90,7 +92,7 @@ class TestSolution(unittest.TestCase):
         solution.namespace.reverse = False
         stdout = sys.stdout
         sys.stdout = None
-        self.assertRaises( SystemExit, solution.main)
+        self.assertRaises(SystemExit, solution.main)
         sys.stdout = stdout
 
     def test_wrong_cell_data(self):
@@ -178,7 +180,7 @@ class TestSolution(unittest.TestCase):
             prepared = json.load(file)
         self.assertCountEqual(calculated, prepared)
 
-    def test_3_jbn_vvh_1_t(self):
+    def test_3_jbn_vvh_2_t(self):
         solution.namespace.csv = &#34;test_data/example3.csv&#34;
         solution.namespace.origin = &#34;JBN&#34;
         solution.namespace.destination = &#34;VVH&#34;
@@ -187,6 +189,18 @@ class TestSolution(unittest.TestCase):
         result = solution.main()
         calculated = json.loads(result)
         with open(&#34;test_data/3_jbn_vvh_2_t.json&#34;) as file:
+            prepared = json.load(file)
+        self.assertCountEqual(calculated, prepared)
+
+    def test_3_zrw_bpz_0_f(self):
+        solution.namespace.csv = &#34;test_data/example3.csv&#34;
+        solution.namespace.origin = &#34;ZRW&#34;
+        solution.namespace.destination = &#34;BPZ&#34;
+        solution.namespace.bags = 0
+        solution.namespace.reverse = False
+        result = solution.main()
+        calculated = json.loads(result)
+        with open(&#34;test_data/3_zrw_bpz_0_f.json&#34;) as file:
             prepared = json.load(file)
         self.assertCountEqual(calculated, prepared)
 
@@ -260,7 +274,7 @@ not have a method with the specified name.</p></div>
         with open(&#34;test_data/0_wiw_rfz_2_f.json&#34;) as file:
             prepared = json.load(file)
         self.assertCountEqual(calculated, prepared)
-    
+
     def test_to_many_bags(self):
         solution.namespace.csv = &#34;test_data/example0.csv&#34;
         solution.namespace.origin = &#34;WIW&#34;
@@ -300,7 +314,7 @@ not have a method with the specified name.</p></div>
         solution.namespace.reverse = False
         stdout = sys.stdout
         sys.stdout = None
-        self.assertRaises( SystemExit, solution.main)
+        self.assertRaises(SystemExit, solution.main)
         sys.stdout = stdout
 
     def test_wrong_cell_data(self):
@@ -388,7 +402,7 @@ not have a method with the specified name.</p></div>
             prepared = json.load(file)
         self.assertCountEqual(calculated, prepared)
 
-    def test_3_jbn_vvh_1_t(self):
+    def test_3_jbn_vvh_2_t(self):
         solution.namespace.csv = &#34;test_data/example3.csv&#34;
         solution.namespace.origin = &#34;JBN&#34;
         solution.namespace.destination = &#34;VVH&#34;
@@ -397,6 +411,18 @@ not have a method with the specified name.</p></div>
         result = solution.main()
         calculated = json.loads(result)
         with open(&#34;test_data/3_jbn_vvh_2_t.json&#34;) as file:
+            prepared = json.load(file)
+        self.assertCountEqual(calculated, prepared)
+
+    def test_3_zrw_bpz_0_f(self):
+        solution.namespace.csv = &#34;test_data/example3.csv&#34;
+        solution.namespace.origin = &#34;ZRW&#34;
+        solution.namespace.destination = &#34;BPZ&#34;
+        solution.namespace.bags = 0
+        solution.namespace.reverse = False
+        result = solution.main()
+        calculated = json.loads(result)
+        with open(&#34;test_data/3_zrw_bpz_0_f.json&#34;) as file:
             prepared = json.load(file)
         self.assertCountEqual(calculated, prepared)</code></pre>
 </details>
@@ -579,8 +605,8 @@ not have a method with the specified name.</p></div>
     self.assertCountEqual(calculated, prepared)</code></pre>
 </details>
 </dd>
-<dt id="weekend.test_solution.TestSolution.test_3_jbn_vvh_1_t"><code class="name flex">
-<span>def <span class="ident">test_3_jbn_vvh_1_t</span></span>(<span>self)</span>
+<dt id="weekend.test_solution.TestSolution.test_3_jbn_vvh_2_t"><code class="name flex">
+<span>def <span class="ident">test_3_jbn_vvh_2_t</span></span>(<span>self)</span>
 </code></dt>
 <dd>
 <div class="desc"></div>
@@ -588,7 +614,7 @@ not have a method with the specified name.</p></div>
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def test_3_jbn_vvh_1_t(self):
+<pre><code class="python">def test_3_jbn_vvh_2_t(self):
     solution.namespace.csv = &#34;test_data/example3.csv&#34;
     solution.namespace.origin = &#34;JBN&#34;
     solution.namespace.destination = &#34;VVH&#34;
@@ -597,6 +623,28 @@ not have a method with the specified name.</p></div>
     result = solution.main()
     calculated = json.loads(result)
     with open(&#34;test_data/3_jbn_vvh_2_t.json&#34;) as file:
+        prepared = json.load(file)
+    self.assertCountEqual(calculated, prepared)</code></pre>
+</details>
+</dd>
+<dt id="weekend.test_solution.TestSolution.test_3_zrw_bpz_0_f"><code class="name flex">
+<span>def <span class="ident">test_3_zrw_bpz_0_f</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_3_zrw_bpz_0_f(self):
+    solution.namespace.csv = &#34;test_data/example3.csv&#34;
+    solution.namespace.origin = &#34;ZRW&#34;
+    solution.namespace.destination = &#34;BPZ&#34;
+    solution.namespace.bags = 0
+    solution.namespace.reverse = False
+    result = solution.main()
+    calculated = json.loads(result)
+    with open(&#34;test_data/3_zrw_bpz_0_f.json&#34;) as file:
         prepared = json.load(file)
     self.assertCountEqual(calculated, prepared)</code></pre>
 </details>
@@ -700,7 +748,7 @@ not have a method with the specified name.</p></div>
     solution.namespace.reverse = False
     stdout = sys.stdout
     sys.stdout = None
-    self.assertRaises( SystemExit, solution.main)
+    self.assertRaises(SystemExit, solution.main)
     sys.stdout = stdout</code></pre>
 </details>
 </dd>
@@ -733,7 +781,8 @@ not have a method with the specified name.</p></div>
 <li><code><a title="weekend.test_solution.TestSolution.test_1_dhe_niz_1_f" href="#weekend.test_solution.TestSolution.test_1_dhe_niz_1_f">test_1_dhe_niz_1_f</a></code></li>
 <li><code><a title="weekend.test_solution.TestSolution.test_2_iut_lom_2_f" href="#weekend.test_solution.TestSolution.test_2_iut_lom_2_f">test_2_iut_lom_2_f</a></code></li>
 <li><code><a title="weekend.test_solution.TestSolution.test_3_bpz_nnb_1_f" href="#weekend.test_solution.TestSolution.test_3_bpz_nnb_1_f">test_3_bpz_nnb_1_f</a></code></li>
-<li><code><a title="weekend.test_solution.TestSolution.test_3_jbn_vvh_1_t" href="#weekend.test_solution.TestSolution.test_3_jbn_vvh_1_t">test_3_jbn_vvh_1_t</a></code></li>
+<li><code><a title="weekend.test_solution.TestSolution.test_3_jbn_vvh_2_t" href="#weekend.test_solution.TestSolution.test_3_jbn_vvh_2_t">test_3_jbn_vvh_2_t</a></code></li>
+<li><code><a title="weekend.test_solution.TestSolution.test_3_zrw_bpz_0_f" href="#weekend.test_solution.TestSolution.test_3_zrw_bpz_0_f">test_3_zrw_bpz_0_f</a></code></li>
 <li><code><a title="weekend.test_solution.TestSolution.test_csv_not_exist" href="#weekend.test_solution.TestSolution.test_csv_not_exist">test_csv_not_exist</a></code></li>
 <li><code><a title="weekend.test_solution.TestSolution.test_no_valid_destination" href="#weekend.test_solution.TestSolution.test_no_valid_destination">test_no_valid_destination</a></code></li>
 <li><code><a title="weekend.test_solution.TestSolution.test_to_many_bags" href="#weekend.test_solution.TestSolution.test_to_many_bags">test_to_many_bags</a></code></li>

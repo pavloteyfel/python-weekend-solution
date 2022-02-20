@@ -28,25 +28,21 @@
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">&#34;&#34;&#34;Main script runner&#34;&#34;&#34;
-from types import SimpleNamespace
 from datetime import datetime
-from csvreader import (
-    CSVWrongValueException,
-    FlightRowValidator,
-    CSVHeaderException,
-    FlightCSVReader,
-    StartDateFilter,
-    BagRowFilter,
-)
-from flighthandler import (
-    FlightTripDataGenerator,
-    DefaultLayoverRule,
-    FlightGraph,
-)
+from types import SimpleNamespace
+
 import argparser
+from csvreader import (
+    BagRowFilter,
+    CSVHeaderException,
+    CSVWrongValueException,
+    FlightCSVReader,
+    FlightRowValidator,
+    StartDateFilter,
+)
+from flighthandler import DefaultLayoverRule, FlightGraph, FlightTripDataGenerator
 
-
-# Namespace object used by unittests and argparser module 
+# Namespace object used by unittests and argparser module
 namespace = SimpleNamespace(
     destination=&#34;&#34;,
     reverse=False,
@@ -65,7 +61,7 @@ def main():
     # Create a csv reader to deal with flight data csv
     try:
         flight_csv_reader = FlightCSVReader(namespace.csv)
-    
+
     # Do we have the file?
     except FileNotFoundError:
         print(f&#34;error: {namespace.csv} file not found&#34;)
@@ -85,7 +81,7 @@ def main():
     flight_csv_reader.add_row_filter(start_date_filter)
 
     # Add bag filter, to check if we can ignore some csv rows during loading
-    # If the --bags argument greater that the flights allowed size, we drop the 
+    # If the --bags argument greater that the flights allowed size, we drop the
     # row.
     bag_row_filter = BagRowFilter(namespace.bags)
     flight_csv_reader.add_row_filter(bag_row_filter)
@@ -97,23 +93,22 @@ def main():
     # and calculations
     try:
         flight_graph = FlightGraph(flights)
-    
+
     # Are the headers ok?
     except CSVHeaderException as error:
         print(error)
         exit(1)
-    
+
     # Are the values ok?
     except CSVWrongValueException as error:
         print(error)
         exit(1)
 
     # Before we start the calculation we feed some layover rules
-    layover_rule = DefaultLayoverRule(namespace.min_layover,
-                                      namespace.max_layover)
+    layover_rule = DefaultLayoverRule(namespace.min_layover, namespace.max_layover)
     flight_graph.set_layover_rule(layover_rule)
 
-    # A list that will contain the list of all calculated trips, 
+    # A list that will contain the list of all calculated trips,
     # e.g. from A to C:
     # [
     #   [Flight(origin=A, destination=B), Flight(origin=B, destination=C), ...],
@@ -124,21 +119,20 @@ def main():
 
     # If --reverse argument is present, the reverse method is called
     if namespace.reverse:
-        trips = flight_graph.find_trips_reverse(namespace.origin,
-                                                namespace.destination,
-                                                start_date)
+        trips = flight_graph.find_trips_reverse(
+            namespace.origin, namespace.destination, start_date
+        )
     # If not, then use the one way method
     else:
-        trips = flight_graph.find_trips(namespace.origin, 
-                                        namespace.destination,
-                                        start_date)
+        trips = flight_graph.find_trips(
+            namespace.origin, namespace.destination, start_date
+        )
 
     # Eventually the list is consumed by this class, that can conver object
     # data into json format
-    data_generator = FlightTripDataGenerator(trips, 
-                                             namespace.origin,
-                                             namespace.destination,
-                                             namespace.bags)
+    data_generator = FlightTripDataGenerator(
+        trips, namespace.origin, namespace.destination, namespace.bags
+    )
 
     # We arrived :)
     return data_generator.to_json()
@@ -177,7 +171,7 @@ if __name__ == &#34;__main__&#34;:
     # Create a csv reader to deal with flight data csv
     try:
         flight_csv_reader = FlightCSVReader(namespace.csv)
-    
+
     # Do we have the file?
     except FileNotFoundError:
         print(f&#34;error: {namespace.csv} file not found&#34;)
@@ -197,7 +191,7 @@ if __name__ == &#34;__main__&#34;:
     flight_csv_reader.add_row_filter(start_date_filter)
 
     # Add bag filter, to check if we can ignore some csv rows during loading
-    # If the --bags argument greater that the flights allowed size, we drop the 
+    # If the --bags argument greater that the flights allowed size, we drop the
     # row.
     bag_row_filter = BagRowFilter(namespace.bags)
     flight_csv_reader.add_row_filter(bag_row_filter)
@@ -209,23 +203,22 @@ if __name__ == &#34;__main__&#34;:
     # and calculations
     try:
         flight_graph = FlightGraph(flights)
-    
+
     # Are the headers ok?
     except CSVHeaderException as error:
         print(error)
         exit(1)
-    
+
     # Are the values ok?
     except CSVWrongValueException as error:
         print(error)
         exit(1)
 
     # Before we start the calculation we feed some layover rules
-    layover_rule = DefaultLayoverRule(namespace.min_layover,
-                                      namespace.max_layover)
+    layover_rule = DefaultLayoverRule(namespace.min_layover, namespace.max_layover)
     flight_graph.set_layover_rule(layover_rule)
 
-    # A list that will contain the list of all calculated trips, 
+    # A list that will contain the list of all calculated trips,
     # e.g. from A to C:
     # [
     #   [Flight(origin=A, destination=B), Flight(origin=B, destination=C), ...],
@@ -236,21 +229,20 @@ if __name__ == &#34;__main__&#34;:
 
     # If --reverse argument is present, the reverse method is called
     if namespace.reverse:
-        trips = flight_graph.find_trips_reverse(namespace.origin,
-                                                namespace.destination,
-                                                start_date)
+        trips = flight_graph.find_trips_reverse(
+            namespace.origin, namespace.destination, start_date
+        )
     # If not, then use the one way method
     else:
-        trips = flight_graph.find_trips(namespace.origin, 
-                                        namespace.destination,
-                                        start_date)
+        trips = flight_graph.find_trips(
+            namespace.origin, namespace.destination, start_date
+        )
 
     # Eventually the list is consumed by this class, that can conver object
     # data into json format
-    data_generator = FlightTripDataGenerator(trips, 
-                                             namespace.origin,
-                                             namespace.destination,
-                                             namespace.bags)
+    data_generator = FlightTripDataGenerator(
+        trips, namespace.origin, namespace.destination, namespace.bags
+    )
 
     # We arrived :)
     return data_generator.to_json()</code></pre>

@@ -29,11 +29,12 @@
 </summary>
 <pre><code class="python">&#34;&#34;&#34;Module for organising flight related classes&#34;&#34;&#34;
 
-from typing import Any, Generator, Optional, Protocol
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timedelta
-from csvreader import DATE_TIME_PATTERN
 from json import dumps
+from typing import Any, Generator, Optional, Protocol
+
+from csvreader import DATE_TIME_PATTERN
 
 
 @dataclass
@@ -78,7 +79,7 @@ class Flight:
 @dataclass
 class FlightTrip:
     &#34;&#34;&#34;Container for all Flight objects that are necessary to get from A
-    airport to B airport &#34;&#34;&#34;
+    airport to B airport&#34;&#34;&#34;
 
     flights: list[Flight]
     bags_allowed: int = field(init=False, default=0)
@@ -117,7 +118,7 @@ class LayoverRule(Protocol):
 
     def validate(self, prev_flight: Flight, next_flight: Flight) -&gt; bool:
         &#34;&#34;&#34;Compare two sequential flights to check if the meet the validation
-        protocol &#34;&#34;&#34;
+        protocol&#34;&#34;&#34;
 
         ...
 
@@ -131,7 +132,7 @@ class DefaultLayoverRule:
 
     def validate(self, prev_flight: Flight, next_flight: Flight) -&gt; bool:
         &#34;&#34;&#34;Compare the previous flight arrival time to the next flight&#39;s
-        departure time &#34;&#34;&#34;
+        departure time&#34;&#34;&#34;
 
         min_hour_time = timedelta(hours=self.min_layover)
         max_hour_time = timedelta(hours=self.max_layover)
@@ -168,8 +169,9 @@ class FlightGraph:
 
         self.layover_rule = rule
 
-    def find_trips(self, origin: str, destination: str,
-                   start_date: datetime) -&gt; list[list[Flight]]:
+    def find_trips(
+        self, origin: str, destination: str, start_date: datetime
+    ) -&gt; list[list[Flight]]:
         &#34;&#34;&#34;Main method for finding all trips&#34;&#34;&#34;
 
         # The eventual list that will contain all the trips (list of flights)
@@ -190,15 +192,15 @@ class FlightGraph:
 
                 # The main method for finding all correct flights starting
                 # from the origin airport
-                self.explore(flight, destination, visited_airport, current_trip,
-                             trips)
+                self.explore(flight, destination, visited_airport, current_trip, trips)
 
         return trips
 
-    def find_trips_reverse(self, origin: str, destination: str,
-                           start_date: datetime) -&gt; list[list[Flight]]:
+    def find_trips_reverse(
+        self, origin: str, destination: str, start_date: datetime
+    ) -&gt; list[list[Flight]]:
         &#34;&#34;&#34;Method for finding all reverse trips, based on the find_trips()
-        method &#34;&#34;&#34;
+        method&#34;&#34;&#34;
 
         # Will be an extended list of flight list with reverse trips
         all_trips: list[list[Flight]] = []
@@ -221,8 +223,9 @@ class FlightGraph:
             # arrival time. So we want see here all flights that starts from
             # B airport and are after the arrival time. No layover rule
             # applied here.
-            reverse_trips = self.find_trips(destination, origin,
-                                            last_flight_arrival_time)
+            reverse_trips = self.find_trips(
+                destination, origin, last_flight_arrival_time
+            )
 
             # Extend our original list with reverse trips as well
             for reverse_trip in reverse_trips:
@@ -232,13 +235,15 @@ class FlightGraph:
 
         return all_trips
 
-    def explore(self, flight: Flight, destination: str,
-                visited_airport: set[str], current_trip: list[Flight],
-                trips: list[list[Flight]]):
+    def explore(
+        self,
+        flight: Flight,
+        destination: str,
+        visited_airport: set[str],
+        current_trip: list[Flight],
+        trips: list[list[Flight]],
+    ):
         &#34;&#34;&#34;Recursive Depth First Search method for finding valid trips&#34;&#34;&#34;
-
-        # Used for determining dead ends in the graph
-        is_correct_trip = True
 
         # Keeping track of visited airports
         visited_airport.add(flight.origin)
@@ -261,30 +266,25 @@ class FlightGraph:
                 # We need a flight that flies to new airport we haven&#39;t been
                 # before, and the layover are correct, min 1 hour and 6 hours
                 # as default.
-                if (next_flight.destination not in visited_airport
-                        and self.is_valid_layover(flight, next_flight)):
+                if (
+                    next_flight.destination not in visited_airport
+                    and self.is_valid_layover(flight, next_flight)
+                ):
                     # Let&#39;s go deep recursively
-                    self.explore(next_flight, destination, visited_airport,
-                                 current_trip, trips)
-            # If we ended up here, it implies that there are no more valid
-            # flight to take to reach our destination, the is a dead end :(
-            is_correct_trip = False
+                    self.explore(
+                        next_flight, destination, visited_airport, current_trip, trips
+                    )
 
         # Let&#39;s explore the other flights from the previous airport, if there
         # any
         current_trip.pop()
 
-        # If we reached the dead end then, we don&#39;t want to take any other
-        # flight&#39;s to this airport anymore. We leave it in the memory as
-        # visited.
-        if is_correct_trip:
-            # We can visit this airport again maybe in different time
-            visited_airport.remove(flight.destination)
+        # We can visit this airport again maybe in different time
+        visited_airport.remove(flight.destination)
 
-    def is_valid_layover(self, prev_flight: Flight,
-                         next_flight: Flight) -&gt; bool:
+    def is_valid_layover(self, prev_flight: Flight, next_flight: Flight) -&gt; bool:
         &#34;&#34;&#34;Method utilises the LayoverRule protocol to check to filter out
-        non-valid layovers &#34;&#34;&#34;
+        non-valid layovers&#34;&#34;&#34;
 
         if self.layover_rule:
             return self.layover_rule.validate(prev_flight, next_flight)
@@ -294,8 +294,9 @@ class FlightGraph:
 class FlightTripDataGenerator:
     &#34;&#34;&#34;Converts trip information into presentable format&#34;&#34;&#34;
 
-    def __init__(self, trips: list[list[Flight]], origin: str, destination: str,
-                 bags: int):
+    def __init__(
+        self, trips: list[list[Flight]], origin: str, destination: str, bags: int
+    ):
         self.trips: list[FlightTrip] = []
         self.origin: str = origin
         self.destination: str = destination
@@ -304,7 +305,7 @@ class FlightTripDataGenerator:
 
     def add_trips(self, trips: list[list[Flight]]):
         &#34;&#34;&#34;Converts a list of Flight objects into FlightTrip objects where the
-        Flight objects are ordered based on the total price data &#34;&#34;&#34;
+        Flight objects are ordered based on the total price data&#34;&#34;&#34;
 
         for flights in trips:
             self.trips.append(
@@ -356,7 +357,7 @@ class FlightTripDataGenerator:
 
     def validate(self, prev_flight: Flight, next_flight: Flight) -&gt; bool:
         &#34;&#34;&#34;Compare the previous flight arrival time to the next flight&#39;s
-        departure time &#34;&#34;&#34;
+        departure time&#34;&#34;&#34;
 
         min_hour_time = timedelta(hours=self.min_layover)
         max_hour_time = timedelta(hours=self.max_layover)
@@ -377,7 +378,7 @@ departure time</p></div>
 </summary>
 <pre><code class="python">def validate(self, prev_flight: Flight, next_flight: Flight) -&gt; bool:
     &#34;&#34;&#34;Compare the previous flight arrival time to the next flight&#39;s
-    departure time &#34;&#34;&#34;
+    departure time&#34;&#34;&#34;
 
     min_hour_time = timedelta(hours=self.min_layover)
     max_hour_time = timedelta(hours=self.max_layover)
@@ -573,8 +574,9 @@ class Flight:
 
         self.layover_rule = rule
 
-    def find_trips(self, origin: str, destination: str,
-                   start_date: datetime) -&gt; list[list[Flight]]:
+    def find_trips(
+        self, origin: str, destination: str, start_date: datetime
+    ) -&gt; list[list[Flight]]:
         &#34;&#34;&#34;Main method for finding all trips&#34;&#34;&#34;
 
         # The eventual list that will contain all the trips (list of flights)
@@ -595,15 +597,15 @@ class Flight:
 
                 # The main method for finding all correct flights starting
                 # from the origin airport
-                self.explore(flight, destination, visited_airport, current_trip,
-                             trips)
+                self.explore(flight, destination, visited_airport, current_trip, trips)
 
         return trips
 
-    def find_trips_reverse(self, origin: str, destination: str,
-                           start_date: datetime) -&gt; list[list[Flight]]:
+    def find_trips_reverse(
+        self, origin: str, destination: str, start_date: datetime
+    ) -&gt; list[list[Flight]]:
         &#34;&#34;&#34;Method for finding all reverse trips, based on the find_trips()
-        method &#34;&#34;&#34;
+        method&#34;&#34;&#34;
 
         # Will be an extended list of flight list with reverse trips
         all_trips: list[list[Flight]] = []
@@ -626,8 +628,9 @@ class Flight:
             # arrival time. So we want see here all flights that starts from
             # B airport and are after the arrival time. No layover rule
             # applied here.
-            reverse_trips = self.find_trips(destination, origin,
-                                            last_flight_arrival_time)
+            reverse_trips = self.find_trips(
+                destination, origin, last_flight_arrival_time
+            )
 
             # Extend our original list with reverse trips as well
             for reverse_trip in reverse_trips:
@@ -637,13 +640,15 @@ class Flight:
 
         return all_trips
 
-    def explore(self, flight: Flight, destination: str,
-                visited_airport: set[str], current_trip: list[Flight],
-                trips: list[list[Flight]]):
+    def explore(
+        self,
+        flight: Flight,
+        destination: str,
+        visited_airport: set[str],
+        current_trip: list[Flight],
+        trips: list[list[Flight]],
+    ):
         &#34;&#34;&#34;Recursive Depth First Search method for finding valid trips&#34;&#34;&#34;
-
-        # Used for determining dead ends in the graph
-        is_correct_trip = True
 
         # Keeping track of visited airports
         visited_airport.add(flight.origin)
@@ -666,30 +671,25 @@ class Flight:
                 # We need a flight that flies to new airport we haven&#39;t been
                 # before, and the layover are correct, min 1 hour and 6 hours
                 # as default.
-                if (next_flight.destination not in visited_airport
-                        and self.is_valid_layover(flight, next_flight)):
+                if (
+                    next_flight.destination not in visited_airport
+                    and self.is_valid_layover(flight, next_flight)
+                ):
                     # Let&#39;s go deep recursively
-                    self.explore(next_flight, destination, visited_airport,
-                                 current_trip, trips)
-            # If we ended up here, it implies that there are no more valid
-            # flight to take to reach our destination, the is a dead end :(
-            is_correct_trip = False
+                    self.explore(
+                        next_flight, destination, visited_airport, current_trip, trips
+                    )
 
         # Let&#39;s explore the other flights from the previous airport, if there
         # any
         current_trip.pop()
 
-        # If we reached the dead end then, we don&#39;t want to take any other
-        # flight&#39;s to this airport anymore. We leave it in the memory as
-        # visited.
-        if is_correct_trip:
-            # We can visit this airport again maybe in different time
-            visited_airport.remove(flight.destination)
+        # We can visit this airport again maybe in different time
+        visited_airport.remove(flight.destination)
 
-    def is_valid_layover(self, prev_flight: Flight,
-                         next_flight: Flight) -&gt; bool:
+    def is_valid_layover(self, prev_flight: Flight, next_flight: Flight) -&gt; bool:
         &#34;&#34;&#34;Method utilises the LayoverRule protocol to check to filter out
-        non-valid layovers &#34;&#34;&#34;
+        non-valid layovers&#34;&#34;&#34;
 
         if self.layover_rule:
             return self.layover_rule.validate(prev_flight, next_flight)
@@ -737,13 +737,15 @@ class Flight:
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def explore(self, flight: Flight, destination: str,
-            visited_airport: set[str], current_trip: list[Flight],
-            trips: list[list[Flight]]):
+<pre><code class="python">def explore(
+    self,
+    flight: Flight,
+    destination: str,
+    visited_airport: set[str],
+    current_trip: list[Flight],
+    trips: list[list[Flight]],
+):
     &#34;&#34;&#34;Recursive Depth First Search method for finding valid trips&#34;&#34;&#34;
-
-    # Used for determining dead ends in the graph
-    is_correct_trip = True
 
     # Keeping track of visited airports
     visited_airport.add(flight.origin)
@@ -766,25 +768,21 @@ class Flight:
             # We need a flight that flies to new airport we haven&#39;t been
             # before, and the layover are correct, min 1 hour and 6 hours
             # as default.
-            if (next_flight.destination not in visited_airport
-                    and self.is_valid_layover(flight, next_flight)):
+            if (
+                next_flight.destination not in visited_airport
+                and self.is_valid_layover(flight, next_flight)
+            ):
                 # Let&#39;s go deep recursively
-                self.explore(next_flight, destination, visited_airport,
-                             current_trip, trips)
-        # If we ended up here, it implies that there are no more valid
-        # flight to take to reach our destination, the is a dead end :(
-        is_correct_trip = False
+                self.explore(
+                    next_flight, destination, visited_airport, current_trip, trips
+                )
 
     # Let&#39;s explore the other flights from the previous airport, if there
     # any
     current_trip.pop()
 
-    # If we reached the dead end then, we don&#39;t want to take any other
-    # flight&#39;s to this airport anymore. We leave it in the memory as
-    # visited.
-    if is_correct_trip:
-        # We can visit this airport again maybe in different time
-        visited_airport.remove(flight.destination)</code></pre>
+    # We can visit this airport again maybe in different time
+    visited_airport.remove(flight.destination)</code></pre>
 </details>
 </dd>
 <dt id="weekend.flighthandler.FlightGraph.find_trips"><code class="name flex">
@@ -796,8 +794,9 @@ class Flight:
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def find_trips(self, origin: str, destination: str,
-               start_date: datetime) -&gt; list[list[Flight]]:
+<pre><code class="python">def find_trips(
+    self, origin: str, destination: str, start_date: datetime
+) -&gt; list[list[Flight]]:
     &#34;&#34;&#34;Main method for finding all trips&#34;&#34;&#34;
 
     # The eventual list that will contain all the trips (list of flights)
@@ -818,8 +817,7 @@ class Flight:
 
             # The main method for finding all correct flights starting
             # from the origin airport
-            self.explore(flight, destination, visited_airport, current_trip,
-                         trips)
+            self.explore(flight, destination, visited_airport, current_trip, trips)
 
     return trips</code></pre>
 </details>
@@ -834,10 +832,11 @@ method</p></div>
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def find_trips_reverse(self, origin: str, destination: str,
-                       start_date: datetime) -&gt; list[list[Flight]]:
+<pre><code class="python">def find_trips_reverse(
+    self, origin: str, destination: str, start_date: datetime
+) -&gt; list[list[Flight]]:
     &#34;&#34;&#34;Method for finding all reverse trips, based on the find_trips()
-    method &#34;&#34;&#34;
+    method&#34;&#34;&#34;
 
     # Will be an extended list of flight list with reverse trips
     all_trips: list[list[Flight]] = []
@@ -860,8 +859,9 @@ method</p></div>
         # arrival time. So we want see here all flights that starts from
         # B airport and are after the arrival time. No layover rule
         # applied here.
-        reverse_trips = self.find_trips(destination, origin,
-                                        last_flight_arrival_time)
+        reverse_trips = self.find_trips(
+            destination, origin, last_flight_arrival_time
+        )
 
         # Extend our original list with reverse trips as well
         for reverse_trip in reverse_trips:
@@ -882,10 +882,9 @@ non-valid layovers</p></div>
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def is_valid_layover(self, prev_flight: Flight,
-                     next_flight: Flight) -&gt; bool:
+<pre><code class="python">def is_valid_layover(self, prev_flight: Flight, next_flight: Flight) -&gt; bool:
     &#34;&#34;&#34;Method utilises the LayoverRule protocol to check to filter out
-    non-valid layovers &#34;&#34;&#34;
+    non-valid layovers&#34;&#34;&#34;
 
     if self.layover_rule:
         return self.layover_rule.validate(prev_flight, next_flight)
@@ -923,7 +922,7 @@ airport to B airport</p></div>
 <pre><code class="python">@dataclass
 class FlightTrip:
     &#34;&#34;&#34;Container for all Flight objects that are necessary to get from A
-    airport to B airport &#34;&#34;&#34;
+    airport to B airport&#34;&#34;&#34;
 
     flights: list[Flight]
     bags_allowed: int = field(init=False, default=0)
@@ -1001,8 +1000,9 @@ class FlightTrip:
 <pre><code class="python">class FlightTripDataGenerator:
     &#34;&#34;&#34;Converts trip information into presentable format&#34;&#34;&#34;
 
-    def __init__(self, trips: list[list[Flight]], origin: str, destination: str,
-                 bags: int):
+    def __init__(
+        self, trips: list[list[Flight]], origin: str, destination: str, bags: int
+    ):
         self.trips: list[FlightTrip] = []
         self.origin: str = origin
         self.destination: str = destination
@@ -1011,7 +1011,7 @@ class FlightTrip:
 
     def add_trips(self, trips: list[list[Flight]]):
         &#34;&#34;&#34;Converts a list of Flight objects into FlightTrip objects where the
-        Flight objects are ordered based on the total price data &#34;&#34;&#34;
+        Flight objects are ordered based on the total price data&#34;&#34;&#34;
 
         for flights in trips:
             self.trips.append(
@@ -1048,7 +1048,7 @@ Flight objects are ordered based on the total price data</p></div>
 </summary>
 <pre><code class="python">def add_trips(self, trips: list[list[Flight]]):
     &#34;&#34;&#34;Converts a list of Flight objects into FlightTrip objects where the
-    Flight objects are ordered based on the total price data &#34;&#34;&#34;
+    Flight objects are ordered based on the total price data&#34;&#34;&#34;
 
     for flights in trips:
         self.trips.append(
@@ -1109,7 +1109,7 @@ Flight objects are ordered based on the total price data</p></div>
 
     def validate(self, prev_flight: Flight, next_flight: Flight) -&gt; bool:
         &#34;&#34;&#34;Compare two sequential flights to check if the meet the validation
-        protocol &#34;&#34;&#34;
+        protocol&#34;&#34;&#34;
 
         ...</code></pre>
 </details>
@@ -1132,7 +1132,7 @@ protocol</p></div>
 </summary>
 <pre><code class="python">def validate(self, prev_flight: Flight, next_flight: Flight) -&gt; bool:
     &#34;&#34;&#34;Compare two sequential flights to check if the meet the validation
-    protocol &#34;&#34;&#34;
+    protocol&#34;&#34;&#34;
 
     ...</code></pre>
 </details>
