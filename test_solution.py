@@ -1,7 +1,9 @@
-import unittest
-import solution
 import json
 import sys
+import unittest
+
+import solution
+
 
 class TestSolution(unittest.TestCase):
     def setUp(self):
@@ -22,7 +24,7 @@ class TestSolution(unittest.TestCase):
         with open("test_data/0_wiw_rfz_2_f.json") as file:
             prepared = json.load(file)
         self.assertCountEqual(calculated, prepared)
-    
+
     def test_to_many_bags(self):
         solution.namespace.csv = "test_data/example0.csv"
         solution.namespace.origin = "WIW"
@@ -62,7 +64,7 @@ class TestSolution(unittest.TestCase):
         solution.namespace.reverse = False
         stdout = sys.stdout
         sys.stdout = None
-        self.assertRaises( SystemExit, solution.main)
+        self.assertRaises(SystemExit, solution.main)
         sys.stdout = stdout
 
     def test_wrong_cell_data(self):
@@ -150,7 +152,7 @@ class TestSolution(unittest.TestCase):
             prepared = json.load(file)
         self.assertCountEqual(calculated, prepared)
 
-    def test_3_jbn_vvh_1_t(self):
+    def test_3_jbn_vvh_2_t(self):
         solution.namespace.csv = "test_data/example3.csv"
         solution.namespace.origin = "JBN"
         solution.namespace.destination = "VVH"
@@ -159,6 +161,18 @@ class TestSolution(unittest.TestCase):
         result = solution.main()
         calculated = json.loads(result)
         with open("test_data/3_jbn_vvh_2_t.json") as file:
+            prepared = json.load(file)
+        self.assertCountEqual(calculated, prepared)
+
+    def test_3_zrw_bpz_0_f(self):
+        solution.namespace.csv = "test_data/example3.csv"
+        solution.namespace.origin = "ZRW"
+        solution.namespace.destination = "BPZ"
+        solution.namespace.bags = 0
+        solution.namespace.reverse = False
+        result = solution.main()
+        calculated = json.loads(result)
+        with open("test_data/3_zrw_bpz_0_f.json") as file:
             prepared = json.load(file)
         self.assertCountEqual(calculated, prepared)
 
