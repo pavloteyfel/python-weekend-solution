@@ -208,8 +208,6 @@ class FlightGraph:
                 trips: list[list[Flight]]):
         """Recursive Depth First Search method for finding valid trips"""
 
-        # Used for determining dead ends in the graph
-        is_correct_trip = True
 
         # Keeping track of visited airports
         visited_airport.add(flight.origin)
@@ -237,20 +235,13 @@ class FlightGraph:
                     # Let's go deep recursively
                     self.explore(next_flight, destination, visited_airport,
                                  current_trip, trips)
-            # If we ended up here, it implies that there are no more valid
-            # flight to take to reach our destination, the is a dead end :(
-            is_correct_trip = False
 
         # Let's explore the other flights from the previous airport, if there
         # any
         current_trip.pop()
 
-        # If we reached the dead end then, we don't want to take any other
-        # flight's to this airport anymore. We leave it in the memory as
-        # visited.
-        if is_correct_trip:
-            # We can visit this airport again maybe in different time
-            visited_airport.remove(flight.destination)
+        # We can visit this airport again maybe in different time
+        visited_airport.remove(flight.destination)
 
     def is_valid_layover(self, prev_flight: Flight,
                          next_flight: Flight) -> bool:
