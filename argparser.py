@@ -51,9 +51,11 @@ def get_args() -> argparse.Namespace:
         type=str,
         help="Path to the .csv file. Example: test_data/example0.csv",
     )
-    parser.add_argument("origin", action="store", type=str, help="Origin airport code.")
     parser.add_argument(
-        "destination", action="store", type=str, help="Destination airport code."
+        "origin", action="store", type=str.upper, help="Origin airport code."
+    )
+    parser.add_argument(
+        "destination", action="store", type=str.upper, help="Destination airport code."
     )
     parser.add_argument(
         "--bags",
