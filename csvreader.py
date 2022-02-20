@@ -1,9 +1,9 @@
 """CSV module for reading flight data"""
 
-from typing import Any, Callable, Generator, Optional, Protocol
+import csv
 from datetime import datetime
 from pathlib import Path
-import csv
+from typing import Any, Callable, Generator, Optional, Protocol
 
 DATE_TIME_PATTERN: str = "%Y-%m-%dT%H:%M:%S"
 DATE_PATTERN: str = "%Y-%m-%d"
@@ -149,7 +149,7 @@ class FlightRowValidator:
 
     def validate_row(self, line: int, row: dict[str, str]):
         """Validate given row based on the sequence of prepared validation
-        functions """
+        functions"""
 
         # Go through every cell and apply the corresponding checker method to it
         for checker, items in zip(self.checkers, row.items()):
