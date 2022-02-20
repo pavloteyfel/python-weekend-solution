@@ -21,7 +21,7 @@ positional arguments:
 options:
   -h, --help                    show this help message and exit
   --bags BAGS                   Number of requested bags. Optional (defaults to 0).
-  --reverse                     Is it a return flight? Optional (defaults to false).
+  --reverse -r                  Is it a return flight? Optional (defaults to false).
   --min-layover MIN_LAYOVER     The minimum layover time between arrive and departure time should not be less 
                                 than X hours. Optional (defaults to 1).
   --max-layover MAX_LAYOVER     The maximum layover time between arrive and departure time should not be more 
