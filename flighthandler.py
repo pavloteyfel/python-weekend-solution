@@ -1,10 +1,11 @@
 """Module for organising flight related classes"""
 
-from typing import Any, Generator, Optional, Protocol
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timedelta
-from csvreader import DATE_TIME_PATTERN
 from json import dumps
+from typing import Any, Generator, Optional, Protocol
+
+from csvreader import DATE_TIME_PATTERN
 
 
 @dataclass
@@ -49,7 +50,7 @@ class Flight:
 @dataclass
 class FlightTrip:
     """Container for all Flight objects that are necessary to get from A
-    airport to B airport """
+    airport to B airport"""
 
     flights: list[Flight]
     bags_allowed: int = field(init=False, default=0)
@@ -88,7 +89,7 @@ class LayoverRule(Protocol):
 
     def validate(self, prev_flight: Flight, next_flight: Flight) -> bool:
         """Compare two sequential flights to check if the meet the validation
-        protocol """
+        protocol"""
 
         ...
 
@@ -102,7 +103,7 @@ class DefaultLayoverRule:
 
     def validate(self, prev_flight: Flight, next_flight: Flight) -> bool:
         """Compare the previous flight arrival time to the next flight's
-        departure time """
+        departure time"""
 
         min_hour_time = timedelta(hours=self.min_layover)
         max_hour_time = timedelta(hours=self.max_layover)
@@ -139,8 +140,9 @@ class FlightGraph:
 
         self.layover_rule = rule
 
-    def find_trips(self, origin: str, destination: str,
-                   start_date: datetime) -> list[list[Flight]]:
+    def find_trips(
+        self, origin: str, destination: str, start_date: datetime
+    ) -> list[list[Flight]]:
         """Main method for finding all trips"""
 
         # The eventual list that will contain all the trips (list of flights)
@@ -161,15 +163,15 @@ class FlightGraph:
 
                 # The main method for finding all correct flights starting
                 # from the origin airport
-                self.explore(flight, destination, visited_airport, current_trip,
-                             trips)
+                self.explore(flight, destination, visited_airport, current_trip, trips)
 
         return trips
 
-    def find_trips_reverse(self, origin: str, destination: str,
-                           start_date: datetime) -> list[list[Flight]]:
+    def find_trips_reverse(
+        self, origin: str, destination: str, start_date: datetime
+    ) -> list[list[Flight]]:
         """Method for finding all reverse trips, based on the find_trips()
-        method """
+        method"""
 
         # Will be an extended list of flight list with reverse trips
         all_trips: list[list[Flight]] = []
@@ -192,8 +194,9 @@ class FlightGraph:
             # arrival time. So we want see here all flights that starts from
             # B airport and are after the arrival time. No layover rule
             # applied here.
-            reverse_trips = self.find_trips(destination, origin,
-                                            last_flight_arrival_time)
+            reverse_trips = self.find_trips(
+                destination, origin, last_flight_arrival_time
+            )
 
             # Extend our original list with reverse trips as well
             for reverse_trip in reverse_trips:
@@ -203,11 +206,15 @@ class FlightGraph:
 
         return all_trips
 
-    def explore(self, flight: Flight, destination: str,
-                visited_airport: set[str], current_trip: list[Flight],
-                trips: list[list[Flight]]):
+    def explore(
+        self,
+        flight: Flight,
+        destination: str,
+        visited_airport: set[str],
+        current_trip: list[Flight],
+        trips: list[list[Flight]],
+    ):
         """Recursive Depth First Search method for finding valid trips"""
-
 
         # Keeping track of visited airports
         visited_airport.add(flight.origin)
@@ -230,11 +237,14 @@ class FlightGraph:
                 # We need a flight that flies to new airport we haven't been
                 # before, and the layover are correct, min 1 hour and 6 hours
                 # as default.
-                if (next_flight.destination not in visited_airport
-                        and self.is_valid_layover(flight, next_flight)):
+                if (
+                    next_flight.destination not in visited_airport
+                    and self.is_valid_layover(flight, next_flight)
+                ):
                     # Let's go deep recursively
-                    self.explore(next_flight, destination, visited_airport,
-                                 current_trip, trips)
+                    self.explore(
+                        next_flight, destination, visited_airport, current_trip, trips
+                    )
 
         # Let's explore the other flights from the previous airport, if there
         # any
@@ -243,10 +253,9 @@ class FlightGraph:
         # We can visit this airport again maybe in different time
         visited_airport.remove(flight.destination)
 
-    def is_valid_layover(self, prev_flight: Flight,
-                         next_flight: Flight) -> bool:
+    def is_valid_layover(self, prev_flight: Flight, next_flight: Flight) -> bool:
         """Method utilises the LayoverRule protocol to check to filter out
-        non-valid layovers """
+        non-valid layovers"""
 
         if self.layover_rule:
             return self.layover_rule.validate(prev_flight, next_flight)
@@ -256,8 +265,9 @@ class FlightGraph:
 class FlightTripDataGenerator:
     """Converts trip information into presentable format"""
 
-    def __init__(self, trips: list[list[Flight]], origin: str, destination: str,
-                 bags: int):
+    def __init__(
+        self, trips: list[list[Flight]], origin: str, destination: str, bags: int
+    ):
         self.trips: list[FlightTrip] = []
         self.origin: str = origin
         self.destination: str = destination
@@ -266,7 +276,7 @@ class FlightTripDataGenerator:
 
     def add_trips(self, trips: list[list[Flight]]):
         """Converts a list of Flight objects into FlightTrip objects where the
-        Flight objects are ordered based on the total price data """
+        Flight objects are ordered based on the total price data"""
 
         for flights in trips:
             self.trips.append(
