@@ -27,7 +27,7 @@
         "destination": "RFZ",
         "origin": "WIW",
         "total_price": 384.0,
-        "travel_time": "9:00:00"
+        "travel_time": "11:00:00"
     },
     {
         "flights": [
@@ -57,7 +57,7 @@
         "destination": "RFZ",
         "origin": "WIW",
         "total_price": 384.0,
-        "travel_time": "9:00:00"
+        "travel_time": "3 days, 11:00:00"
     },
     {
         "flights": [
@@ -87,7 +87,7 @@
         "destination": "RFZ",
         "origin": "WIW",
         "total_price": 384.0,
-        "travel_time": "9:00:00"
+        "travel_time": "8 days, 11:00:00"
     },
     {
         "flights": [
@@ -117,7 +117,7 @@
         "destination": "RFZ",
         "origin": "WIW",
         "total_price": 384.0,
-        "travel_time": "9:00:00"
+        "travel_time": "11:00:00"
     },
     {
         "flights": [
@@ -147,7 +147,7 @@
         "destination": "RFZ",
         "origin": "WIW",
         "total_price": 384.0,
-        "travel_time": "9:00:00"
+        "travel_time": "5 days, 11:00:00"
     },
     {
         "flights": [
@@ -177,6 +177,6 @@
         "destination": "RFZ",
         "origin": "WIW",
         "total_price": 384.0,
-        "travel_time": "9:00:00"
+        "travel_time": "11:00:00"
     }
 ]

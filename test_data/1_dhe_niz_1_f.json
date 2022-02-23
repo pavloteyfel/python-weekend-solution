@@ -27,7 +27,7 @@
         "destination": "NIZ",
         "origin": "DHE",
         "total_price": 137.0,
-        "travel_time": "5:45:00"
+        "travel_time": "8:30:00"
     },
     {
         "flights": [
@@ -57,7 +57,7 @@
         "destination": "NIZ",
         "origin": "DHE",
         "total_price": 137.0,
-        "travel_time": "5:45:00"
+        "travel_time": "8:30:00"
     },
     {
         "flights": [
@@ -87,7 +87,7 @@
         "destination": "NIZ",
         "origin": "DHE",
         "total_price": 137.0,
-        "travel_time": "5:45:00"
+        "travel_time": "8:30:00"
     },
     {
         "flights": [
@@ -127,7 +127,7 @@
         "destination": "NIZ",
         "origin": "DHE",
         "total_price": 156.0,
-        "travel_time": "7:00:00"
+        "travel_time": "10:45:00"
     },
     {
         "flights": [
@@ -157,7 +157,7 @@
         "destination": "NIZ",
         "origin": "DHE",
         "total_price": 161.0,
-        "travel_time": "5:35:00"
+        "travel_time": "10:10:00"
     },
     {
         "flights": [
@@ -187,7 +187,7 @@
         "destination": "NIZ",
         "origin": "DHE",
         "total_price": 161.0,
-        "travel_time": "5:35:00"
+        "travel_time": "10:10:00"
     },
     {
         "flights": [
@@ -217,7 +217,7 @@
         "destination": "NIZ",
         "origin": "DHE",
         "total_price": 161.0,
-        "travel_time": "5:35:00"
+        "travel_time": "10:10:00"
     },
     {
         "flights": [
@@ -257,7 +257,7 @@
         "destination": "NIZ",
         "origin": "DHE",
         "total_price": 182.0,
-        "travel_time": "7:00:00"
+        "travel_time": "13:30:00"
     },
     {
         "flights": [

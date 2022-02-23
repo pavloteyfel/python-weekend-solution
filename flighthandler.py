@@ -64,16 +64,21 @@ class FlightTrip:
         # Maybe creating @property for these would be a better option
         bags_allowed: int = 999
         total_price: float = 0.0
-        travel_time: timedelta = timedelta()
 
         for flight in self.flights:
             bags_allowed = min(bags_allowed, flight.bags_allowed)
             total_price += flight.get_full_price(self.bags_count)
-            travel_time += flight.get_travel_time()
 
         self.bags_allowed = bags_allowed
         self.total_price = total_price
-        self.travel_time = str(travel_time)
+        self.travel_time = self.get_travel_time()
+
+    def get_travel_time(self):
+        """Calculates the whole trave time"""
+        start = self.flights[0]
+        end = self.flights[-1]
+
+        return str(end.get_arrival_time() - start.get_departure_time())
 
     # Used to calculate the final order flight trips
     def __gt__(self, other: "FlightTrip"):
