@@ -93,16 +93,21 @@ class FlightTrip:
         # Maybe creating @property for these would be a better option
         bags_allowed: int = 999
         total_price: float = 0.0
-        travel_time: timedelta = timedelta()
 
         for flight in self.flights:
             bags_allowed = min(bags_allowed, flight.bags_allowed)
             total_price += flight.get_full_price(self.bags_count)
-            travel_time += flight.get_travel_time()
 
         self.bags_allowed = bags_allowed
         self.total_price = total_price
-        self.travel_time = str(travel_time)
+        self.travel_time = self.get_travel_time()
+
+    def get_travel_time(self):
+        &#34;&#34;&#34;Calculates the whole trave time&#34;&#34;&#34;
+        start = self.flights[0]
+        end = self.flights[-1]
+
+        return str(end.get_arrival_time() - start.get_departure_time())
 
     # Used to calculate the final order flight trips
     def __gt__(self, other: &#34;FlightTrip&#34;):
@@ -936,16 +941,21 @@ class FlightTrip:
         # Maybe creating @property for these would be a better option
         bags_allowed: int = 999
         total_price: float = 0.0
-        travel_time: timedelta = timedelta()
 
         for flight in self.flights:
             bags_allowed = min(bags_allowed, flight.bags_allowed)
             total_price += flight.get_full_price(self.bags_count)
-            travel_time += flight.get_travel_time()
 
         self.bags_allowed = bags_allowed
         self.total_price = total_price
-        self.travel_time = str(travel_time)
+        self.travel_time = self.get_travel_time()
+
+    def get_travel_time(self):
+        &#34;&#34;&#34;Calculates the whole trave time&#34;&#34;&#34;
+        start = self.flights[0]
+        end = self.flights[-1]
+
+        return str(end.get_arrival_time() - start.get_departure_time())
 
     # Used to calculate the final order flight trips
     def __gt__(self, other: &#34;FlightTrip&#34;):
@@ -984,6 +994,26 @@ class FlightTrip:
 <dt id="weekend.flighthandler.FlightTrip.travel_time"><code class="name">var <span class="ident">travel_time</span> : str</code></dt>
 <dd>
 <div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="weekend.flighthandler.FlightTrip.get_travel_time"><code class="name flex">
+<span>def <span class="ident">get_travel_time</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calculates the whole trave time</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_travel_time(self):
+    &#34;&#34;&#34;Calculates the whole trave time&#34;&#34;&#34;
+    start = self.flights[0]
+    end = self.flights[-1]
+
+    return str(end.get_arrival_time() - start.get_departure_time())</code></pre>
+</details>
 </dd>
 </dl>
 </dd>
@@ -1196,6 +1226,7 @@ protocol</p></div>
 <li><code><a title="weekend.flighthandler.FlightTrip.bags_count" href="#weekend.flighthandler.FlightTrip.bags_count">bags_count</a></code></li>
 <li><code><a title="weekend.flighthandler.FlightTrip.destination" href="#weekend.flighthandler.FlightTrip.destination">destination</a></code></li>
 <li><code><a title="weekend.flighthandler.FlightTrip.flights" href="#weekend.flighthandler.FlightTrip.flights">flights</a></code></li>
+<li><code><a title="weekend.flighthandler.FlightTrip.get_travel_time" href="#weekend.flighthandler.FlightTrip.get_travel_time">get_travel_time</a></code></li>
 <li><code><a title="weekend.flighthandler.FlightTrip.origin" href="#weekend.flighthandler.FlightTrip.origin">origin</a></code></li>
 <li><code><a title="weekend.flighthandler.FlightTrip.total_price" href="#weekend.flighthandler.FlightTrip.total_price">total_price</a></code></li>
 <li><code><a title="weekend.flighthandler.FlightTrip.travel_time" href="#weekend.flighthandler.FlightTrip.travel_time">travel_time</a></code></li>
