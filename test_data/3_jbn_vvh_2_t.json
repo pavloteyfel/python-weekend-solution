@@ -27,7 +27,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 66.0,
-        "travel_time": "3:40:00"
+        "travel_time": "1 day, 21:00:00"
     },
     {
         "flights": [
@@ -57,7 +57,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 66.0,
-        "travel_time": "3:40:00"
+        "travel_time": "4 days, 21:00:00"
     },
     {
         "flights": [
@@ -87,7 +87,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 66.0,
-        "travel_time": "3:40:00"
+        "travel_time": "9 days, 21:00:00"
     },
     {
         "flights": [
@@ -117,7 +117,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 66.0,
-        "travel_time": "3:40:00"
+        "travel_time": "15 days, 21:00:00"
     },
     {
         "flights": [
@@ -147,7 +147,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 66.0,
-        "travel_time": "3:40:00"
+        "travel_time": "2 days, 21:00:00"
     },
     {
         "flights": [
@@ -177,7 +177,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 66.0,
-        "travel_time": "3:40:00"
+        "travel_time": "7 days, 21:00:00"
     },
     {
         "flights": [
@@ -207,7 +207,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 66.0,
-        "travel_time": "3:40:00"
+        "travel_time": "13 days, 21:00:00"
     },
     {
         "flights": [
@@ -237,7 +237,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 66.0,
-        "travel_time": "3:40:00"
+        "travel_time": "4 days, 21:00:00"
     },
     {
         "flights": [
@@ -267,7 +267,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 66.0,
-        "travel_time": "3:40:00"
+        "travel_time": "10 days, 21:00:00"
     },
     {
         "flights": [
@@ -297,7 +297,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 66.0,
-        "travel_time": "3:40:00"
+        "travel_time": "5 days, 21:00:00"
     },
     {
         "flights": [
@@ -337,7 +337,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 114.0,
-        "travel_time": "5:40:00"
+        "travel_time": "2 days, 12:35:00"
     },
     {
         "flights": [
@@ -377,7 +377,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 114.0,
-        "travel_time": "5:40:00"
+        "travel_time": "12:35:00"
     },
     {
         "flights": [
@@ -417,7 +417,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 216.0,
-        "travel_time": "8:30:00"
+        "travel_time": "5 days, 10:15:00"
     },
     {
         "flights": [
@@ -457,7 +457,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 216.0,
-        "travel_time": "8:30:00"
+        "travel_time": "11 days, 10:15:00"
     },
     {
         "flights": [
@@ -497,7 +497,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 216.0,
-        "travel_time": "8:30:00"
+        "travel_time": "6 days, 10:15:00"
     },
     {
         "flights": [
@@ -537,7 +537,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 235.0,
-        "travel_time": "8:30:00"
+        "travel_time": "1 day, 4:45:00"
     },
     {
         "flights": [
@@ -577,7 +577,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 344.0,
-        "travel_time": "10:20:00"
+        "travel_time": "15:40:00"
     },
     {
         "flights": [
@@ -617,7 +617,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 344.0,
-        "travel_time": "10:20:00"
+        "travel_time": "2 days, 15:40:00"
     },
     {
         "flights": [
@@ -657,7 +657,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 344.0,
-        "travel_time": "10:20:00"
+        "travel_time": "5 days, 15:40:00"
     },
     {
         "flights": [
@@ -697,7 +697,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 344.0,
-        "travel_time": "10:20:00"
+        "travel_time": "10 days, 15:40:00"
     },
     {
         "flights": [
@@ -737,7 +737,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 344.0,
-        "travel_time": "10:20:00"
+        "travel_time": "16 days, 15:40:00"
     },
     {
         "flights": [
@@ -777,7 +777,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 355.0,
-        "travel_time": "10:20:00"
+        "travel_time": "15:40:00"
     },
     {
         "flights": [
@@ -817,7 +817,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 355.0,
-        "travel_time": "10:20:00"
+        "travel_time": "2 days, 15:40:00"
     },
     {
         "flights": [
@@ -857,7 +857,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 355.0,
-        "travel_time": "10:20:00"
+        "travel_time": "5 days, 15:40:00"
     },
     {
         "flights": [
@@ -897,7 +897,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 355.0,
-        "travel_time": "10:20:00"
+        "travel_time": "10 days, 15:40:00"
     },
     {
         "flights": [
@@ -937,7 +937,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 355.0,
-        "travel_time": "10:20:00"
+        "travel_time": "16 days, 15:40:00"
     },
     {
         "flights": [
@@ -977,7 +977,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 355.0,
-        "travel_time": "10:20:00"
+        "travel_time": "15:40:00"
     },
     {
         "flights": [
@@ -1017,7 +1017,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 355.0,
-        "travel_time": "10:20:00"
+        "travel_time": "3 days, 15:40:00"
     },
     {
         "flights": [
@@ -1057,7 +1057,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 355.0,
-        "travel_time": "10:20:00"
+        "travel_time": "8 days, 15:40:00"
     },
     {
         "flights": [
@@ -1097,7 +1097,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 355.0,
-        "travel_time": "10:20:00"
+        "travel_time": "14 days, 15:40:00"
     },
     {
         "flights": [
@@ -1137,7 +1137,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 368.0,
-        "travel_time": "10:10:00"
+        "travel_time": "1 day, 7:20:00"
     },
     {
         "flights": [
@@ -1177,7 +1177,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 368.0,
-        "travel_time": "10:10:00"
+        "travel_time": "3 days, 7:20:00"
     },
     {
         "flights": [
@@ -1217,7 +1217,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 368.0,
-        "travel_time": "10:10:00"
+        "travel_time": "6 days, 7:20:00"
     },
     {
         "flights": [
@@ -1257,7 +1257,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 368.0,
-        "travel_time": "10:10:00"
+        "travel_time": "11 days, 7:20:00"
     },
     {
         "flights": [
@@ -1297,7 +1297,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 368.0,
-        "travel_time": "10:10:00"
+        "travel_time": "17 days, 7:20:00"
     },
     {
         "flights": [
@@ -1337,7 +1337,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 368.0,
-        "travel_time": "10:10:00"
+        "travel_time": "1 day, 3:20:00"
     },
     {
         "flights": [
@@ -1377,7 +1377,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 368.0,
-        "travel_time": "10:10:00"
+        "travel_time": "5 days, 3:20:00"
     },
     {
         "flights": [
@@ -1417,7 +1417,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 368.0,
-        "travel_time": "10:10:00"
+        "travel_time": "10 days, 3:20:00"
     },
     {
         "flights": [
@@ -1457,7 +1457,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 368.0,
-        "travel_time": "10:10:00"
+        "travel_time": "1 day, 7:20:00"
     },
     {
         "flights": [
@@ -1497,7 +1497,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 368.0,
-        "travel_time": "10:10:00"
+        "travel_time": "4 days, 7:20:00"
     },
     {
         "flights": [
@@ -1537,7 +1537,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 368.0,
-        "travel_time": "10:10:00"
+        "travel_time": "9 days, 7:20:00"
     },
     {
         "flights": [
@@ -1577,7 +1577,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 368.0,
-        "travel_time": "10:10:00"
+        "travel_time": "15 days, 7:20:00"
     },
     {
         "flights": [
@@ -1617,7 +1617,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 368.0,
-        "travel_time": "10:10:00"
+        "travel_time": "3 days, 3:20:00"
     },
     {
         "flights": [
@@ -1657,7 +1657,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 368.0,
-        "travel_time": "10:10:00"
+        "travel_time": "8 days, 3:20:00"
     },
     {
         "flights": [
@@ -1697,7 +1697,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 368.0,
-        "travel_time": "10:10:00"
+        "travel_time": "5 days, 7:20:00"
     },
     {
         "flights": [
@@ -1737,7 +1737,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 368.0,
-        "travel_time": "10:10:00"
+        "travel_time": "11 days, 7:20:00"
     },
     {
         "flights": [
@@ -1777,7 +1777,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 368.0,
-        "travel_time": "10:10:00"
+        "travel_time": "5 days, 3:20:00"
     },
     {
         "flights": [
@@ -1817,7 +1817,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 368.0,
-        "travel_time": "10:10:00"
+        "travel_time": "6 days, 7:20:00"
     },
     {
         "flights": [
@@ -1857,7 +1857,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 373.0,
-        "travel_time": "10:10:00"
+        "travel_time": "1 day, 18:10:00"
     },
     {
         "flights": [
@@ -1897,7 +1897,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 373.0,
-        "travel_time": "10:10:00"
+        "travel_time": "3 days, 18:10:00"
     },
     {
         "flights": [
@@ -1937,7 +1937,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 373.0,
-        "travel_time": "10:10:00"
+        "travel_time": "6 days, 18:10:00"
     },
     {
         "flights": [
@@ -1977,7 +1977,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 373.0,
-        "travel_time": "10:10:00"
+        "travel_time": "11 days, 18:10:00"
     },
     {
         "flights": [
@@ -2017,7 +2017,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 373.0,
-        "travel_time": "10:10:00"
+        "travel_time": "17 days, 18:10:00"
     },
     {
         "flights": [
@@ -2057,7 +2057,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 377.0,
-        "travel_time": "10:20:00"
+        "travel_time": "14:45:00"
     },
     {
         "flights": [
@@ -2097,7 +2097,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 377.0,
-        "travel_time": "10:20:00"
+        "travel_time": "2 days, 14:45:00"
     },
     {
         "flights": [
@@ -2137,7 +2137,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 377.0,
-        "travel_time": "10:20:00"
+        "travel_time": "5 days, 14:45:00"
     },
     {
         "flights": [
@@ -2177,7 +2177,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 377.0,
-        "travel_time": "10:20:00"
+        "travel_time": "10 days, 14:45:00"
     },
     {
         "flights": [
@@ -2217,7 +2217,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 377.0,
-        "travel_time": "10:20:00"
+        "travel_time": "16 days, 14:45:00"
     },
     {
         "flights": [
@@ -2257,7 +2257,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 377.0,
-        "travel_time": "10:20:00"
+        "travel_time": "14:45:00"
     },
     {
         "flights": [
@@ -2297,7 +2297,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 377.0,
-        "travel_time": "10:20:00"
+        "travel_time": "3 days, 14:45:00"
     },
     {
         "flights": [
@@ -2337,7 +2337,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 377.0,
-        "travel_time": "10:20:00"
+        "travel_time": "8 days, 14:45:00"
     },
     {
         "flights": [
@@ -2377,7 +2377,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 377.0,
-        "travel_time": "10:20:00"
+        "travel_time": "14 days, 14:45:00"
     },
     {
         "flights": [
@@ -2427,7 +2427,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 392.0,
-        "travel_time": "12:20:00"
+        "travel_time": "3 days, 7:15:00"
     },
     {
         "flights": [
@@ -2477,7 +2477,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 403.0,
-        "travel_time": "12:20:00"
+        "travel_time": "3 days, 7:15:00"
     },
     {
         "flights": [
@@ -2527,7 +2527,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 403.0,
-        "travel_time": "12:45:00"
+        "travel_time": "2 days, 10:15:00"
     },
     {
         "flights": [
@@ -2577,7 +2577,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 403.0,
-        "travel_time": "12:45:00"
+        "travel_time": "5 days, 10:15:00"
     },
     {
         "flights": [
@@ -2627,7 +2627,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 403.0,
-        "travel_time": "12:45:00"
+        "travel_time": "10 days, 10:15:00"
     },
     {
         "flights": [
@@ -2677,7 +2677,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 403.0,
-        "travel_time": "12:45:00"
+        "travel_time": "16 days, 10:15:00"
     },
     {
         "flights": [
@@ -2727,7 +2727,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 403.0,
-        "travel_time": "12:20:00"
+        "travel_time": "1 day, 7:15:00"
     },
     {
         "flights": [
@@ -2777,7 +2777,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 416.0,
-        "travel_time": "12:10:00"
+        "travel_time": "3 days, 22:55:00"
     },
     {
         "flights": [
@@ -2827,7 +2827,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 416.0,
-        "travel_time": "12:10:00"
+        "travel_time": "1 day, 22:55:00"
     },
     {
         "flights": [
@@ -2877,7 +2877,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 421.0,
-        "travel_time": "12:10:00"
+        "travel_time": "4 days, 9:45:00"
     },
     {
         "flights": [
@@ -2927,7 +2927,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 425.0,
-        "travel_time": "12:20:00"
+        "travel_time": "3 days, 6:20:00"
     },
     {
         "flights": [
@@ -2977,7 +2977,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 425.0,
-        "travel_time": "12:20:00"
+        "travel_time": "1 day, 6:20:00"
     },
     {
         "flights": [
@@ -3037,7 +3037,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 451.0,
-        "travel_time": "14:45:00"
+        "travel_time": "3 days, 1:50:00"
     },
     {
         "flights": [
@@ -3087,7 +3087,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 452.0,
-        "travel_time": "13:40:00"
+        "travel_time": "1 day, 11:35:00"
     },
     {
         "flights": [
@@ -3137,7 +3137,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 452.0,
-        "travel_time": "13:40:00"
+        "travel_time": "3 days, 11:35:00"
     },
     {
         "flights": [
@@ -3187,7 +3187,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 452.0,
-        "travel_time": "13:40:00"
+        "travel_time": "6 days, 11:35:00"
     },
     {
         "flights": [
@@ -3237,7 +3237,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 452.0,
-        "travel_time": "13:40:00"
+        "travel_time": "11 days, 11:35:00"
     },
     {
         "flights": [
@@ -3287,7 +3287,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 452.0,
-        "travel_time": "13:40:00"
+        "travel_time": "17 days, 11:35:00"
     },
     {
         "flights": [
@@ -3337,7 +3337,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 455.0,
-        "travel_time": "13:40:00"
+        "travel_time": "1 day, 10:25:00"
     },
     {
         "flights": [
@@ -3387,7 +3387,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 455.0,
-        "travel_time": "13:40:00"
+        "travel_time": "3 days, 10:25:00"
     },
     {
         "flights": [
@@ -3437,7 +3437,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 455.0,
-        "travel_time": "13:40:00"
+        "travel_time": "6 days, 10:25:00"
     },
     {
         "flights": [
@@ -3487,7 +3487,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 455.0,
-        "travel_time": "13:40:00"
+        "travel_time": "11 days, 10:25:00"
     },
     {
         "flights": [
@@ -3537,7 +3537,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 455.0,
-        "travel_time": "13:40:00"
+        "travel_time": "17 days, 10:25:00"
     },
     {
         "flights": [
@@ -3587,7 +3587,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 465.0,
-        "travel_time": "13:40:00"
+        "travel_time": "1 day, 10:25:00"
     },
     {
         "flights": [
@@ -3637,7 +3637,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 465.0,
-        "travel_time": "13:40:00"
+        "travel_time": "3 days, 10:25:00"
     },
     {
         "flights": [
@@ -3687,7 +3687,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 465.0,
-        "travel_time": "13:40:00"
+        "travel_time": "6 days, 10:25:00"
     },
     {
         "flights": [
@@ -3737,7 +3737,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 465.0,
-        "travel_time": "13:40:00"
+        "travel_time": "11 days, 10:25:00"
     },
     {
         "flights": [
@@ -3787,7 +3787,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 465.0,
-        "travel_time": "13:40:00"
+        "travel_time": "17 days, 10:25:00"
     },
     {
         "flights": [
@@ -3837,7 +3837,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 483.0,
-        "travel_time": "13:40:00"
+        "travel_time": "1 day, 11:35:00"
     },
     {
         "flights": [
@@ -3887,7 +3887,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 483.0,
-        "travel_time": "13:40:00"
+        "travel_time": "3 days, 11:35:00"
     },
     {
         "flights": [
@@ -3937,7 +3937,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 483.0,
-        "travel_time": "13:40:00"
+        "travel_time": "6 days, 11:35:00"
     },
     {
         "flights": [
@@ -3987,7 +3987,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 483.0,
-        "travel_time": "13:40:00"
+        "travel_time": "11 days, 11:35:00"
     },
     {
         "flights": [
@@ -4037,7 +4037,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 483.0,
-        "travel_time": "13:40:00"
+        "travel_time": "17 days, 11:35:00"
     },
     {
         "flights": [
@@ -4097,7 +4097,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 500.0,
-        "travel_time": "15:40:00"
+        "travel_time": "4 days, 3:10:00"
     },
     {
         "flights": [
@@ -4157,7 +4157,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 503.0,
-        "travel_time": "15:40:00"
+        "travel_time": "4 days, 2:00:00"
     },
     {
         "flights": [
@@ -4217,7 +4217,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 513.0,
-        "travel_time": "15:40:00"
+        "travel_time": "4 days, 2:00:00"
     },
     {
         "flights": [
@@ -4267,7 +4267,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 513.0,
-        "travel_time": "15:10:00"
+        "travel_time": "1 day, 23:25:00"
     },
     {
         "flights": [
@@ -4317,7 +4317,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 518.0,
-        "travel_time": "15:00:00"
+        "travel_time": "5 days, 16:35:00"
     },
     {
         "flights": [
@@ -4367,7 +4367,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 524.0,
-        "travel_time": "15:10:00"
+        "travel_time": "1 day, 23:25:00"
     },
     {
         "flights": [
@@ -4427,7 +4427,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 531.0,
-        "travel_time": "15:40:00"
+        "travel_time": "4 days, 3:10:00"
     },
     {
         "flights": [
@@ -4477,7 +4477,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 531.0,
-        "travel_time": "13:35:00"
+        "travel_time": "2 days, 10:15:00"
     },
     {
         "flights": [
@@ -4527,7 +4527,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 531.0,
-        "travel_time": "13:35:00"
+        "travel_time": "5 days, 10:15:00"
     },
     {
         "flights": [
@@ -4577,7 +4577,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 531.0,
-        "travel_time": "13:35:00"
+        "travel_time": "10 days, 10:15:00"
     },
     {
         "flights": [
@@ -4627,7 +4627,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 531.0,
-        "travel_time": "13:35:00"
+        "travel_time": "16 days, 10:15:00"
     },
     {
         "flights": [
@@ -4677,7 +4677,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 537.0,
-        "travel_time": "15:00:00"
+        "travel_time": "2 days, 15:05:00"
     },
     {
         "flights": [
@@ -4727,7 +4727,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 542.0,
-        "travel_time": "15:00:00"
+        "travel_time": "1 day, 1:55:00"
     },
     {
         "flights": [
@@ -4777,7 +4777,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 542.0,
-        "travel_time": "15:00:00"
+        "travel_time": "3 days, 1:55:00"
     },
     {
         "flights": [
@@ -4827,7 +4827,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 546.0,
-        "travel_time": "15:10:00"
+        "travel_time": "1 day, 22:30:00"
     },
     {
         "flights": [
@@ -4887,7 +4887,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 555.0,
-        "travel_time": "16:55:00"
+        "travel_time": "1 day, 6:55:00"
     },
     {
         "flights": [
@@ -4947,7 +4947,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 572.0,
-        "travel_time": "17:35:00"
+        "travel_time": "1 day, 18:00:00"
     },
     {
         "flights": [
@@ -5007,7 +5007,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 579.0,
-        "travel_time": "15:35:00"
+        "travel_time": "3 days, 1:50:00"
     },
     {
         "flights": [
@@ -5067,7 +5067,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 608.0,
-        "travel_time": "17:20:00"
+        "travel_time": "1 day, 6:55:00"
     },
     {
         "flights": [
@@ -5127,7 +5127,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 621.0,
-        "travel_time": "18:30:00"
+        "travel_time": "2 days, 19:20:00"
     },
     {
         "flights": [
@@ -5177,7 +5177,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 621.0,
-        "travel_time": "13:30:00"
+        "travel_time": "7 days, 12:35:00"
     },
     {
         "flights": [
@@ -5227,7 +5227,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 621.0,
-        "travel_time": "13:30:00"
+        "travel_time": "5 days, 12:35:00"
     },
     {
         "flights": [
@@ -5277,7 +5277,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 621.0,
-        "travel_time": "13:30:00"
+        "travel_time": "2 days, 12:35:00"
     },
     {
         "flights": [
@@ -5337,7 +5337,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 624.0,
-        "travel_time": "18:30:00"
+        "travel_time": "2 days, 18:10:00"
     },
     {
         "flights": [
@@ -5397,7 +5397,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 633.0,
-        "travel_time": "16:40:00"
+        "travel_time": "2 days, 7:15:00"
     },
     {
         "flights": [
@@ -5457,7 +5457,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 633.0,
-        "travel_time": "16:40:00"
+        "travel_time": "5 days, 7:15:00"
     },
     {
         "flights": [
@@ -5517,7 +5517,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 633.0,
-        "travel_time": "16:40:00"
+        "travel_time": "10 days, 7:15:00"
     },
     {
         "flights": [
@@ -5577,7 +5577,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 633.0,
-        "travel_time": "16:40:00"
+        "travel_time": "16 days, 7:15:00"
     },
     {
         "flights": [
@@ -5637,7 +5637,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 634.0,
-        "travel_time": "18:30:00"
+        "travel_time": "2 days, 18:10:00"
     },
     {
         "flights": [
@@ -5687,7 +5687,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 635.0,
-        "travel_time": "16:50:00"
+        "travel_time": "1 day, 1:00:00"
     },
     {
         "flights": [
@@ -5747,7 +5747,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 645.0,
-        "travel_time": "16:40:00"
+        "travel_time": "2 days, 7:15:00"
     },
     {
         "flights": [
@@ -5807,7 +5807,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 645.0,
-        "travel_time": "16:40:00"
+        "travel_time": "5 days, 7:15:00"
     },
     {
         "flights": [
@@ -5867,7 +5867,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 645.0,
-        "travel_time": "16:40:00"
+        "travel_time": "10 days, 7:15:00"
     },
     {
         "flights": [
@@ -5927,7 +5927,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 645.0,
-        "travel_time": "16:40:00"
+        "travel_time": "16 days, 7:15:00"
     },
     {
         "flights": [
@@ -5977,7 +5977,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 646.0,
-        "travel_time": "16:50:00"
+        "travel_time": "1 day, 22:00:00"
     },
     {
         "flights": [
@@ -6027,7 +6027,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 646.0,
-        "travel_time": "16:50:00"
+        "travel_time": "5 days, 22:00:00"
     },
     {
         "flights": [
@@ -6077,7 +6077,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 646.0,
-        "travel_time": "16:50:00"
+        "travel_time": "10 days, 22:00:00"
     },
     {
         "flights": [
@@ -6127,7 +6127,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 646.0,
-        "travel_time": "16:50:00"
+        "travel_time": "1 day, 1:00:00"
     },
     {
         "flights": [
@@ -6177,7 +6177,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 651.0,
-        "travel_time": "16:50:00"
+        "travel_time": "1 day, 1:55:00"
     },
     {
         "flights": [
@@ -6237,7 +6237,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 652.0,
-        "travel_time": "18:30:00"
+        "travel_time": "2 days, 19:20:00"
     },
     {
         "flights": [
@@ -6287,7 +6287,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 657.0,
-        "travel_time": "16:50:00"
+        "travel_time": "1 day, 22:00:00"
     },
     {
         "flights": [
@@ -6337,7 +6337,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 657.0,
-        "travel_time": "16:50:00"
+        "travel_time": "5 days, 22:00:00"
     },
     {
         "flights": [
@@ -6387,7 +6387,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 657.0,
-        "travel_time": "16:50:00"
+        "travel_time": "10 days, 22:00:00"
     },
     {
         "flights": [
@@ -6437,7 +6437,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 657.0,
-        "travel_time": "16:50:00"
+        "travel_time": "3 days, 22:00:00"
     },
     {
         "flights": [
@@ -6487,7 +6487,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 657.0,
-        "travel_time": "16:50:00"
+        "travel_time": "8 days, 22:00:00"
     },
     {
         "flights": [
@@ -6537,7 +6537,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 659.0,
-        "travel_time": "16:40:00"
+        "travel_time": "1 day, 16:40:00"
     },
     {
         "flights": [
@@ -6587,7 +6587,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 664.0,
-        "travel_time": "16:40:00"
+        "travel_time": "2 days, 3:30:00"
     },
     {
         "flights": [
@@ -6637,7 +6637,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 668.0,
-        "travel_time": "16:50:00"
+        "travel_time": "1 day, 0:05:00"
     },
     {
         "flights": [
@@ -6687,7 +6687,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 670.0,
-        "travel_time": "16:40:00"
+        "travel_time": "2 days, 13:40:00"
     },
     {
         "flights": [
@@ -6737,7 +6737,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 670.0,
-        "travel_time": "16:40:00"
+        "travel_time": "6 days, 13:40:00"
     },
     {
         "flights": [
@@ -6787,7 +6787,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 670.0,
-        "travel_time": "16:40:00"
+        "travel_time": "11 days, 13:40:00"
     },
     {
         "flights": [
@@ -6837,7 +6837,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 670.0,
-        "travel_time": "16:40:00"
+        "travel_time": "4 days, 13:40:00"
     },
     {
         "flights": [
@@ -6887,7 +6887,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 670.0,
-        "travel_time": "16:40:00"
+        "travel_time": "9 days, 13:40:00"
     },
     {
         "flights": [
@@ -6937,7 +6937,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 670.0,
-        "travel_time": "16:40:00"
+        "travel_time": "5 days, 13:40:00"
     },
     {
         "flights": [
@@ -6987,7 +6987,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 673.0,
-        "travel_time": "16:50:00"
+        "travel_time": "1 day, 1:25:00"
     },
     {
         "flights": [
@@ -7037,7 +7037,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 675.0,
-        "travel_time": "16:40:00"
+        "travel_time": "1 day, 0:30:00"
     },
     {
         "flights": [
@@ -7087,7 +7087,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 675.0,
-        "travel_time": "16:40:00"
+        "travel_time": "3 days, 0:30:00"
     },
     {
         "flights": [
@@ -7137,7 +7137,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 675.0,
-        "travel_time": "16:40:00"
+        "travel_time": "7 days, 0:30:00"
     },
     {
         "flights": [
@@ -7187,7 +7187,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 675.0,
-        "travel_time": "16:40:00"
+        "travel_time": "12 days, 0:30:00"
     },
     {
         "flights": [
@@ -7237,7 +7237,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 679.0,
-        "travel_time": "16:50:00"
+        "travel_time": "1 day, 21:05:00"
     },
     {
         "flights": [
@@ -7287,7 +7287,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 679.0,
-        "travel_time": "16:50:00"
+        "travel_time": "5 days, 21:05:00"
     },
     {
         "flights": [
@@ -7337,7 +7337,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 679.0,
-        "travel_time": "16:50:00"
+        "travel_time": "10 days, 21:05:00"
     },
     {
         "flights": [
@@ -7387,7 +7387,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 679.0,
-        "travel_time": "16:50:00"
+        "travel_time": "3 days, 21:05:00"
     },
     {
         "flights": [
@@ -7437,7 +7437,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 679.0,
-        "travel_time": "16:50:00"
+        "travel_time": "8 days, 21:05:00"
     },
     {
         "flights": [
@@ -7507,7 +7507,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 681.0,
-        "travel_time": "18:40:00"
+        "travel_time": "2 days, 22:50:00"
     },
     {
         "flights": [
@@ -7577,7 +7577,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 693.0,
-        "travel_time": "18:40:00"
+        "travel_time": "2 days, 22:50:00"
     },
     {
         "flights": [
@@ -7637,7 +7637,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 700.0,
-        "travel_time": "18:25:00"
+        "travel_time": "1 day, 18:00:00"
     },
     {
         "flights": [
@@ -7697,7 +7697,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 705.0,
-        "travel_time": "19:15:00"
+        "travel_time": "1 day, 16:35:00"
     },
     {
         "flights": [
@@ -7757,7 +7757,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 705.0,
-        "travel_time": "19:15:00"
+        "travel_time": "5 days, 16:35:00"
     },
     {
         "flights": [
@@ -7817,7 +7817,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 705.0,
-        "travel_time": "19:15:00"
+        "travel_time": "10 days, 16:35:00"
     },
     {
         "flights": [
@@ -7887,7 +7887,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 716.0,
-        "travel_time": "20:20:00"
+        "travel_time": "1 day, 14:30:00"
     },
     {
         "flights": [
@@ -7957,7 +7957,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 722.0,
-        "travel_time": "20:20:00"
+        "travel_time": "1 day, 14:30:00"
     },
     {
         "flights": [
@@ -8017,7 +8017,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 743.0,
-        "travel_time": "20:10:00"
+        "travel_time": "1 day, 20:55:00"
     },
     {
         "flights": [
@@ -8077,7 +8077,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 746.0,
-        "travel_time": "20:10:00"
+        "travel_time": "1 day, 19:45:00"
     },
     {
         "flights": [
@@ -8137,7 +8137,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 754.0,
-        "travel_time": "20:10:00"
+        "travel_time": "2 days, 17:55:00"
     },
     {
         "flights": [
@@ -8197,7 +8197,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 754.0,
-        "travel_time": "20:10:00"
+        "travel_time": "6 days, 17:55:00"
     },
     {
         "flights": [
@@ -8257,7 +8257,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 754.0,
-        "travel_time": "20:10:00"
+        "travel_time": "11 days, 17:55:00"
     },
     {
         "flights": [
@@ -8317,7 +8317,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 756.0,
-        "travel_time": "20:10:00"
+        "travel_time": "1 day, 19:45:00"
     },
     {
         "flights": [
@@ -8377,7 +8377,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 757.0,
-        "travel_time": "20:10:00"
+        "travel_time": "2 days, 16:45:00"
     },
     {
         "flights": [
@@ -8437,7 +8437,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 757.0,
-        "travel_time": "20:10:00"
+        "travel_time": "6 days, 16:45:00"
     },
     {
         "flights": [
@@ -8497,7 +8497,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 757.0,
-        "travel_time": "20:10:00"
+        "travel_time": "11 days, 16:45:00"
     },
     {
         "flights": [
@@ -8547,7 +8547,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 759.0,
-        "travel_time": "16:25:00"
+        "travel_time": "2 days, 3:20:00"
     },
     {
         "flights": [
@@ -8597,7 +8597,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 759.0,
-        "travel_time": "16:25:00"
+        "travel_time": "5 days, 3:20:00"
     },
     {
         "flights": [
@@ -8647,7 +8647,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 759.0,
-        "travel_time": "16:25:00"
+        "travel_time": "10 days, 3:20:00"
     },
     {
         "flights": [
@@ -8697,7 +8697,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 759.0,
-        "travel_time": "16:25:00"
+        "travel_time": "16 days, 3:20:00"
     },
     {
         "flights": [
@@ -8757,7 +8757,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 767.0,
-        "travel_time": "20:10:00"
+        "travel_time": "2 days, 16:45:00"
     },
     {
         "flights": [
@@ -8817,7 +8817,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 767.0,
-        "travel_time": "20:10:00"
+        "travel_time": "6 days, 16:45:00"
     },
     {
         "flights": [
@@ -8877,7 +8877,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 767.0,
-        "travel_time": "20:10:00"
+        "travel_time": "11 days, 16:45:00"
     },
     {
         "flights": [
@@ -8927,7 +8927,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 771.0,
-        "travel_time": "16:25:00"
+        "travel_time": "2 days, 3:20:00"
     },
     {
         "flights": [
@@ -8977,7 +8977,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 771.0,
-        "travel_time": "16:25:00"
+        "travel_time": "5 days, 3:20:00"
     },
     {
         "flights": [
@@ -9027,7 +9027,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 771.0,
-        "travel_time": "16:25:00"
+        "travel_time": "10 days, 3:20:00"
     },
     {
         "flights": [
@@ -9077,7 +9077,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 771.0,
-        "travel_time": "16:25:00"
+        "travel_time": "16 days, 3:20:00"
     },
     {
         "flights": [
@@ -9137,7 +9137,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 771.0,
-        "travel_time": "18:20:00"
+        "travel_time": "3 days, 1:50:00"
     },
     {
         "flights": [
@@ -9197,7 +9197,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 774.0,
-        "travel_time": "20:10:00"
+        "travel_time": "1 day, 20:55:00"
     },
     {
         "flights": [
@@ -9257,7 +9257,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 785.0,
-        "travel_time": "20:10:00"
+        "travel_time": "2 days, 17:55:00"
     },
     {
         "flights": [
@@ -9317,7 +9317,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 785.0,
-        "travel_time": "20:10:00"
+        "travel_time": "6 days, 17:55:00"
     },
     {
         "flights": [
@@ -9377,7 +9377,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 785.0,
-        "travel_time": "20:10:00"
+        "travel_time": "11 days, 17:55:00"
     },
     {
         "flights": [
@@ -9457,7 +9457,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 800.0,
-        "travel_time": "23:50:00"
+        "travel_time": "1 day, 18:10:00"
     },
     {
         "flights": [
@@ -9537,7 +9537,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 800.0,
-        "travel_time": "23:50:00"
+        "travel_time": "3 days, 18:10:00"
     },
     {
         "flights": [
@@ -9617,7 +9617,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 800.0,
-        "travel_time": "23:50:00"
+        "travel_time": "6 days, 18:10:00"
     },
     {
         "flights": [
@@ -9697,7 +9697,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 800.0,
-        "travel_time": "23:50:00"
+        "travel_time": "11 days, 18:10:00"
     },
     {
         "flights": [
@@ -9777,7 +9777,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 800.0,
-        "travel_time": "23:50:00"
+        "travel_time": "17 days, 18:10:00"
     },
     {
         "flights": [
@@ -9847,7 +9847,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 802.0,
-        "travel_time": "21:30:00"
+        "travel_time": "1 day, 15:00:00"
     },
     {
         "flights": [
@@ -9907,7 +9907,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 807.0,
-        "travel_time": "18:25:00"
+        "travel_time": "2 days, 18:55:00"
     },
     {
         "flights": [
@@ -9987,7 +9987,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 811.0,
-        "travel_time": "23:50:00"
+        "travel_time": "1 day, 18:10:00"
     },
     {
         "flights": [
@@ -10067,7 +10067,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 811.0,
-        "travel_time": "23:50:00"
+        "travel_time": "3 days, 18:10:00"
     },
     {
         "flights": [
@@ -10147,7 +10147,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 811.0,
-        "travel_time": "23:50:00"
+        "travel_time": "6 days, 18:10:00"
     },
     {
         "flights": [
@@ -10227,7 +10227,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 811.0,
-        "travel_time": "23:50:00"
+        "travel_time": "11 days, 18:10:00"
     },
     {
         "flights": [
@@ -10307,7 +10307,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 811.0,
-        "travel_time": "23:50:00"
+        "travel_time": "17 days, 18:10:00"
     },
     {
         "flights": [
@@ -10377,7 +10377,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 814.0,
-        "travel_time": "21:30:00"
+        "travel_time": "1 day, 15:00:00"
     },
     {
         "flights": [
@@ -10437,7 +10437,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 819.0,
-        "travel_time": "18:25:00"
+        "travel_time": "2 days, 18:55:00"
     },
     {
         "flights": [
@@ -10497,7 +10497,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 821.0,
-        "travel_time": "19:35:00"
+        "travel_time": "6 days, 10:25:00"
     },
     {
         "flights": [
@@ -10557,7 +10557,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 833.0,
-        "travel_time": "20:05:00"
+        "travel_time": "1 day, 16:35:00"
     },
     {
         "flights": [
@@ -10617,7 +10617,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 833.0,
-        "travel_time": "20:05:00"
+        "travel_time": "5 days, 16:35:00"
     },
     {
         "flights": [
@@ -10677,7 +10677,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 833.0,
-        "travel_time": "20:05:00"
+        "travel_time": "10 days, 16:35:00"
     },
     {
         "flights": [
@@ -10737,7 +10737,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 837.0,
-        "travel_time": "19:55:00"
+        "travel_time": "2 days, 11:35:00"
     },
     {
         "flights": [
@@ -10797,7 +10797,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 837.0,
-        "travel_time": "19:55:00"
+        "travel_time": "5 days, 11:35:00"
     },
     {
         "flights": [
@@ -10857,7 +10857,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 837.0,
-        "travel_time": "19:55:00"
+        "travel_time": "10 days, 11:35:00"
     },
     {
         "flights": [
@@ -10917,7 +10917,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 837.0,
-        "travel_time": "19:55:00"
+        "travel_time": "16 days, 11:35:00"
     },
     {
         "flights": [
@@ -11007,7 +11007,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 848.0,
-        "travel_time": "1 day, 1:50:00"
+        "travel_time": "4 days, 9:45:00"
     },
     {
         "flights": [
@@ -11067,7 +11067,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 849.0,
-        "travel_time": "19:55:00"
+        "travel_time": "2 days, 11:35:00"
     },
     {
         "flights": [
@@ -11127,7 +11127,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 849.0,
-        "travel_time": "19:55:00"
+        "travel_time": "5 days, 11:35:00"
     },
     {
         "flights": [
@@ -11187,7 +11187,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 849.0,
-        "travel_time": "19:55:00"
+        "travel_time": "10 days, 11:35:00"
     },
     {
         "flights": [
@@ -11247,7 +11247,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 849.0,
-        "travel_time": "19:55:00"
+        "travel_time": "16 days, 11:35:00"
     },
     {
         "flights": [
@@ -11337,7 +11337,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 859.0,
-        "travel_time": "1 day, 1:50:00"
+        "travel_time": "4 days, 9:45:00"
     },
     {
         "flights": [
@@ -11397,7 +11397,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 859.0,
-        "travel_time": "19:55:00"
+        "travel_time": "2 days, 11:35:00"
     },
     {
         "flights": [
@@ -11457,7 +11457,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 859.0,
-        "travel_time": "19:55:00"
+        "travel_time": "5 days, 11:35:00"
     },
     {
         "flights": [
@@ -11517,7 +11517,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 859.0,
-        "travel_time": "19:55:00"
+        "travel_time": "10 days, 11:35:00"
     },
     {
         "flights": [
@@ -11577,7 +11577,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 859.0,
-        "travel_time": "19:55:00"
+        "travel_time": "16 days, 11:35:00"
     },
     {
         "flights": [
@@ -11637,7 +11637,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 871.0,
-        "travel_time": "19:55:00"
+        "travel_time": "2 days, 11:35:00"
     },
     {
         "flights": [
@@ -11697,7 +11697,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 871.0,
-        "travel_time": "19:55:00"
+        "travel_time": "5 days, 11:35:00"
     },
     {
         "flights": [
@@ -11757,7 +11757,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 871.0,
-        "travel_time": "19:55:00"
+        "travel_time": "10 days, 11:35:00"
     },
     {
         "flights": [
@@ -11817,7 +11817,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 871.0,
-        "travel_time": "19:55:00"
+        "travel_time": "16 days, 11:35:00"
     },
     {
         "flights": [
@@ -11887,7 +11887,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 885.0,
-        "travel_time": "21:55:00"
+        "travel_time": "3 days, 3:10:00"
     },
     {
         "flights": [
@@ -11957,7 +11957,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 897.0,
-        "travel_time": "21:55:00"
+        "travel_time": "3 days, 3:10:00"
     },
     {
         "flights": [
@@ -12017,7 +12017,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 899.0,
-        "travel_time": "20:10:00"
+        "travel_time": "8 days, 7:15:00"
     },
     {
         "flights": [
@@ -12087,7 +12087,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 907.0,
-        "travel_time": "21:55:00"
+        "travel_time": "3 days, 3:10:00"
     },
     {
         "flights": [
@@ -12147,7 +12147,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 910.0,
-        "travel_time": "20:10:00"
+        "travel_time": "8 days, 7:15:00"
     },
     {
         "flights": [
@@ -12207,7 +12207,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 910.0,
-        "travel_time": "20:10:00"
+        "travel_time": "6 days, 7:15:00"
     },
     {
         "flights": [
@@ -12277,7 +12277,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 919.0,
-        "travel_time": "21:55:00"
+        "travel_time": "3 days, 3:10:00"
     },
     {
         "flights": [
@@ -12337,7 +12337,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 923.0,
-        "travel_time": "20:00:00"
+        "travel_time": "8 days, 22:55:00"
     },
     {
         "flights": [
@@ -12397,7 +12397,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 923.0,
-        "travel_time": "20:00:00"
+        "travel_time": "6 days, 22:55:00"
     },
     {
         "flights": [
@@ -12457,7 +12457,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 923.0,
-        "travel_time": "20:00:00"
+        "travel_time": "2 days, 22:55:00"
     },
     {
         "flights": [
@@ -12517,7 +12517,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 928.0,
-        "travel_time": "20:00:00"
+        "travel_time": "1 day, 9:45:00"
     },
     {
         "flights": [
@@ -12577,7 +12577,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 928.0,
-        "travel_time": "20:00:00"
+        "travel_time": "9 days, 9:45:00"
     },
     {
         "flights": [
@@ -12637,7 +12637,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 928.0,
-        "travel_time": "21:15:00"
+        "travel_time": "1 day, 11:05:00"
     },
     {
         "flights": [
@@ -12707,7 +12707,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 930.0,
-        "travel_time": "1 day, 0:30:00"
+        "travel_time": "2 days, 3:30:00"
     },
     {
         "flights": [
@@ -12767,7 +12767,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 932.0,
-        "travel_time": "20:10:00"
+        "travel_time": "8 days, 6:20:00"
     },
     {
         "flights": [
@@ -12827,7 +12827,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 932.0,
-        "travel_time": "20:10:00"
+        "travel_time": "6 days, 6:20:00"
     },
     {
         "flights": [
@@ -12897,7 +12897,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 935.0,
-        "travel_time": "23:10:00"
+        "travel_time": "1 day, 13:35:00"
     },
     {
         "flights": [
@@ -12967,7 +12967,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 935.0,
-        "travel_time": "23:10:00"
+        "travel_time": "5 days, 13:35:00"
     },
     {
         "flights": [
@@ -13037,7 +13037,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 935.0,
-        "travel_time": "23:10:00"
+        "travel_time": "10 days, 13:35:00"
     },
     {
         "flights": [
@@ -13097,7 +13097,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 940.0,
-        "travel_time": "21:15:00"
+        "travel_time": "1 day, 11:05:00"
     },
     {
         "flights": [
@@ -13177,7 +13177,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 941.0,
-        "travel_time": "1 day, 2:05:00"
+        "travel_time": "2 days, 3:30:00"
     },
     {
         "flights": [
@@ -13257,7 +13257,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 947.0,
-        "travel_time": "1 day, 2:05:00"
+        "travel_time": "2 days, 3:30:00"
     },
     {
         "flights": [
@@ -13327,7 +13327,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 947.0,
-        "travel_time": "23:10:00"
+        "travel_time": "1 day, 13:35:00"
     },
     {
         "flights": [
@@ -13397,7 +13397,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 947.0,
-        "travel_time": "23:10:00"
+        "travel_time": "5 days, 13:35:00"
     },
     {
         "flights": [
@@ -13467,7 +13467,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 947.0,
-        "travel_time": "23:10:00"
+        "travel_time": "10 days, 13:35:00"
     },
     {
         "flights": [
@@ -13537,7 +13537,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 952.0,
-        "travel_time": "1 day, 0:30:00"
+        "travel_time": "2 days, 3:30:00"
     },
     {
         "flights": [
@@ -13607,7 +13607,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 958.0,
-        "travel_time": "22:35:00"
+        "travel_time": "8 days, 1:50:00"
     },
     {
         "flights": [
@@ -13697,7 +13697,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 969.0,
-        "travel_time": "1 day, 4:40:00"
+        "travel_time": "3 days, 1:55:00"
     },
     {
         "flights": [
@@ -13787,7 +13787,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 980.0,
-        "travel_time": "1 day, 4:40:00"
+        "travel_time": "3 days, 1:55:00"
     },
     {
         "flights": [
@@ -13867,7 +13867,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 983.0,
-        "travel_time": "1 day, 3:25:00"
+        "travel_time": "1 day, 21:55:00"
     },
     {
         "flights": [
@@ -13937,7 +13937,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1006.0,
-        "travel_time": "1 day, 0:45:00"
+        "travel_time": "1 day, 19:20:00"
     },
     {
         "flights": [
@@ -14007,7 +14007,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1007.0,
-        "travel_time": "23:30:00"
+        "travel_time": "9 days, 3:10:00"
     },
     {
         "flights": [
@@ -14077,7 +14077,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1010.0,
-        "travel_time": "23:30:00"
+        "travel_time": "9 days, 2:00:00"
     },
     {
         "flights": [
@@ -14147,7 +14147,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1018.0,
-        "travel_time": "1 day, 0:45:00"
+        "travel_time": "1 day, 19:20:00"
     },
     {
         "flights": [
@@ -14217,7 +14217,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1020.0,
-        "travel_time": "23:30:00"
+        "travel_time": "9 days, 2:00:00"
     },
     {
         "flights": [
@@ -14287,7 +14287,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1028.0,
-        "travel_time": "1 day, 0:45:00"
+        "travel_time": "1 day, 19:20:00"
     },
     {
         "flights": [
@@ -14357,7 +14357,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1038.0,
-        "travel_time": "23:30:00"
+        "travel_time": "9 days, 3:10:00"
     },
     {
         "flights": [
@@ -14427,7 +14427,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1040.0,
-        "travel_time": "1 day, 0:45:00"
+        "travel_time": "1 day, 19:20:00"
     },
     {
         "flights": [
@@ -14487,7 +14487,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1056.0,
-        "travel_time": "22:55:00"
+        "travel_time": "1 day, 16:40:00"
     },
     {
         "flights": [
@@ -14547,7 +14547,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1061.0,
-        "travel_time": "22:55:00"
+        "travel_time": "2 days, 3:30:00"
     },
     {
         "flights": [
@@ -14607,7 +14607,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1061.0,
-        "travel_time": "22:55:00"
+        "travel_time": "1 day, 9:40:00"
     },
     {
         "flights": [
@@ -14667,7 +14667,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1061.0,
-        "travel_time": "22:55:00"
+        "travel_time": "5 days, 9:40:00"
     },
     {
         "flights": [
@@ -14727,7 +14727,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1061.0,
-        "travel_time": "22:55:00"
+        "travel_time": "10 days, 9:40:00"
     },
     {
         "flights": [
@@ -14787,7 +14787,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1073.0,
-        "travel_time": "22:55:00"
+        "travel_time": "1 day, 9:40:00"
     },
     {
         "flights": [
@@ -14847,7 +14847,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1073.0,
-        "travel_time": "22:55:00"
+        "travel_time": "5 days, 9:40:00"
     },
     {
         "flights": [
@@ -14907,7 +14907,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1073.0,
-        "travel_time": "22:55:00"
+        "travel_time": "10 days, 9:40:00"
     },
     {
         "flights": [
@@ -14967,7 +14967,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1073.0,
-        "travel_time": "21:45:00"
+        "travel_time": "6 days, 10:25:00"
     },
     {
         "flights": [
@@ -15037,7 +15037,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1086.0,
-        "travel_time": "23:25:00"
+        "travel_time": "8 days, 1:50:00"
     },
     {
         "flights": [
@@ -15127,7 +15127,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1091.0,
-        "travel_time": "1 day, 6:20:00"
+        "travel_time": "2 days, 3:30:00"
     },
     {
         "flights": [
@@ -15217,7 +15217,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1102.0,
-        "travel_time": "1 day, 6:20:00"
+        "travel_time": "3 days, 0:30:00"
     },
     {
         "flights": [
@@ -15307,7 +15307,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1102.0,
-        "travel_time": "1 day, 6:20:00"
+        "travel_time": "7 days, 0:30:00"
     },
     {
         "flights": [
@@ -15397,7 +15397,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1102.0,
-        "travel_time": "1 day, 6:20:00"
+        "travel_time": "12 days, 0:30:00"
     },
     {
         "flights": [
@@ -15487,7 +15487,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1102.0,
-        "travel_time": "1 day, 6:20:00"
+        "travel_time": "2 days, 3:30:00"
     },
     {
         "flights": [
@@ -15577,7 +15577,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1113.0,
-        "travel_time": "1 day, 6:20:00"
+        "travel_time": "3 days, 0:30:00"
     },
     {
         "flights": [
@@ -15667,7 +15667,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1113.0,
-        "travel_time": "1 day, 6:20:00"
+        "travel_time": "7 days, 0:30:00"
     },
     {
         "flights": [
@@ -15757,7 +15757,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1113.0,
-        "travel_time": "1 day, 6:20:00"
+        "travel_time": "12 days, 0:30:00"
     },
     {
         "flights": [
@@ -15827,7 +15827,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1139.0,
-        "travel_time": "1 day, 2:25:00"
+        "travel_time": "1 day, 17:55:00"
     },
     {
         "flights": [
@@ -15897,7 +15897,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1139.0,
-        "travel_time": "1 day, 2:25:00"
+        "travel_time": "5 days, 17:55:00"
     },
     {
         "flights": [
@@ -15967,7 +15967,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1139.0,
-        "travel_time": "1 day, 2:25:00"
+        "travel_time": "10 days, 17:55:00"
     },
     {
         "flights": [
@@ -16037,7 +16037,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1140.0,
-        "travel_time": "1 day, 2:25:00"
+        "travel_time": "1 day, 20:55:00"
     },
     {
         "flights": [
@@ -16107,7 +16107,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1151.0,
-        "travel_time": "1 day, 2:25:00"
+        "travel_time": "1 day, 17:55:00"
     },
     {
         "flights": [
@@ -16177,7 +16177,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1151.0,
-        "travel_time": "1 day, 2:25:00"
+        "travel_time": "5 days, 17:55:00"
     },
     {
         "flights": [
@@ -16247,7 +16247,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1151.0,
-        "travel_time": "1 day, 2:25:00"
+        "travel_time": "10 days, 17:55:00"
     },
     {
         "flights": [
@@ -16317,7 +16317,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1153.0,
-        "travel_time": "1 day, 2:25:00"
+        "travel_time": "1 day, 19:45:00"
     },
     {
         "flights": [
@@ -16387,7 +16387,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1161.0,
-        "travel_time": "1 day, 2:25:00"
+        "travel_time": "1 day, 17:55:00"
     },
     {
         "flights": [
@@ -16457,7 +16457,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1161.0,
-        "travel_time": "1 day, 2:25:00"
+        "travel_time": "5 days, 17:55:00"
     },
     {
         "flights": [
@@ -16527,7 +16527,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1161.0,
-        "travel_time": "1 day, 2:25:00"
+        "travel_time": "10 days, 17:55:00"
     },
     {
         "flights": [
@@ -16597,7 +16597,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1171.0,
-        "travel_time": "1 day, 2:25:00"
+        "travel_time": "1 day, 20:55:00"
     },
     {
         "flights": [
@@ -16667,7 +16667,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1173.0,
-        "travel_time": "1 day, 2:25:00"
+        "travel_time": "1 day, 17:55:00"
     },
     {
         "flights": [
@@ -16737,7 +16737,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1173.0,
-        "travel_time": "1 day, 2:25:00"
+        "travel_time": "5 days, 17:55:00"
     },
     {
         "flights": [
@@ -16807,7 +16807,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1173.0,
-        "travel_time": "1 day, 2:25:00"
+        "travel_time": "10 days, 17:55:00"
     },
     {
         "flights": [
@@ -16887,7 +16887,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1188.0,
-        "travel_time": "1 day, 2:30:00"
+        "travel_time": "7 days, 22:50:00"
     },
     {
         "flights": [
@@ -16967,7 +16967,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1200.0,
-        "travel_time": "1 day, 2:30:00"
+        "travel_time": "7 days, 22:50:00"
     },
     {
         "flights": [
@@ -17037,7 +17037,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1314.0,
-        "travel_time": "1 day, 2:15:00"
+        "travel_time": "7 days, 18:55:00"
     },
     {
         "flights": [
@@ -17107,7 +17107,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1326.0,
-        "travel_time": "1 day, 2:15:00"
+        "travel_time": "7 days, 18:55:00"
     },
     {
         "flights": [
@@ -17207,7 +17207,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1355.0,
-        "travel_time": "1 day, 9:40:00"
+        "travel_time": "9 days, 9:45:00"
     },
     {
         "flights": [
@@ -17307,7 +17307,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1366.0,
-        "travel_time": "1 day, 9:40:00"
+        "travel_time": "9 days, 9:45:00"
     },
     {
         "flights": [
@@ -17387,7 +17387,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1392.0,
-        "travel_time": "1 day, 5:45:00"
+        "travel_time": "8 days, 3:10:00"
     },
     {
         "flights": [
@@ -17467,7 +17467,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1404.0,
-        "travel_time": "1 day, 5:45:00"
+        "travel_time": "8 days, 3:10:00"
     },
     {
         "flights": [
@@ -17547,7 +17547,7 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1414.0,
-        "travel_time": "1 day, 5:45:00"
+        "travel_time": "8 days, 3:10:00"
     },
     {
         "flights": [
@@ -17627,6 +17627,6 @@
         "destination": "VVH",
         "origin": "JBN",
         "total_price": 1426.0,
-        "travel_time": "1 day, 5:45:00"
+        "travel_time": "8 days, 3:10:00"
     }
 ]

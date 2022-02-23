@@ -267,7 +267,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 135.0,
-        "travel_time": "6:10:00"
+        "travel_time": "11:45:00"
     },
     {
         "flights": [
@@ -297,7 +297,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 154.0,
-        "travel_time": "6:20:00"
+        "travel_time": "11:05:00"
     },
     {
         "flights": [
@@ -327,7 +327,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 171.0,
-        "travel_time": "6:10:00"
+        "travel_time": "12:00:00"
     },
     {
         "flights": [
@@ -357,7 +357,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 172.0,
-        "travel_time": "6:10:00"
+        "travel_time": "8:50:00"
     },
     {
         "flights": [
@@ -387,7 +387,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 175.0,
-        "travel_time": "6:20:00"
+        "travel_time": "8:15:00"
     },
     {
         "flights": [
@@ -417,7 +417,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 175.0,
-        "travel_time": "6:20:00"
+        "travel_time": "8:15:00"
     },
     {
         "flights": [
@@ -447,7 +447,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 175.0,
-        "travel_time": "6:20:00"
+        "travel_time": "8:15:00"
     },
     {
         "flights": [
@@ -477,7 +477,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 179.0,
-        "travel_time": "6:20:00"
+        "travel_time": "12:10:00"
     },
     {
         "flights": [
@@ -507,7 +507,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 181.0,
-        "travel_time": "6:05:00"
+        "travel_time": "9:35:00"
     },
     {
         "flights": [
@@ -537,7 +537,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 191.0,
-        "travel_time": "6:05:00"
+        "travel_time": "8:55:00"
     },
     {
         "flights": [
@@ -567,7 +567,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 200.0,
-        "travel_time": "6:20:00"
+        "travel_time": "10:30:00"
     },
     {
         "flights": [
@@ -607,7 +607,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 218.0,
-        "travel_time": "8:30:00"
+        "travel_time": "17:10:00"
     },
     {
         "flights": [
@@ -657,7 +657,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 224.0,
-        "travel_time": "10:00:00"
+        "travel_time": "20:15:00"
     },
     {
         "flights": [
@@ -697,7 +697,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 244.0,
-        "travel_time": "9:40:00"
+        "travel_time": "14:15:00"
     },
     {
         "flights": [
@@ -737,7 +737,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 265.0,
-        "travel_time": "9:40:00"
+        "travel_time": "14:15:00"
     },
     {
         "flights": [
@@ -777,7 +777,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 279.0,
-        "travel_time": "10:00:00"
+        "travel_time": "20:45:00"
     },
     {
         "flights": [
@@ -817,7 +817,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 279.0,
-        "travel_time": "10:00:00"
+        "travel_time": "20:45:00"
     },
     {
         "flights": [
@@ -857,7 +857,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 315.0,
-        "travel_time": "10:45:00"
+        "travel_time": "15:55:00"
     },
     {
         "flights": [
@@ -907,7 +907,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 335.0,
-        "travel_time": "13:15:00"
+        "travel_time": "21:55:00"
     },
     {
         "flights": [
@@ -957,7 +957,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 336.0,
-        "travel_time": "13:15:00"
+        "travel_time": "17:30:00"
     },
     {
         "flights": [
@@ -1007,7 +1007,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 356.0,
-        "travel_time": "13:15:00"
+        "travel_time": "18:00:00"
     },
     {
         "flights": [
@@ -1057,7 +1057,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 365.0,
-        "travel_time": "13:35:00"
+        "travel_time": "22:25:00"
     },
     {
         "flights": [
@@ -1107,7 +1107,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 367.0,
-        "travel_time": "13:35:00"
+        "travel_time": "22:25:00"
     },
     {
         "flights": [
@@ -1147,7 +1147,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 371.0,
-        "travel_time": "11:10:00"
+        "travel_time": "19:20:00"
     },
     {
         "flights": [
@@ -1187,7 +1187,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 376.0,
-        "travel_time": "11:45:00"
+        "travel_time": "17:30:00"
     },
     {
         "flights": [
@@ -1227,7 +1227,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 394.0,
-        "travel_time": "12:05:00"
+        "travel_time": "19:25:00"
     },
     {
         "flights": [
@@ -1267,7 +1267,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 396.0,
-        "travel_time": "11:45:00"
+        "travel_time": "18:00:00"
     },
     {
         "flights": [
@@ -1297,7 +1297,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 397.0,
-        "travel_time": "8:45:00"
+        "travel_time": "11:40:00"
     },
     {
         "flights": [
@@ -1327,7 +1327,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 397.0,
-        "travel_time": "8:45:00"
+        "travel_time": "11:40:00"
     },
     {
         "flights": [
@@ -1357,7 +1357,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 399.0,
-        "travel_time": "8:45:00"
+        "travel_time": "12:45:00"
     },
     {
         "flights": [
@@ -1387,7 +1387,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 402.0,
-        "travel_time": "8:45:00"
+        "travel_time": "10:20:00"
     },
     {
         "flights": [
@@ -1437,7 +1437,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 408.0,
-        "travel_time": "13:35:00"
+        "travel_time": "1 day, 2:55:00"
     },
     {
         "flights": [
@@ -1497,7 +1497,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 440.0,
-        "travel_time": "17:05:00"
+        "travel_time": "1 day, 7:10:00"
     },
     {
         "flights": [
@@ -1557,7 +1557,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 441.0,
-        "travel_time": "14:50:00"
+        "travel_time": "1 day, 4:30:00"
     },
     {
         "flights": [
@@ -1617,7 +1617,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 441.0,
-        "travel_time": "17:05:00"
+        "travel_time": "1 day, 2:45:00"
     },
     {
         "flights": [
@@ -1677,7 +1677,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 461.0,
-        "travel_time": "17:05:00"
+        "travel_time": "1 day, 7:10:00"
     },
     {
         "flights": [
@@ -1737,7 +1737,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 461.0,
-        "travel_time": "17:05:00"
+        "travel_time": "1 day, 3:15:00"
     },
     {
         "flights": [
@@ -1797,7 +1797,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 462.0,
-        "travel_time": "17:05:00"
+        "travel_time": "1 day, 2:45:00"
     },
     {
         "flights": [
@@ -1857,7 +1857,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 470.0,
-        "travel_time": "17:25:00"
+        "travel_time": "1 day, 7:40:00"
     },
     {
         "flights": [
@@ -1917,7 +1917,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 472.0,
-        "travel_time": "17:25:00"
+        "travel_time": "1 day, 7:40:00"
     },
     {
         "flights": [
@@ -1977,7 +1977,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 475.0,
-        "travel_time": "15:45:00"
+        "travel_time": "1 day, 7:40:00"
     },
     {
         "flights": [
@@ -2047,7 +2047,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 478.0,
-        "travel_time": "17:15:00"
+        "travel_time": "1 day, 12:05:00"
     },
     {
         "flights": [
@@ -2097,7 +2097,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 481.0,
-        "travel_time": "15:35:00"
+        "travel_time": "1 day, 2:45:00"
     },
     {
         "flights": [
@@ -2157,7 +2157,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 482.0,
-        "travel_time": "17:05:00"
+        "travel_time": "1 day, 3:15:00"
     },
     {
         "flights": [
@@ -2207,7 +2207,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 488.0,
-        "travel_time": "15:10:00"
+        "travel_time": "1 day, 4:30:00"
     },
     {
         "flights": [
@@ -2267,7 +2267,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 491.0,
-        "travel_time": "17:25:00"
+        "travel_time": "1 day, 7:40:00"
     },
     {
         "flights": [
@@ -2327,7 +2327,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 493.0,
-        "travel_time": "17:25:00"
+        "travel_time": "1 day, 7:40:00"
     },
     {
         "flights": [
@@ -2377,7 +2377,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 496.0,
-        "travel_time": "14:50:00"
+        "travel_time": "1 day, 5:00:00"
     },
     {
         "flights": [
@@ -2457,7 +2457,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 500.0,
-        "travel_time": "19:30:00"
+        "travel_time": "1 day, 14:15:00"
     },
     {
         "flights": [
@@ -2507,7 +2507,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 500.0,
-        "travel_time": "15:20:00"
+        "travel_time": "1 day, 1:10:00"
     },
     {
         "flights": [
@@ -2557,7 +2557,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 501.0,
-        "travel_time": "15:35:00"
+        "travel_time": "1 day, 3:15:00"
     },
     {
         "flights": [
@@ -2607,7 +2607,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 502.0,
-        "travel_time": "15:35:00"
+        "travel_time": "1 day, 2:45:00"
     },
     {
         "flights": [
@@ -2677,7 +2677,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 519.0,
-        "travel_time": "19:00:00"
+        "travel_time": "1 day, 14:15:00"
     },
     {
         "flights": [
@@ -2727,7 +2727,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 520.0,
-        "travel_time": "15:20:00"
+        "travel_time": "1 day, 1:40:00"
     },
     {
         "flights": [
@@ -2777,7 +2777,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 522.0,
-        "travel_time": "15:35:00"
+        "travel_time": "1 day, 3:15:00"
     },
     {
         "flights": [
@@ -2827,7 +2827,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 524.0,
-        "travel_time": "15:35:00"
+        "travel_time": "21:55:00"
     },
     {
         "flights": [
@@ -2887,7 +2887,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 533.0,
-        "travel_time": "17:15:00"
+        "travel_time": "1 day, 12:35:00"
     },
     {
         "flights": [
@@ -2947,7 +2947,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 543.0,
-        "travel_time": "15:40:00"
+        "travel_time": "1 day, 1:05:00"
     },
     {
         "flights": [
@@ -3007,7 +3007,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 543.0,
-        "travel_time": "15:40:00"
+        "travel_time": "1 day, 1:05:00"
     },
     {
         "flights": [
@@ -3067,7 +3067,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 548.0,
-        "travel_time": "15:40:00"
+        "travel_time": "23:45:00"
     },
     {
         "flights": [
@@ -3117,7 +3117,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 562.0,
-        "travel_time": "15:10:00"
+        "travel_time": "1 day, 1:05:00"
     },
     {
         "flights": [
@@ -3167,7 +3167,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 562.0,
-        "travel_time": "15:10:00"
+        "travel_time": "1 day, 1:05:00"
     },
     {
         "flights": [
@@ -3217,7 +3217,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 566.0,
-        "travel_time": "15:30:00"
+        "travel_time": "1 day, 7:10:00"
     },
     {
         "flights": [
@@ -3267,7 +3267,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 567.0,
-        "travel_time": "15:10:00"
+        "travel_time": "23:45:00"
     },
     {
         "flights": [
@@ -3317,7 +3317,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 567.0,
-        "travel_time": "15:30:00"
+        "travel_time": "1 day, 2:45:00"
     },
     {
         "flights": [
@@ -3367,7 +3367,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 574.0,
-        "travel_time": "15:10:00"
+        "travel_time": "20:35:00"
     },
     {
         "flights": [
@@ -3417,7 +3417,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 574.0,
-        "travel_time": "15:10:00"
+        "travel_time": "20:35:00"
     },
     {
         "flights": [
@@ -3467,7 +3467,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 575.0,
-        "travel_time": "15:30:00"
+        "travel_time": "1 day, 2:45:00"
     },
     {
         "flights": [
@@ -3527,7 +3527,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 582.0,
-        "travel_time": "18:25:00"
+        "travel_time": "1 day, 6:40:00"
     },
     {
         "flights": [
@@ -3587,7 +3587,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 584.0,
-        "travel_time": "18:25:00"
+        "travel_time": "1 day, 6:40:00"
     },
     {
         "flights": [
@@ -3637,7 +3637,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 587.0,
-        "travel_time": "15:30:00"
+        "travel_time": "1 day, 3:15:00"
     },
     {
         "flights": [
@@ -3697,7 +3697,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 604.0,
-        "travel_time": "18:30:00"
+        "travel_time": "1 day, 2:55:00"
     },
     {
         "flights": [
@@ -3767,7 +3767,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 619.0,
-        "travel_time": "20:50:00"
+        "travel_time": "1 day, 14:15:00"
     },
     {
         "flights": [
@@ -3837,7 +3837,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 621.0,
-        "travel_time": "20:50:00"
+        "travel_time": "1 day, 14:15:00"
     },
     {
         "flights": [
@@ -3907,7 +3907,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 648.0,
-        "travel_time": "19:30:00"
+        "travel_time": "1 day, 10:20:00"
     },
     {
         "flights": [
@@ -3967,7 +3967,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 648.0,
-        "travel_time": "19:10:00"
+        "travel_time": "1 day, 5:35:00"
     },
     {
         "flights": [
@@ -4037,7 +4037,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 653.0,
-        "travel_time": "19:30:00"
+        "travel_time": "1 day, 9:00:00"
     },
     {
         "flights": [
@@ -4097,7 +4097,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 667.0,
-        "travel_time": "19:00:00"
+        "travel_time": "1 day, 10:20:00"
     },
     {
         "flights": [
@@ -4167,7 +4167,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 669.0,
-        "travel_time": "19:30:00"
+        "travel_time": "1 day, 10:20:00"
     },
     {
         "flights": [
@@ -4237,7 +4237,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 672.0,
-        "travel_time": "21:35:00"
+        "travel_time": "1 day, 6:40:00"
     },
     {
         "flights": [
@@ -4297,7 +4297,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 672.0,
-        "travel_time": "19:00:00"
+        "travel_time": "1 day, 9:00:00"
     },
     {
         "flights": [
@@ -4377,7 +4377,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 674.0,
-        "travel_time": "22:10:00"
+        "travel_time": "1 day, 12:05:00"
     },
     {
         "flights": [
@@ -4447,7 +4447,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 674.0,
-        "travel_time": "19:30:00"
+        "travel_time": "1 day, 9:00:00"
     },
     {
         "flights": [
@@ -4507,7 +4507,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 679.0,
-        "travel_time": "19:00:00"
+        "travel_time": "1 day, 5:50:00"
     },
     {
         "flights": [
@@ -4577,7 +4577,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 687.0,
-        "travel_time": "22:15:00"
+        "travel_time": "1 day, 15:55:00"
     },
     {
         "flights": [
@@ -4637,7 +4637,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 688.0,
-        "travel_time": "19:00:00"
+        "travel_time": "1 day, 10:20:00"
     },
     {
         "flights": [
@@ -4707,7 +4707,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 689.0,
-        "travel_time": "22:15:00"
+        "travel_time": "1 day, 15:55:00"
     },
     {
         "flights": [
@@ -4777,7 +4777,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 692.0,
-        "travel_time": "20:35:00"
+        "travel_time": "1 day, 15:55:00"
     },
     {
         "flights": [
@@ -4837,7 +4837,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 693.0,
-        "travel_time": "19:00:00"
+        "travel_time": "1 day, 9:00:00"
     },
     {
         "flights": [
@@ -4897,7 +4897,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 700.0,
-        "travel_time": "19:00:00"
+        "travel_time": "1 day, 5:50:00"
     },
     {
         "flights": [
@@ -4967,7 +4967,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 708.0,
-        "travel_time": "22:15:00"
+        "travel_time": "1 day, 15:55:00"
     },
     {
         "flights": [
@@ -5037,7 +5037,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 710.0,
-        "travel_time": "22:15:00"
+        "travel_time": "1 day, 15:55:00"
     },
     {
         "flights": [
@@ -5107,7 +5107,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 729.0,
-        "travel_time": "22:10:00"
+        "travel_time": "1 day, 12:35:00"
     },
     {
         "flights": [
@@ -5167,7 +5167,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 747.0,
-        "travel_time": "19:50:00"
+        "travel_time": "1 day, 6:40:00"
     },
     {
         "flights": [
@@ -5237,7 +5237,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 757.0,
-        "travel_time": "21:45:00"
+        "travel_time": "1 day, 11:10:00"
     },
     {
         "flights": [
@@ -5297,7 +5297,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 762.0,
-        "travel_time": "19:50:00"
+        "travel_time": "1 day, 6:40:00"
     },
     {
         "flights": [
@@ -5357,7 +5357,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 774.0,
-        "travel_time": "17:55:00"
+        "travel_time": "1 day, 10:20:00"
     },
     {
         "flights": [
@@ -5427,7 +5427,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 778.0,
-        "travel_time": "20:25:00"
+        "travel_time": "1 day, 12:05:00"
     },
     {
         "flights": [
@@ -5487,7 +5487,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 779.0,
-        "travel_time": "17:55:00"
+        "travel_time": "1 day, 9:00:00"
     },
     {
         "flights": [
@@ -5547,7 +5547,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 833.0,
-        "travel_time": "20:25:00"
+        "travel_time": "1 day, 12:35:00"
     },
     {
         "flights": [
@@ -5597,7 +5597,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 853.0,
-        "travel_time": "17:45:00"
+        "travel_time": "1 day, 2:55:00"
     },
     {
         "flights": [
@@ -5647,7 +5647,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 868.0,
-        "travel_time": "17:45:00"
+        "travel_time": "1 day, 1:55:00"
     },
     {
         "flights": [
@@ -5727,7 +5727,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 886.0,
-        "travel_time": "23:45:00"
+        "travel_time": "1 day, 21:55:00"
     },
     {
         "flights": [
@@ -5797,7 +5797,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 927.0,
-        "travel_time": "1 day, 0:10:00"
+        "travel_time": "1 day, 20:25:00"
     },
     {
         "flights": [
@@ -5867,7 +5867,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 937.0,
-        "travel_time": "1 day, 0:10:00"
+        "travel_time": "1 day, 20:25:00"
     },
     {
         "flights": [
@@ -5937,7 +5937,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 947.0,
-        "travel_time": "1 day, 0:10:00"
+        "travel_time": "1 day, 20:55:00"
     },
     {
         "flights": [
@@ -6007,7 +6007,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 948.0,
-        "travel_time": "1 day, 0:10:00"
+        "travel_time": "1 day, 20:25:00"
     },
     {
         "flights": [
@@ -6077,7 +6077,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 957.0,
-        "travel_time": "1 day, 0:10:00"
+        "travel_time": "1 day, 20:55:00"
     },
     {
         "flights": [
@@ -6147,7 +6147,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 958.0,
-        "travel_time": "1 day, 0:10:00"
+        "travel_time": "1 day, 20:25:00"
     },
     {
         "flights": [
@@ -6217,7 +6217,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 968.0,
-        "travel_time": "1 day, 0:10:00"
+        "travel_time": "1 day, 20:55:00"
     },
     {
         "flights": [
@@ -6287,7 +6287,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 978.0,
-        "travel_time": "1 day, 0:10:00"
+        "travel_time": "1 day, 20:55:00"
     },
     {
         "flights": [
@@ -6347,7 +6347,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 1013.0,
-        "travel_time": "22:20:00"
+        "travel_time": "1 day, 16:10:00"
     },
     {
         "flights": [
@@ -6407,7 +6407,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 1023.0,
-        "travel_time": "22:20:00"
+        "travel_time": "1 day, 15:30:00"
     },
     {
         "flights": [
@@ -6467,7 +6467,7 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 1028.0,
-        "travel_time": "22:20:00"
+        "travel_time": "1 day, 15:10:00"
     },
     {
         "flights": [
@@ -6527,6 +6527,6 @@
         "destination": "NNB",
         "origin": "BPZ",
         "total_price": 1038.0,
-        "travel_time": "22:20:00"
+        "travel_time": "1 day, 14:30:00"
     }
 ]
