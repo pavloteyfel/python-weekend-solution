@@ -247,7 +247,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 116.0,
-        "travel_time": "5:20:00"
+        "travel_time": "6:50:00"
     },
     {
         "flights": [
@@ -287,7 +287,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 189.0,
-        "travel_time": "9:20:00"
+        "travel_time": "14:45:00"
     },
     {
         "flights": [
@@ -327,7 +327,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 200.0,
-        "travel_time": "9:05:00"
+        "travel_time": "15:20:00"
     },
     {
         "flights": [
@@ -357,7 +357,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 203.0,
-        "travel_time": "7:45:00"
+        "travel_time": "11:00:00"
     },
     {
         "flights": [
@@ -397,7 +397,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 206.0,
-        "travel_time": "9:20:00"
+        "travel_time": "14:45:00"
     },
     {
         "flights": [
@@ -427,7 +427,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 247.0,
-        "travel_time": "7:45:00"
+        "travel_time": "9:55:00"
     },
     {
         "flights": [
@@ -457,7 +457,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 256.0,
-        "travel_time": "7:45:00"
+        "travel_time": "11:35:00"
     },
     {
         "flights": [
@@ -497,7 +497,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 264.0,
-        "travel_time": "10:45:00"
+        "travel_time": "17:10:00"
     },
     {
         "flights": [
@@ -547,7 +547,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 284.0,
-        "travel_time": "12:55:00"
+        "travel_time": "22:00:00"
     },
     {
         "flights": [
@@ -597,7 +597,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 295.0,
-        "travel_time": "12:50:00"
+        "travel_time": "1 day, 0:35:00"
     },
     {
         "flights": [
@@ -647,7 +647,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 298.0,
-        "travel_time": "12:55:00"
+        "travel_time": "22:00:00"
     },
     {
         "flights": [
@@ -697,7 +697,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 302.0,
-        "travel_time": "12:25:00"
+        "travel_time": "23:55:00"
     },
     {
         "flights": [
@@ -737,7 +737,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 304.0,
-        "travel_time": "10:45:00"
+        "travel_time": "20:10:00"
     },
     {
         "flights": [
@@ -787,7 +787,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 306.0,
-        "travel_time": "12:35:00"
+        "travel_time": "1 day, 1:10:00"
     },
     {
         "flights": [
@@ -837,7 +837,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 309.0,
-        "travel_time": "11:35:00"
+        "travel_time": "20:40:00"
     },
     {
         "flights": [
@@ -877,7 +877,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 312.0,
-        "travel_time": "11:05:00"
+        "travel_time": "18:40:00"
     },
     {
         "flights": [
@@ -927,7 +927,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 312.0,
-        "travel_time": "12:50:00"
+        "travel_time": "1 day, 0:35:00"
     },
     {
         "flights": [
@@ -967,7 +967,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 312.0,
-        "travel_time": "11:05:00"
+        "travel_time": "18:40:00"
     },
     {
         "flights": [
@@ -1007,7 +1007,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 312.0,
-        "travel_time": "11:05:00"
+        "travel_time": "18:40:00"
     },
     {
         "flights": [
@@ -1047,7 +1047,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 324.0,
-        "travel_time": "10:45:00"
+        "travel_time": "18:10:00"
     },
     {
         "flights": [
@@ -1077,7 +1077,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 327.0,
-        "travel_time": "9:05:00"
+        "travel_time": "11:05:00"
     },
     {
         "flights": [
@@ -1107,7 +1107,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 327.0,
-        "travel_time": "9:05:00"
+        "travel_time": "11:05:00"
     },
     {
         "flights": [
@@ -1137,7 +1137,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 327.0,
-        "travel_time": "9:05:00"
+        "travel_time": "11:05:00"
     },
     {
         "flights": [
@@ -1187,7 +1187,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 329.0,
-        "travel_time": "11:35:00"
+        "travel_time": "21:35:00"
     },
     {
         "flights": [
@@ -1237,7 +1237,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 332.0,
-        "travel_time": "13:10:00"
+        "travel_time": "22:35:00"
     },
     {
         "flights": [
@@ -1287,7 +1287,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 341.0,
-        "travel_time": "13:10:00"
+        "travel_time": "1 day, 0:15:00"
     },
     {
         "flights": [
@@ -1317,7 +1317,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 347.0,
-        "travel_time": "9:05:00"
+        "travel_time": "12:00:00"
     },
     {
         "flights": [
@@ -1347,7 +1347,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 347.0,
-        "travel_time": "9:05:00"
+        "travel_time": "12:00:00"
     },
     {
         "flights": [
@@ -1377,7 +1377,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 347.0,
-        "travel_time": "9:05:00"
+        "travel_time": "12:00:00"
     },
     {
         "flights": [
@@ -1407,7 +1407,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 347.0,
-        "travel_time": "9:05:00"
+        "travel_time": "12:00:00"
     },
     {
         "flights": [
@@ -1457,7 +1457,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 350.0,
-        "travel_time": "12:45:00"
+        "travel_time": "1 day, 1:25:00"
     },
     {
         "flights": [
@@ -1517,7 +1517,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 390.0,
-        "travel_time": "16:25:00"
+        "travel_time": "1 day, 0:35:00"
     },
     {
         "flights": [
@@ -1567,7 +1567,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 391.0,
-        "travel_time": "14:25:00"
+        "travel_time": "20:40:00"
     },
     {
         "flights": [
@@ -1617,7 +1617,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 392.0,
-        "travel_time": "14:25:00"
+        "travel_time": "1 day, 2:05:00"
     },
     {
         "flights": [
@@ -1667,7 +1667,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 392.0,
-        "travel_time": "14:25:00"
+        "travel_time": "1 day, 2:05:00"
     },
     {
         "flights": [
@@ -1707,7 +1707,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 398.0,
-        "travel_time": "12:35:00"
+        "travel_time": "19:10:00"
     },
     {
         "flights": [
@@ -1747,7 +1747,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 407.0,
-        "travel_time": "12:35:00"
+        "travel_time": "19:10:00"
     },
     {
         "flights": [
@@ -1797,7 +1797,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 410.0,
-        "travel_time": "14:25:00"
+        "travel_time": "21:35:00"
     },
     {
         "flights": [
@@ -1847,7 +1847,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 410.0,
-        "travel_time": "14:25:00"
+        "travel_time": "21:35:00"
     },
     {
         "flights": [
@@ -1897,7 +1897,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 411.0,
-        "travel_time": "14:25:00"
+        "travel_time": "21:35:00"
     },
     {
         "flights": [
@@ -1947,7 +1947,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 418.0,
-        "travel_time": "14:45:00"
+        "travel_time": "1 day, 0:00:00"
     },
     {
         "flights": [
@@ -1987,7 +1987,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 418.0,
-        "travel_time": "12:35:00"
+        "travel_time": "20:05:00"
     },
     {
         "flights": [
@@ -2027,7 +2027,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 424.0,
-        "travel_time": "12:35:00"
+        "travel_time": "23:35:00"
     },
     {
         "flights": [
@@ -2087,7 +2087,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 425.0,
-        "travel_time": "16:10:00"
+        "travel_time": "1 day, 8:25:00"
     },
     {
         "flights": [
@@ -2137,7 +2137,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 432.0,
-        "travel_time": "14:45:00"
+        "travel_time": "1 day, 0:00:00"
     },
     {
         "flights": [
@@ -2187,7 +2187,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 438.0,
-        "travel_time": "14:45:00"
+        "travel_time": "1 day, 0:55:00"
     },
     {
         "flights": [
@@ -2247,7 +2247,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 438.0,
-        "travel_time": "16:45:00"
+        "travel_time": "1 day, 2:05:00"
     },
     {
         "flights": [
@@ -2287,7 +2287,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 444.0,
-        "travel_time": "12:40:00"
+        "travel_time": "16:30:00"
     },
     {
         "flights": [
@@ -2337,7 +2337,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 452.0,
-        "travel_time": "14:45:00"
+        "travel_time": "1 day, 0:55:00"
     },
     {
         "flights": [
@@ -2397,7 +2397,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 465.0,
-        "travel_time": "16:50:00"
+        "travel_time": "1 day, 3:55:00"
     },
     {
         "flights": [
@@ -2437,7 +2437,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 471.0,
-        "travel_time": "11:40:00"
+        "travel_time": "18:00:00"
     },
     {
         "flights": [
@@ -2477,7 +2477,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 478.0,
-        "travel_time": "11:40:00"
+        "travel_time": "21:20:00"
     },
     {
         "flights": [
@@ -2517,7 +2517,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 484.0,
-        "travel_time": "11:40:00"
+        "travel_time": "21:30:00"
     },
     {
         "flights": [
@@ -2557,7 +2557,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 492.0,
-        "travel_time": "11:25:00"
+        "travel_time": "15:45:00"
     },
     {
         "flights": [
@@ -2617,7 +2617,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 493.0,
-        "travel_time": "17:25:00"
+        "travel_time": "1 day, 8:25:00"
     },
     {
         "flights": [
@@ -2677,7 +2677,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 497.0,
-        "travel_time": "16:30:00"
+        "travel_time": "1 day, 1:35:00"
     },
     {
         "flights": [
@@ -2727,7 +2727,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 500.0,
-        "travel_time": "16:00:00"
+        "travel_time": "23:35:00"
     },
     {
         "flights": [
@@ -2787,7 +2787,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 502.0,
-        "travel_time": "17:25:00"
+        "travel_time": "1 day, 10:05:00"
     },
     {
         "flights": [
@@ -2827,7 +2827,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 512.0,
-        "travel_time": "11:25:00"
+        "travel_time": "16:40:00"
     },
     {
         "flights": [
@@ -2897,7 +2897,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 513.0,
-        "travel_time": "19:35:00"
+        "travel_time": "1 day, 13:15:00"
     },
     {
         "flights": [
@@ -2957,7 +2957,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 517.0,
-        "travel_time": "16:30:00"
+        "travel_time": "1 day, 2:30:00"
     },
     {
         "flights": [
@@ -3027,7 +3027,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 522.0,
-        "travel_time": "19:35:00"
+        "travel_time": "1 day, 14:55:00"
     },
     {
         "flights": [
@@ -3097,7 +3097,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 527.0,
-        "travel_time": "19:35:00"
+        "travel_time": "1 day, 13:15:00"
     },
     {
         "flights": [
@@ -3167,7 +3167,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 533.0,
-        "travel_time": "20:15:00"
+        "travel_time": "1 day, 8:25:00"
     },
     {
         "flights": [
@@ -3207,7 +3207,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 533.0,
-        "travel_time": "12:45:00"
+        "travel_time": "20:35:00"
     },
     {
         "flights": [
@@ -3277,7 +3277,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 536.0,
-        "travel_time": "19:35:00"
+        "travel_time": "1 day, 14:55:00"
     },
     {
         "flights": [
@@ -3337,7 +3337,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 538.0,
-        "travel_time": "17:40:00"
+        "travel_time": "1 day, 6:20:00"
     },
     {
         "flights": [
@@ -3407,7 +3407,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 542.0,
-        "travel_time": "20:15:00"
+        "travel_time": "1 day, 10:05:00"
     },
     {
         "flights": [
@@ -3447,7 +3447,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 559.0,
-        "travel_time": "12:55:00"
+        "travel_time": "17:45:00"
     },
     {
         "flights": [
@@ -3487,7 +3487,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 559.0,
-        "travel_time": "12:55:00"
+        "travel_time": "17:45:00"
     },
     {
         "flights": [
@@ -3537,7 +3537,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 563.0,
-        "travel_time": "15:35:00"
+        "travel_time": "21:10:00"
     },
     {
         "flights": [
@@ -3587,7 +3587,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 574.0,
-        "travel_time": "15:20:00"
+        "travel_time": "21:45:00"
     },
     {
         "flights": [
@@ -3647,7 +3647,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 579.0,
-        "travel_time": "19:20:00"
+        "travel_time": "1 day, 1:35:00"
     },
     {
         "flights": [
@@ -3707,7 +3707,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 580.0,
-        "travel_time": "19:20:00"
+        "travel_time": "1 day, 7:00:00"
     },
     {
         "flights": [
@@ -3767,7 +3767,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 598.0,
-        "travel_time": "19:20:00"
+        "travel_time": "1 day, 2:30:00"
     },
     {
         "flights": [
@@ -3827,7 +3827,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 599.0,
-        "travel_time": "19:20:00"
+        "travel_time": "1 day, 2:30:00"
     },
     {
         "flights": [
@@ -3867,7 +3867,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 625.0,
-        "travel_time": "14:00:00"
+        "travel_time": "23:40:00"
     },
     {
         "flights": [
@@ -3937,7 +3937,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 626.0,
-        "travel_time": "21:40:00"
+        "travel_time": "1 day, 7:00:00"
     },
     {
         "flights": [
@@ -3967,7 +3967,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 654.0,
-        "travel_time": "11:30:00"
+        "travel_time": "13:05:00"
     },
     {
         "flights": [
@@ -4017,7 +4017,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 659.0,
-        "travel_time": "16:35:00"
+        "travel_time": "22:55:00"
     },
     {
         "flights": [
@@ -4047,7 +4047,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 661.0,
-        "travel_time": "11:30:00"
+        "travel_time": "16:25:00"
     },
     {
         "flights": [
@@ -4077,7 +4077,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 661.0,
-        "travel_time": "11:30:00"
+        "travel_time": "16:25:00"
     },
     {
         "flights": [
@@ -4107,7 +4107,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 661.0,
-        "travel_time": "11:30:00"
+        "travel_time": "16:25:00"
     },
     {
         "flights": [
@@ -4137,7 +4137,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 661.0,
-        "travel_time": "11:30:00"
+        "travel_time": "16:25:00"
     },
     {
         "flights": [
@@ -4187,7 +4187,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 666.0,
-        "travel_time": "16:35:00"
+        "travel_time": "1 day, 2:15:00"
     },
     {
         "flights": [
@@ -4217,7 +4217,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 667.0,
-        "travel_time": "11:30:00"
+        "travel_time": "16:35:00"
     },
     {
         "flights": [
@@ -4267,7 +4267,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 672.0,
-        "travel_time": "16:35:00"
+        "travel_time": "1 day, 2:25:00"
     },
     {
         "flights": [
@@ -4327,7 +4327,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 675.0,
-        "travel_time": "19:10:00"
+        "travel_time": "1 day, 10:20:00"
     },
     {
         "flights": [
@@ -4387,7 +4387,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 678.0,
-        "travel_time": "20:00:00"
+        "travel_time": "1 day, 2:00:00"
     },
     {
         "flights": [
@@ -4437,7 +4437,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 756.0,
-        "travel_time": "17:05:00"
+        "travel_time": "1 day, 0:40:00"
     },
     {
         "flights": [
@@ -4487,7 +4487,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 770.0,
-        "travel_time": "17:05:00"
+        "travel_time": "1 day, 0:40:00"
     },
     {
         "flights": [
@@ -4537,7 +4537,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 777.0,
-        "travel_time": "18:15:00"
+        "travel_time": "23:40:00"
     },
     {
         "flights": [
@@ -4607,7 +4607,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 789.0,
-        "travel_time": "21:15:00"
+        "travel_time": "1 day, 15:15:00"
     },
     {
         "flights": [
@@ -4667,7 +4667,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 815.0,
-        "travel_time": "21:05:00"
+        "travel_time": "1 day, 6:40:00"
     },
     {
         "flights": [
@@ -4737,7 +4737,7 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 843.0,
-        "travel_time": "22:20:00"
+        "travel_time": "1 day, 6:40:00"
     },
     {
         "flights": [
@@ -4797,6 +4797,6 @@
         "destination": "BPZ",
         "origin": "ZRW",
         "total_price": 870.0,
-        "travel_time": "21:50:00"
+        "travel_time": "1 day, 6:40:00"
     }
 ]
